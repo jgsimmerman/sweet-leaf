@@ -95,7 +95,7 @@ const BlogList = ({ path, cover, title, date, excerpt, tags }) => (
         </Link>
       </Image>
       <Information>
-        <Date>{date}</Date>
+        {/*<Date>{date}</Date>*/}
         <Link to={path}>
           <Title>{title}</Title>
         </Link>
@@ -112,7 +112,7 @@ BlogList.propTypes = {
   cover: PropTypes.object.isRequired,
   path: PropTypes.string.isRequired,
   excerpt: PropTypes.string,
-  date: PropTypes.string.isRequired,
+  //date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   tags: PropTypes.array.isRequired,
 };

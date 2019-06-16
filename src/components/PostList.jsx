@@ -11,7 +11,6 @@ const Wrapper = styled.article`
   z-index: 100;
   border-radius: ${props => props.theme.borderRadius.default};
   box-shadow: ${props => props.theme.shadow.feature.small.default};
-  transition: ${props => props.theme.transitions.boom.transition};
   height: 17rem;
   flex-basis: calc(99.9% * 1 / 3 - 2.5rem);
   max-width: calc(99.9% * 1 / 3 - 2.5rem);
@@ -19,7 +18,6 @@ const Wrapper = styled.article`
 
   &:hover {
     box-shadow: ${props => props.theme.shadow.feature.small.hover};
-    transform: scale(1.04);
   }
 
   @media (max-width: 1000px) {
@@ -112,9 +110,9 @@ const PostList = ({ cover, path, date, title, excerpt }) => (
     </Image>
     <StyledLink to={path}>
       <Info>
-        <span>{date}</span>
+        {/*<span>{date}</span>*/}
         <Title>{title}</Title>
-        <span>{excerpt}</span>
+        {/*<span>{excerpt}</span>*/}
       </Info>
     </StyledLink>
   </Wrapper>
