@@ -5,6 +5,9 @@ import PropTypes from 'prop-types';
 import { Layout, Container, Content } from 'layouts';
 import { TagsBlock, Header, SEO } from 'components';
 import '../styles/prism';
+import Helmet from 'react-helmet';
+import BuyButton from '../components/BuyButton'
+
 
 const SuggestionBar = styled.div`
   display: flex;
@@ -28,6 +31,12 @@ const Post = ({ data, pageContext }) => {
   const html = post.html;
   return (
     <Layout>
+      <Helmet htmlAttributes={{ lang: 'en' }}>
+      
+      <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" rel="stylesheet" type="text/css" />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+      <script id="snipcart" src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" data-api-key="YjdiNWIyOTUtZTIyMy00MWMwLTkwNDUtMzI1M2M2NTgxYjE0"></script>
+    </Helmet>
       <SEO
         title={title}
         description={post.frontmatter.description || post.excerpt || ' '}
@@ -40,6 +49,16 @@ const Post = ({ data, pageContext }) => {
         <Content input={html} />
         <TagsBlock list={post.frontmatter.tags || []} />
       </Container>
+      <button
+    className='snipcart-add-item buyBtn'
+    data-item-id={post.frontmatter.id}
+    data-item-price={post.frontmatter.price}
+    data-item-image={post.frontmatter.image}
+    data-item-name={post.frontmatter.title}
+    data-item-description={post.frontmatter.description}
+    data-item-url={"http://snipcart-gatsby.netlify.com" + post.frontmatter.path}>
+    Buy
+</button>
       <SuggestionBar>
         <PostSuggestion>
           {prev && (
@@ -80,6 +99,8 @@ export const query = graphql`
         date
         title
         tags
+        id
+        price
         cover {
           childImageSharp {
             fluid(
