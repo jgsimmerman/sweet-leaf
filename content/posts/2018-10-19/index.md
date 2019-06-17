@@ -3,6 +3,8 @@ path: "/post-five"
 cover: "./succ5.jpg"
 date: "2018-10-19"
 title: "Product Number Five"
+price: 10.00
+id: 10
 tags: ['tutorial', 'javascript', 'frontend']
 published: true
 ---

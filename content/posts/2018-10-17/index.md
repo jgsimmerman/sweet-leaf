@@ -3,6 +3,8 @@ path: "/post-three"
 cover: "./succ3.jpg"
 date: "2018-10-17"
 title: "Product Number Three"
+price: 8.00
+id: 8
 tags: ['gatsby', 'news', 'other']
 published: true
 ---

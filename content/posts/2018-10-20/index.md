@@ -3,6 +3,8 @@ path: "/post-six"
 cover: "./succ6.jpg"
 date: "2018-10-20"
 title: "Product Number Six"
+price: 20.00
+id: 20
 tags: ['gatsby', 'tutorial']
 published: true
 ---
