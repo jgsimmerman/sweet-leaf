@@ -31,12 +31,24 @@ const Post = ({ data, pageContext }) => {
   const html = post.html;
   return (
     <Layout>
-      <Helmet htmlAttributes={{ lang: 'en' }}>
-      
-      <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" rel="stylesheet" type="text/css" />
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-      <script id="snipcart" src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" data-api-key="YjdiNWIyOTUtZTIyMy00MWMwLTkwNDUtMzI1M2M2NTgxYjE0"></script>
-    </Helmet>
+      <Helmet
+          htmlAttributes={{ lang: 'en' }}
+         
+          link={[{
+            href:"https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css",
+            rel:"stylesheet",
+            type:"text/css" 
+          }]}
+          script={[{ 
+            type: 'text/javascript',
+            id: "snipcart",
+            "data-api-key": "OWRmMjdlZWUtNzM1NS00YmQzLWFlN2EtOGU2MTIyOGQyZDQ4NjM2OTUwMjk5ODUzNDc5OTgw",
+            src:"https://cdn.snipcart.com/scripts/2.0/snipcart.js" 
+          },{
+            type: 'text/javascript',
+            src:"https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"
+          }]}
+        />
       <SEO
         title={title}
         description={post.frontmatter.description || post.excerpt || ' '}
@@ -49,16 +61,8 @@ const Post = ({ data, pageContext }) => {
         <Content input={html} />
         <TagsBlock list={post.frontmatter.tags || []} />
       </Container>
-      <button
-    className='snipcart-add-item buyBtn'
-    data-item-id={post.frontmatter.id}
-    data-item-price={post.frontmatter.price}
-    data-item-image={post.frontmatter.image}
-    data-item-name={post.frontmatter.title}
-    data-item-description={post.frontmatter.description}
-    data-item-url={"http://snipcart-gatsby.netlify.com" + post.frontmatter.path}>
-    Buy
-</button>
+      <BuyButton post={post.frontmatter}></BuyButton>
+
       <SuggestionBar>
         <PostSuggestion>
           {prev && (
@@ -101,6 +105,7 @@ export const query = graphql`
         tags
         id
         price
+        path
         cover {
           childImageSharp {
             fluid(

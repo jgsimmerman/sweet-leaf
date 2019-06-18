@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
 
-var BuyButton = React.memo(({post, images}) => {
+let BuyButton = React.memo(({post, images}) => {
     const [selected, setSelected] = post.customField 
         ? useState(post.customField.values[0]) 
         : useState({});
-    var filteredImgs = images.filter(x => x.name === selected);
-    var choosenImgSrc = filteredImgs.length > 0
-    ? filteredImgs[0].src
-    : images[0].src
+    //var filteredImgs = images.filter(x => x.name === selected);
+    //var choosenImgSrc = filteredImgs.length > 0
+    //? filteredImgs[0].src
+    //: images[0].src
 
     return (
     <div>
-        <img src={choosenImgSrc} width="400px" alt={post.title}></img>
         { post.customField && <h3>{post.customField.name}</h3> }
         { post.customField &&
             <select 
@@ -37,7 +36,7 @@ var BuyButton = React.memo(({post, images}) => {
             color: "#F5F5F5",
             fontWeight: "bold",
             paddingBottom: "15px",
-            paddingTop: "15px",
+            paddingTop: "5px",
             paddingRight: "35px",
             paddingLeft: "35px",
             fontSize: "24"
@@ -46,10 +45,9 @@ var BuyButton = React.memo(({post, images}) => {
         className='snipcart-add-item buyBtn'
         data-item-id={post.id}
         data-item-price={post.price}
-        data-item-image={choosenImgSrc}
         data-item-name={post.title}
         data-item-description={post.description}
-        data-item-url={"https://snipcart-react-gatsby.netlify.com/" + post.path}>
+        data-item-url={"http://localhost:8000" + post.path}>
         Buy for {post.price}$
         </button>
     </div>
