@@ -36,6 +36,10 @@ const NavBar = () => (
       <Link to="/">Home</Link>
       <Link to="/catalog">Catalog</Link>
       <Link to="/about">About</Link>
+      <a className="Header__summary snipcart-checkout snipcart-summary" href="#" >
+        Cart: <span class="snipcart-total-items"></span>
+        {/* |<span class="snipcart-total-price"></span> */}
+      </a>
     </Nav>
   </Headroom>
 );

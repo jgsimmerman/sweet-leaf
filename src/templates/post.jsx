@@ -31,7 +31,7 @@ const Post = ({ data, pageContext }) => {
   const html = post.html;
   return (
     <Layout>
-      <Helmet
+      {/* <Helmet
           htmlAttributes={{ lang: 'en' }}
          
           link={[{
@@ -48,7 +48,7 @@ const Post = ({ data, pageContext }) => {
             type: 'text/javascript',
             src:"https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"
           }]}
-        />
+        /> */}
       <SEO
         title={title}
         description={post.frontmatter.description || post.excerpt || ' '}
