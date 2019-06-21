@@ -1,8 +1,8 @@
 {
   "name": "gatsby-tutorial-starter",
-  "author": "Justin Formentin",
+  "author": "Jacob Simmerman",
   "title": "Gatsby V2 Tutorial Starter",
-  "description": "My Blog",
+  "description": "Succulent Store",
   "homepage": "https://gatsby-tutorial-starter.netlify.com",
   "license": "MIT",
   "version": "0.0.7",
@@ -50,6 +50,7 @@
     "react-dom": "^16.7.0",
     "react-headroom": "^2.2.4",
     "react-helmet": "^5.2.0",
+    "react-snipcart": "^0.1.6",
     "react-typography": "^0.16.18",
     "typeface-candal": "0.0.54",
     "typeface-open-sans": "0.0.54",
@@ -67,9 +68,9 @@
     "prettier": "^1.15.3"
   },
   "keywords": [
-    "justin formentin",
-    "personal blog",
-    "tutorial",
+    "succulent store",
+    "ecommerce",
+    "succulents",
     "gatsby",
     "emotion"
   ]

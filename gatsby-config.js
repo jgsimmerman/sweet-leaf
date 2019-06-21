@@ -64,6 +64,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-snipcart',
       options: {
+          jquery: 'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js',
           apiKey: 'OWRmMjdlZWUtNzM1NS00YmQzLWFlN2EtOGU2MTIyOGQyZDQ4NjM2OTUwMjk5ODUzNDc5OTgw',
           autopop: true,
       }

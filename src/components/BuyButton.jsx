@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { AddToCart } from 'react-snipcart'
+
 
 let BuyButton = React.memo(({post, images}) => {
     const [selected, setSelected] = post.customField 
@@ -27,7 +29,7 @@ let BuyButton = React.memo(({post, images}) => {
                 {post.customField.values.map((x) => (<option key={x}>{x}</option>))}
             </select>
         }
-        <button 
+        {/* <button 
         data-item-custom1-name={post.customField ? post.customField.name : null}
         data-item-custom1-value={selected}
         style={{
@@ -49,6 +51,29 @@ let BuyButton = React.memo(({post, images}) => {
         data-item-description={post.description}
         data-item-url={"http://localhost:8000" + post.path}>
         Buy for {post.price}$
+        </button> */}
+        <button 
+            style={{
+                backgroundColor: "#212121",
+                borderRadius: "5px",
+                color: "#F5F5F5",
+                fontWeight: "bold",
+                paddingBottom: "15px",
+                paddingTop: "5px",
+                paddingRight: "35px",
+                paddingLeft: "35px",
+                fontSize: "24"
+            }}
+        >
+            <AddToCart data={{
+                id: post.id,
+                name: post.title,
+                url: 'http://localhost:8000' + post.path,
+                price: post.price,
+                openCart: true,
+                }}>
+                Add to Cart for ${post.price}
+            </AddToCart>
         </button>
     </div>
     )

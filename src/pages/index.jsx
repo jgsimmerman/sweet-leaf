@@ -24,8 +24,8 @@ const Index = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
   return (
     <Layout>
-      <Helmet title={'Super Succulents'} />
-      <Header title="Super Succulents">Gatsby Test Site</Header>
+      <Helmet title={'Sweet Leaf Succulents'} />
+      <Header title="Sweet Leaf Succulents">and Ornamental Plants</Header>
       <PostWrapper>
         {edges.map(({ node }) => (
           <PostList
