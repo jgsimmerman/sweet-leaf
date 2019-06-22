@@ -1,14 +1,14 @@
 {
-  "name": "gatsby-tutorial-starter",
+  "name": "sweet-leaf-succulents",
   "author": "Jacob Simmerman",
-  "title": "Gatsby V2 Tutorial Starter",
+  "title": "Sweet Leaf Succulents",
   "description": "Succulent Store",
   "homepage": "https://gatsby-tutorial-starter.netlify.com",
   "license": "MIT",
   "version": "0.0.7",
   "repository": {
     "type": "git",
-    "url": "https://github.com/justinformentin/gatsby-v2-tutorial-starter"
+    "url": "https://github.com/jgsimmerman/gatsby-v2-tutorial-starter"
   },
   "scripts": {
     "develop": "gatsby develop",
