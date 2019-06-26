@@ -29,6 +29,7 @@ const Post = ({ data, pageContext }) => {
   const title = post.frontmatter.title;
   const date = post.frontmatter.date;
   const html = post.html;
+  const story = post.frontmatter.story;
   return (
     <Layout>
       {/* <Helmet
@@ -51,17 +52,22 @@ const Post = ({ data, pageContext }) => {
         /> */}
       <SEO
         title={title}
+        story={story}
         description={post.frontmatter.description || post.excerpt || ' '}
         image={image}
         pathname={post.frontmatter.path}
         article
       />
       <Header title={title} cover={image} />
+     
       <Container>
+      <p>{post.frontmatter.story}</p>
         <Content input={html} />
         <TagsBlock list={post.frontmatter.tags || []} />
+        <p>{story} </p>
+        <BuyButton post={post.frontmatter}></BuyButton>
       </Container>
-      <BuyButton post={post.frontmatter}></BuyButton>
+      
 
       <SuggestionBar>
         <PostSuggestion>
@@ -106,6 +112,7 @@ export const query = graphql`
         id
         price
         path
+        story
         cover {
           childImageSharp {
             fluid(
