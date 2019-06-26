@@ -1,10 +1,11 @@
 ---
 path: "/post-one"
 cover: "./succ1.jpg"
+pic: "./succ1.jpg"
 date: "2018-10-15"
 title: "Product Number One"
 published: true
-story: "Story post"
+story: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea nulla modi, odit explicabo hic doloremque commodi ab molestiae. Iure voluptatem labore et aliquid soluta inventore expedita quam vel a earum!"
 price: 6.00
 id: 6
 tags: ['website', 'react', 'other']

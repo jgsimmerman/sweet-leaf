@@ -7,6 +7,7 @@ import { TagsBlock, Header, SEO } from 'components';
 import '../styles/prism';
 import Helmet from 'react-helmet';
 import BuyButton from '../components/BuyButton'
+import ItemContent from '../components/ItemContent'
 
 
 const SuggestionBar = styled.div`
@@ -26,6 +27,7 @@ const Post = ({ data, pageContext }) => {
   const { next, prev } = pageContext;
   const post = data.markdownRemark;
   const image = post.frontmatter.cover.childImageSharp.fluid;
+  //const pic = post.frontmatter.image.childImageSharp.fluid;
   const title = post.frontmatter.title;
   const date = post.frontmatter.date;
   const html = post.html;
@@ -61,11 +63,13 @@ const Post = ({ data, pageContext }) => {
       <Header title={title} cover={image} />
      
       <Container>
-      <p>{post.frontmatter.story}</p>
-        <Content input={html} />
+      
+        {/* <Item /> */}
+        <ItemContent post={post.frontmatter} />
+        {/* <Content input={html} />
         <TagsBlock list={post.frontmatter.tags || []} />
         <p>{story} </p>
-        <BuyButton post={post.frontmatter}></BuyButton>
+        <BuyButton post={post.frontmatter}></BuyButton> */}
       </Container>
       
 
@@ -113,6 +117,7 @@ export const query = graphql`
         price
         path
         story
+        
         cover {
           childImageSharp {
             fluid(
