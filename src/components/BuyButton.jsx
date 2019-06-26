@@ -72,7 +72,7 @@ let BuyButton = React.memo(({post, images}) => {
                 price: post.price,
                 openCart: true,
                 }}>
-                Add to Cart for ${post.price}
+                Add to Cart {/* for ${post.price} */}
             </AddToCart>
         </button>
     </div>

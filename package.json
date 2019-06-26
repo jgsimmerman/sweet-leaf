@@ -52,6 +52,8 @@
     "react-helmet": "^5.2.1",
     "react-snipcart": "^0.1.6",
     "react-typography": "^0.16.19",
+    "styled-components": "^4.3.2",
+    "styled-grid-component": "^1.1.13",
     "typeface-candal": "0.0.72",
     "typeface-open-sans": "0.0.54",
     "typography": "^0.16.19"

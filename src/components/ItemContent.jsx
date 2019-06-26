@@ -4,10 +4,11 @@ import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 import { Layout, Container, Content } from 'layouts';
 import { TagsBlock, Header, SEO } from 'components';
-import '../styles/prism';
 import Helmet from 'react-helmet';
 import BuyButton from './BuyButton'
 import Img from 'gatsby-image'
+import { Grid, GridItem } from 'styled-grid-component';
+
 
 const Wrapper = styled.div`
   padding: 1rem 0 2rem 0
@@ -41,6 +42,9 @@ const StyledImg = styled(Img)`
   margin: 0 auto
   width: 10%
 `
+/*  const Grid = styled(Grid)`
+  display: flex
+`  */
 
 /*
 .itemPageWrapper
@@ -115,7 +119,7 @@ const ItemContent = ({ post }) => {
 
   return (
     <Wrapper>
-        <Image>
+        {/* <Image>
           
         </Image>
          <Img fluid={post.cover.childImageSharp.fluid} alt="" />
@@ -127,6 +131,22 @@ const ItemContent = ({ post }) => {
           </p>
           <BuyButton post={post}></BuyButton>
         </Info>
+ */}
+        <Grid display="flex" width="100%" height="50vh" templateColumns="repeat(2, 1fr)" gap="70px" autoRows="minmax(70px, auto)">
+          <GridItem column="1" row="1" >
+            <Img fluid={post.cover.childImageSharp.fluid} alt="" />
+          </GridItem>
+          <GridItem column="2 " row="1" >
+            <Info>
+              <ItemName>{post.title}</ItemName>
+              <Cost><strong>${post.price}</strong></Cost>
+              <p className="ItemName">
+                  {post.story}
+              </p>
+              <BuyButton post={post}></BuyButton>
+            </Info>
+          </GridItem>
+        </Grid>
     </Wrapper>    
   )
   
