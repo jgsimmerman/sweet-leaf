@@ -5,6 +5,7 @@ import Helmet from 'react-helmet';
 import styled from '@emotion/styled';
 import { Header, PostList } from 'components';
 import { Layout } from 'layouts';
+import { SocialIcon } from 'react-social-icons';
 
 const PostWrapper = styled.div`
   display: flex;
@@ -12,6 +13,12 @@ const PostWrapper = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 4rem 4rem 1rem 4rem;
+  .SocialIcon {
+    display: flex;
+    align-items: right;
+    width: 25px;
+    height: 25px;
+  }
   @media (max-width: 1000px) {
     margin: 4rem 2rem 1rem 2rem;
   }
@@ -20,12 +27,29 @@ const PostWrapper = styled.div`
   }
 `;
 
+const SocialWrapper = styled.span`
+display: flex;
+align-items: right;
+position: right;
+/* width: 75%;
+height: 75%; */
+`
+
 const Index = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
   return (
     <Layout>
       <Helmet title={'Sweet Leaf Succulents'} />
-      <Header title="Sweet Leaf Succulents">and Ornamental Plants</Header>
+
+      <Header title="Sweet Leaf Succulents">{/* and Ornamental Plants */}
+        <SocialWrapper className="SocialIcon">
+          <SocialIcon url="https://www.facebook.com/" bgColor="#000000" />
+          <SocialIcon url="http://twitter.com/jacobsimmerman" bgColor="#000000"/>
+          <SocialIcon url="http://pinterest.com/jacobsimmerman" bgColor="#000000"/>
+          <SocialIcon url="http://instagram.com/jacobsimmerman" bgColor="#000000" />
+          <SocialIcon url="http://reddit.com/u/jacobsimmerman" bgColor="#000000" />
+        </SocialWrapper>
+      </Header>
       <PostWrapper>
         {edges.map(({ node }) => (
           <PostList

@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { SocialIcon } from 'react-social-icons';
 
 const Wrapper = styled.footer`
   position: relative;
@@ -25,8 +26,9 @@ const Footer = () => (
   <Wrapper>
     <Text>
       <span>
-      Sweet Leaf Succulents and Ornamental Plants, LLC -{' '}
-        <a href="https://twitter.com/jacobsimmerman">Follow us on twitter!</a>
+      Sweet Leaf Succulents and Ornamental Plants, LLC {' '}
+        {/* <a href="https://twitter.com/jacobsimmerman">Follow us on twitter!</a> */}
+        
       </span>
     </Text>
   </Wrapper>

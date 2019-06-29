@@ -13,6 +13,7 @@ import { Grid, GridItem } from 'styled-grid-component';
 const Wrapper = styled.div`
   padding: 1rem 0 2rem 0
   display: flex
+  flex-wrap: wrap
   flex-direction: column
 `
 
@@ -42,8 +43,9 @@ const StyledImg = styled(Img)`
   margin: 0 auto
   width: 10%
 `
-/*  const Grid = styled(Grid)`
+/* const StyledGrid = styled(Grid)`
   display: flex
+  flex-direction: column
 `  */
 
 /*
@@ -132,7 +134,7 @@ const ItemContent = ({ post }) => {
           <BuyButton post={post}></BuyButton>
         </Info>
  */}
-        <Grid display="flex" width="100%" height="50vh" templateColumns="repeat(2, 1fr)" gap="70px" autoRows="minmax(70px, auto)">
+        <Grid display="flex" flex-wrap="wrap" width="100%" height="50vh" templateColumns="repeat(2, 1fr)" gap="70px" autoRows="minmax(70px, auto)">
           <GridItem column="1" row="1" >
             <Img fluid={post.cover.childImageSharp.fluid} alt="" />
           </GridItem>
