@@ -1,13 +1,14 @@
 ---
-path: "/post-one"
+path: "/catalog/maigret"
 cover: "./succ1.jpg"
 pic: "./succ1.jpg"
 date: "2018-10-15"
-title: "Product Number One"
+title: "Maigret"
+scientificname: "Sempervivum"
 published: true
-story: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea nulla modi, odit explicabo hic doloremque commodi ab molestiae. Iure voluptatem labore et aliquid soluta inventore expedita quam vel a earum!"
-price: 6.00
-id: 6
+story: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+price: 3.95
+id: 1
 tags: ['website', 'react', 'other']
 
 ---

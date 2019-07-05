@@ -32,6 +32,8 @@ const Post = ({ data, pageContext }) => {
   const date = post.frontmatter.date;
   const html = post.html;
   const story = post.frontmatter.story;
+  const scientificname = post.frontmatter.scientificname;
+
   return (
     <Layout>
       {/* <Helmet
@@ -117,7 +119,7 @@ export const query = graphql`
         price
         path
         story
-        
+        scientificname
         cover {
           childImageSharp {
             fluid(

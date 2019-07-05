@@ -43,6 +43,9 @@ const StyledImg = styled(Img)`
   margin: 0 auto
   width: 10%
 `
+const Story = styled.p`
+  grid-column-start: span 2
+`
 /* const StyledGrid = styled(Grid)`
   display: flex
   flex-direction: column
@@ -134,21 +137,39 @@ const ItemContent = ({ post }) => {
           <BuyButton post={post}></BuyButton>
         </Info>
  */}
-        <Grid display="flex" flex-wrap="wrap" width="100%" height="50vh" templateColumns="repeat(2, 1fr)" gap="70px" autoRows="minmax(70px, auto)">
+      <Grid>
+        <Grid display="flex" flex-wrap="wrap" width="100%" height="30vh" templateColumns="repeat(2, 1fr)" gap="70px" autoRows="minmax(70px, auto)">
           <GridItem column="1" row="1" >
             <Img fluid={post.cover.childImageSharp.fluid} alt="" />
           </GridItem>
           <GridItem column="2 " row="1" >
             <Info>
               <ItemName>{post.title}</ItemName>
+              <p><em>{post.scientificname}</em></p>
               <Cost><strong>${post.price}</strong></Cost>
-              <p className="ItemName">
+               {/* <p className="ItemName">
                   {post.story}
-              </p>
+              </p>  */}
               <BuyButton post={post}></BuyButton>
             </Info>
           </GridItem>
+         
         </Grid>
+        <Grid>
+          <GridItem column=" 1 / 2" row="2">
+            <p className="ItemName">
+                  {post.story}
+              </p>
+          </GridItem>
+        </Grid>
+      </Grid>
+{/*         <Grid display="flex" flex-wrap="wrap" width="100%" height="50vh" templateColumns="repeat(1, 1fr)" gap="70px" autoRows="minmax(70px, auto)"></Grid>
+          <GridItem column="1" row="1" >
+            <p className="ItemName">
+                  {post.story}
+              </p>
+          </GridItem>
+        </Grid> */}
     </Wrapper>    
   )
   
@@ -193,6 +214,7 @@ query($pathSlug: String!) {
       price
       path
       story
+      pic
       cover {
         childImageSharp {
           fluid(
