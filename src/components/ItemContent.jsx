@@ -138,7 +138,7 @@ const ItemContent = ({ post }) => {
         </Info>
  */}
       <Grid>
-        <Grid display="flex" flex-wrap="wrap" width="100%" height="30vh" templateColumns="repeat(2, 1fr)" gap="70px" autoRows="minmax(70px, auto)">
+        <Grid display="flex" flex-wrap="wrap" width="100%" height="100%" templateColumns="repeat(2, 1fr)" gap="70px" autoRows="max-content">
           <GridItem column="1" row="1" >
             <Img fluid={post.cover.childImageSharp.fluid} alt="" />
           </GridItem>
@@ -156,11 +156,29 @@ const ItemContent = ({ post }) => {
          
         </Grid>
         <Grid>
+          <br />
           <GridItem column=" 1 / 2" row="2">
             <p className="ItemName">
-                  {post.story}
-              </p>
+                {post.story}
+            </p>
+            <br />
           </GridItem>
+          <hr></hr>
+        </Grid>
+        <Grid display="flex" flex-wrap="wrap" width="50%" height="100%" templateColumns="repeat(2, 1fr)" gap="70px" autoRows="max-content">
+          <GridItem column="1" row="1" >
+            <div>Primary Color:</div>
+            <div>Stress Colors:</div>
+            <div>Pet Safe:</div>
+            <div>Seasonality:</div> 
+          </GridItem>
+          <GridItem column="2 " row="1" >
+            <div>{post.primarycolor}</div>
+            <div>{post.stresscolors}</div>
+            <div>{post.petsafe}</div>
+            <div>{post.seasonality}</div>
+          </GridItem>
+         
         </Grid>
       </Grid>
 {/*         <Grid display="flex" flex-wrap="wrap" width="100%" height="50vh" templateColumns="repeat(1, 1fr)" gap="70px" autoRows="minmax(70px, auto)"></Grid>

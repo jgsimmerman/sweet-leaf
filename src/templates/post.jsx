@@ -120,6 +120,10 @@ export const query = graphql`
         path
         story
         scientificname
+        primarycolor
+        stresscolors
+        petsafe
+        seasonality
         cover {
           childImageSharp {
             fluid(
