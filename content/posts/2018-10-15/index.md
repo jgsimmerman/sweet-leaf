@@ -10,8 +10,8 @@ story: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
 price: 3.95
 id: 1
 tags: ['website', 'react', 'other']
-primarycolor: "Green / Lime"
-stresscolors: "Red / Burgundy"
+primarycolor: "Green/Lime"
+stresscolors: "Red/Burgundy"
 petsafe: "Yes"
 seasonality: "Winter Dormant Partial"
 ---

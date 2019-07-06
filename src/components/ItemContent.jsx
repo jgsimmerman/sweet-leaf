@@ -9,7 +9,6 @@ import BuyButton from './BuyButton'
 import Img from 'gatsby-image'
 import { Grid, GridItem } from 'styled-grid-component';
 
-
 const Wrapper = styled.div`
   padding: 1rem 0 2rem 0
   display: flex
@@ -49,11 +48,9 @@ const Story = styled.p`
 
 
 const ItemContent = ({ post }) => {
-
   
   return (
     <Wrapper>
-      <Grid>
         <Grid display="flex" flex-wrap="wrap" width="100%" height="100%" templateColumns="repeat(2, 1fr)" gap="70px" autoRows="max-content">
           <GridItem column="1" row="1" >
             <Img fluid={post.cover.childImageSharp.fluid} alt="" />
@@ -68,8 +65,7 @@ const ItemContent = ({ post }) => {
               </p>  */}
               <BuyButton post={post}></BuyButton>
             </Info>
-          </GridItem>
-         
+          </GridItem>  
         </Grid>
         <Grid>
           <br />
@@ -77,7 +73,7 @@ const ItemContent = ({ post }) => {
             <p className="ItemName">
                 {post.story}
             </p>
-            <br />
+          <br />
           </GridItem>
           <hr></hr>
         </Grid>
@@ -96,10 +92,8 @@ const ItemContent = ({ post }) => {
           </GridItem>
          
         </Grid>
-      </Grid>
     </Wrapper>    
   )
-  
 }
 
 

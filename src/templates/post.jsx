@@ -36,28 +36,11 @@ const Post = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      {/* <Helmet
-          htmlAttributes={{ lang: 'en' }}
-         
-          link={[{
-            href:"https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css",
-            rel:"stylesheet",
-            type:"text/css" 
-          }]}
-          script={[{ 
-            type: 'text/javascript',
-            id: "snipcart",
-            "data-api-key": "OWRmMjdlZWUtNzM1NS00YmQzLWFlN2EtOGU2MTIyOGQyZDQ4NjM2OTUwMjk5ODUzNDc5OTgw",
-            src:"https://cdn.snipcart.com/scripts/2.0/snipcart.js" 
-          },{
-            type: 'text/javascript',
-            src:"https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"
-          }]}
-        /> */}
+      
       <SEO
         title={title}
         story={story}
-        description={post.frontmatter.description || post.excerpt || ' '}
+        //description={post.frontmatter.description || post.excerpt || ' '}
         image={image}
         pathname={post.frontmatter.path}
         article
@@ -66,15 +49,9 @@ const Post = ({ data, pageContext }) => {
      
       <Container>
       
-        {/* <Item /> */}
         <ItemContent post={post.frontmatter} />
-        {/* <Content input={html} />
-        <TagsBlock list={post.frontmatter.tags || []} />
-        <p>{story} </p>
-        <BuyButton post={post.frontmatter}></BuyButton> */}
+        
       </Container>
-      
-
       
     </Layout>
   );
