@@ -77,18 +77,28 @@ const ItemContent = ({ post }) => {
           </GridItem>
           <hr></hr>
         </Grid>
-        <Grid display="flex" flex-wrap="wrap" width="50%" height="100%" templateColumns="repeat(2, 1fr)" gap="70px" autoRows="max-content">
+        <Grid display="flex" flex-wrap="wrap" width="80" height="100%" templateColumns="repeat(2, 1fr)" gap="70px" autoRows="max-content">
           <GridItem column="1" row="1" >
             <div>Primary Color:</div>
             <div>Stress Colors:</div>
-            <div>Pet Safe:</div>
-            <div>Seasonality:</div> 
+            <div>Bloom Color:</div>
+            
           </GridItem>
           <GridItem column="2 " row="1" >
             <div>{post.primarycolor}</div>
             <div>{post.stresscolors}</div>
+            <div>{post.bloomcolor}</div>
+            
+          </GridItem>
+          <GridItem column="3" row="1">
+            <div>Pet Safe:</div>
+            <div>Seasonality:</div> 
+            <div>Temperature:</div>
+          </GridItem>
+          <GridItem column="4" row="1">
             <div>{post.petsafe}</div>
             <div>{post.seasonality}</div>
+            <div>{post.temperature}</div>
           </GridItem>
          
         </Grid>

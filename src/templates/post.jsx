@@ -84,6 +84,8 @@ export const query = graphql`
         stresscolors
         petsafe
         seasonality
+        bloomcolor
+        temperature
         cover {
           childImageSharp {
             fluid(
