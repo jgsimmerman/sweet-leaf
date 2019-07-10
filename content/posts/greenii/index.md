@@ -10,7 +10,6 @@ story: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
 price: 3.95
 id: 1
 catalog-section: "hens-n-chicks"
-tags: ['website', 'react', 'other']
 primarycolor: "Green/Lime"
 stresscolors: "Red/Burgundy"
 bloomcolor: "Pink"

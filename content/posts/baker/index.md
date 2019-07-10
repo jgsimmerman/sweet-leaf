@@ -1,5 +1,5 @@
 ---
-path: "/catalog/sempervivum/baker
+path: "/catalog/sempervivum/baker"
 cover: "./succ6.jpg"
 pic: "./succ6.jpg"
 date: "2018-10-15"

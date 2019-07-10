@@ -15,7 +15,6 @@ bloomcolor: "Pink"
 petsafe: "Yes"
 temperature: "-20/5"
 seasonality: "Winter Dormant Partial"
-id: 1
 catalog-section: "hens-n-chicks"
 tags: ['Hens & Chicks', 'Sempervivum']
 
