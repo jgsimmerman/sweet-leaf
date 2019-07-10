@@ -18,6 +18,7 @@ exports.createPages = ({ graphql, actions }) => {
               edges {
                 node {
                   frontmatter {
+                    id
                     path
                     title
                     tags
@@ -47,6 +48,22 @@ exports.createPages = ({ graphql, actions }) => {
             });
           }
         });
+
+     /*    // START
+        posts.forEach(({ node }) => {
+          if (node.frontmatter.id === 1) {
+            createPage({
+              path: '/semps',
+              component: postTemplate,
+              context: {
+                tags: tags.sort(),
+              },
+            });
+          }
+        });
+
+
+        // END */
 
         const tags = Object.keys(postsByTag);
 
