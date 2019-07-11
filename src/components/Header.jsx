@@ -2,6 +2,8 @@ import React from 'react';
 import styled from '@emotion/styled';
 import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
+import { SocialIcon } from 'react-social-icons';
+
 
 const Wrapper = styled.header`
 
@@ -42,6 +44,14 @@ const Subtitle = styled.p`
   color: ${props => props.theme.colors.white.light};
 `;
 
+const SocialWrapper = styled.span`
+display: flex;
+align-items: right;
+position: right;
+/* width: 75%;
+height: 75%; */
+`
+
 const Header = ({ children, title, date, cover }) => (
   <Wrapper>
     <Img fluid={cover || {} || [] || ''} />
@@ -51,6 +61,15 @@ const Header = ({ children, title, date, cover }) => (
 
       {children && <Subtitle>{children}</Subtitle>}
     </Text>
+    {/* 
+      <SocialWrapper className="SocialIcon">
+          <SocialIcon url="https://www.facebook.com/" bgColor="#000000" />
+          <SocialIcon url="http://twitter.com/jacobsimmerman" bgColor="#000000"/>
+          <SocialIcon url="http://pinterest.com/jacobsimmerman" bgColor="#000000"/>
+          <SocialIcon url="http://instagram.com/jacobsimmerman" bgColor="#000000" />
+          <SocialIcon url="http://reddit.com/u/jacobsimmerman" bgColor="#000000" />
+      </SocialWrapper> 
+      */}
   </Wrapper>
 );
 
