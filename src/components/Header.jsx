@@ -50,7 +50,7 @@ align-items: right;
 position: right;
 /* width: 75%;
 height: 75%; */
-`
+`;
 
 const Header = ({ children, title, date, cover }) => (
   <Wrapper>
