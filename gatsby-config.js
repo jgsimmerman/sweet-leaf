@@ -10,13 +10,19 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    `gatsby-mdx`,
     'gatsby-plugin-catch-links',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'posts',
         path: `${__dirname}/content/posts`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/images`,
+        name: 'images',
       },
     },
     'gatsby-transformer-sharp',
