@@ -17,7 +17,7 @@ const Wrapper = styled.div`
 `
 
 const Image = styled.span`
-background: #eee
+  background: #eee
   flex: 1
   min-height: 50vh
 `
@@ -53,7 +53,9 @@ const ItemContent = ({ post }) => {
     <Wrapper>
         <Grid display="flex" flex-wrap="wrap" width="100%" height="100%" templateColumns="repeat(2, 1fr)" gap="70px" autoRows="max-content">
           <GridItem column="1" row="1" >
-            <Img fluid={post.cover.childImageSharp.fluid} alt="" />
+            <Image>
+              <Img fluid={post.pic.childImageSharp.fluid} alt="" />
+            </Image>
           </GridItem>
           <GridItem column="2 " row="1" >
             <Info>

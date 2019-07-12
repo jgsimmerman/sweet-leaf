@@ -43,7 +43,7 @@ const Catalog = ({ data }) => {
           date={node.frontmatter.date}
           tags={node.frontmatter.tags}
           excerpt={node.excerpt}
-          pic={node.frontmatter.pic.childImageSharp.fluid}
+          //pic={node.frontmatter.pic.childImageSharp.fluid}
 
         />
       ))}

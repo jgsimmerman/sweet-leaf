@@ -32,6 +32,7 @@ const Post = ({ data, pageContext }) => {
   const date = post.frontmatter.date;
   const html = post.html;
   const story = post.frontmatter.story;
+  const pic = post.frontmatter.pic.childImageSharp.fluid
   const scientificname = post.frontmatter.scientificname;
 
   return (
@@ -86,6 +87,17 @@ export const query = graphql`
         seasonality
         bloomcolor
         temperature
+        pic {
+          childImageSharp {
+            fluid(
+              maxWidth: 1000
+               quality: 90
+               traceSVG: {color: "#2B2B2F"}
+              ){
+                ...GatsbyImageSharpFluid_withWebp_tracedSVG
+              }
+          }
+        }
         cover {
           childImageSharp {
             fluid(
