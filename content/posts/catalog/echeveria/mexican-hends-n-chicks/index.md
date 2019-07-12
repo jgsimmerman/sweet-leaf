@@ -1,18 +1,18 @@
 ---
-path: "/catalog/echiveria/mexican-hens-n-chicks"
+path: "/catalog/echeveria/wilderness"
 cover: "./succ3.jpg"
 pic: "./succ3.jpg"
-title: "Mexican Hens & Chicks"
-scientificname: "Echiveria Subalpina"
+title: "Wilderness"
+scientificname: "Echeveria"
 id: 4
-catalog-section: "echiveria"
-tags: ['Echiveria']
-primarycolor: "Blue/Blue-Green"
-stresscolors: "Pink"
-bloomcolor: "Yellow"
+catalog-section: "echeveria"
+tags: ['echeveria']
+primarycolor: "Green"
+stresscolors: "Red"
+bloomcolor: "None"
 petsafe: "Yes"
 temperature: "20F/9"
-seasonality: ""
+seasonality: "Year-round Color"
 inventory: 5
 price: 3.95
 published: true

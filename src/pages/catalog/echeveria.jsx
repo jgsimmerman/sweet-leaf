@@ -21,7 +21,7 @@ const CatalogWrapper = styled.div`
   }
 `;
 
-const Echiveria = ({ data }) => {
+const echeveria = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
   return (
     <Layout>
@@ -32,7 +32,7 @@ const Echiveria = ({ data }) => {
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
       <script id="snipcart" src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" data-api-key="YjdiNWIyOTUtZTIyMy00MWMwLTkwNDUtMzI1M2M2NTgxYjE0"></script>
       </Helmet> */}
-      <Header title="Echiveria">Sweet Leaf Succulents and Ornamental Plants</Header>
+      <Header title="echeveria">Sweet Leaf Succulents and Ornamental Plants</Header>
       <CatalogWrapper>
       {edges.map(({ node }) => (
         <BlogList
@@ -50,9 +50,9 @@ const Echiveria = ({ data }) => {
   );
 };
 
-export default Echiveria;
+export default echeveria;
 
-Echiveria.propTypes = {
+echeveria.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.arrayOf(

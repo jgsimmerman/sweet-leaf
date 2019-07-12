@@ -64,7 +64,7 @@ const Index = ({ data }) => {
         ))} */}
         <div>
             <Img fluid={data.imageOne.childImageSharp.fluid} />  
-            <Link to="/catalog/echiveria/">Echeveria</Link>      
+            <Link to="/catalog/echeveria/">Echeveria</Link>      
         </div>
       </PostWrapper>
     </Layout>
