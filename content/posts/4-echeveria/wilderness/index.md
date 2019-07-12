@@ -1,15 +1,15 @@
 ---
-path: "/catalog/echiveria/mexican-snowball"
+path: "/catalog/echeveria/mexican-hens-n-chicks"
 cover: "./succ3.jpg"
 pic: "./succ3.jpg"
-title: "Mexican Snowball"
-scientificname: "Echeveria Elegans"
+title: "Mexican Hens & Chicks"
+scientificname: "echeveria Subalpina"
 id: 4
-catalog-section: "echiveria"
-tags: ['Echiveria']
-primarycolor: "Green/Lime"
-stresscolors: ""
-bloomcolor: "Pink"
+catalog-section: "echeveria"
+tags: ['echeveria']
+primarycolor: "Blue/Blue-Green"
+stresscolors: "Pink"
+bloomcolor: "Yellow"
 petsafe: "Yes"
 temperature: "20F/9"
 seasonality: ""

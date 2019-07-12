@@ -1,18 +1,18 @@
 ---
-path: "/catalog/echiveria/wilderness"
+path: "/catalog/echeveria/mexican-snowball"
 cover: "./succ3.jpg"
 pic: "./succ3.jpg"
-title: "Wilderness"
-scientificname: "Echeveria"
+title: "Mexican Snowball"
+scientificname: "Echeveria Elegans"
 id: 4
-catalog-section: "echiveria"
-tags: ['Echiveria']
-primarycolor: "Green"
-stresscolors: "Red"
-bloomcolor: "None"
+catalog-section: "echeveria"
+tags: ['echeveria']
+primarycolor: "Green/Lime"
+stresscolors: ""
+bloomcolor: "Pink"
 petsafe: "Yes"
 temperature: "20F/9"
-seasonality: "Year-round Color"
+seasonality: ""
 inventory: 5
 price: 3.95
 published: true

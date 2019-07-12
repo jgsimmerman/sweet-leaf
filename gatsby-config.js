@@ -78,7 +78,7 @@ module.exports = {
       resolve: 'gatsby-source-google-sheets',
       options: {
           spreadsheetId: '1L6b9PCnciNzXXnWrv_MjC1WTGWZjiE31LhVxU3zZExQ',
-          worksheetTitle: 'Echiveria\x20(test\x20words)',
+          worksheetTitle: 'echeveria\x20(test\x20words)',
           credentials: require('./succulents-eceeb0db1c4f.json')
       }
     },

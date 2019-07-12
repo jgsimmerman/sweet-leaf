@@ -1,12 +1,12 @@
 ---
-path: "/catalog/echiveria/melaco"
+path: "/catalog/echeveria/melaco"
 cover: "./succ3.jpg"
 pic: "./succ3.jpg"
 title: "Melaco"
-scientificname: "Echiveria"
+scientificname: "echeveria"
 id: 4
-catalog-section: "echiveria"
-tags: ['Echiveria']
+catalog-section: "echeveria"
+tags: ['echeveria']
 primarycolor: "Green/Orange/Copper"
 stresscolors: "Red/Burgundy"
 bloomcolor: "Orange"
