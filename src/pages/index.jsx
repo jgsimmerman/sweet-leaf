@@ -17,7 +17,8 @@ const PostWrapper = styled.div`
   margin: 4rem 4rem 1rem 4rem;
   .SocialIcon {
     display: flex;
-    align-items: right;
+    flex-direction: row;
+    justify-content: flex-end;
     width: 25px;
     height: 25px;
   }
@@ -28,6 +29,7 @@ const PostWrapper = styled.div`
     margin: 4rem 1rem 1rem 1rem;
   }
 `;
+
 const Wrapper = styled.article`
   margin-bottom: 2rem;
   position: relative;
@@ -57,13 +59,15 @@ const Wrapper = styled.article`
     height: 15rem;
   }
 `;
+
 const SocialWrapper = styled.span`
-display: flex;
-align-items: right;
-position: right;
-/* width: 75%;
-height: 75%; */
-`
+  display: flex;
+   flex-direction: row;
+   justify-content: flex-end;
+
+  /* width: 75%;
+  height: 75%; */
+`;
 
 const StyledLink = styled(Link)`
   position: absolute;
@@ -255,4 +259,4 @@ export const pageQuery = graphql`
       ...fluidImage
     } 
   }
-`
+`;

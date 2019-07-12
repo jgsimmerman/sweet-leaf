@@ -118,8 +118,6 @@ exports.createPages = ({ graphql, actions }) => {
         });
       })
     );
-
-
   });
 };
 

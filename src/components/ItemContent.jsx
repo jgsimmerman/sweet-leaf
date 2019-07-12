@@ -17,7 +17,7 @@ const Wrapper = styled.div`
 `
 
 const Image = styled.span`
-  background: #eee
+background: #eee
   flex: 1
   min-height: 50vh
 `
