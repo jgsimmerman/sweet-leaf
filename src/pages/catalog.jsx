@@ -43,6 +43,8 @@ const Catalog = ({ data }) => {
           date={node.frontmatter.date}
           tags={node.frontmatter.tags}
           excerpt={node.excerpt}
+          pic={node.frontmatter.pic.childImageSharp.fluid}
+
         />
       ))}
       </CatalogWrapper>
@@ -87,6 +89,17 @@ export const query = graphql`
             id
             price
             date(formatString: "MM.DD.YYYY")
+            pic {
+              childImageSharp {
+                fluid(
+                  maxWidth: 1000
+                   quality: 90
+                   traceSVG: {color: "#2B2B2F"}
+                  ){
+                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                  }
+              }
+            }
             cover {
               childImageSharp {
                 fluid(
