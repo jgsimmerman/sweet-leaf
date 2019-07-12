@@ -32,7 +32,7 @@ const Catalog = ({ data }) => {
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
       <script id="snipcart" src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" data-api-key="YjdiNWIyOTUtZTIyMy00MWMwLTkwNDUtMzI1M2M2NTgxYjE0"></script>
     </Helmet> */}
-      <Header title="Catalog">Sweet Leaf Succulents and Ornamental Plants</Header>
+      <Header title="Full Catalog">Sweet Leaf Succulents and Ornamental Plants</Header>
       <CatalogWrapper>
       {edges.map(({ node }) => (
         <BlogList

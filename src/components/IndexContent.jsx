@@ -83,7 +83,7 @@ IndexContent.propTypes = {
     }),
   }),
 };
-
+/* 
 export const fluidImage = graphql`
 fragment fluidImage on File {
   childImageSharp {
@@ -100,4 +100,4 @@ export const pageQuery = graphql`
       ...fluidImage
     } 
   }
-`
+` */
