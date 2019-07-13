@@ -45,6 +45,19 @@ const StyledImg = styled(Img)`
 const Story = styled.p`
   grid-column-start: span 2
 `
+const Table = styled.table`
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid black;
+
+  thead {
+    background: #C5CBE3;
+    th {
+      text-align: center;
+    }
+  }
+`;
 
 
 const ItemContent = ({ post }) => {
@@ -79,33 +92,13 @@ const ItemContent = ({ post }) => {
           </GridItem>
           <hr></hr>
         </Grid>
-        {/* <Grid display="flex" flex-wrap="wrap" width="80" height="100%" templateColumns="repeat(2, 1fr)" gap="70px" autoRows="max-content">
-          <GridItem column="1" row="1" >
-            <div>Primary Color:</div>
-            <div>Stress Colors:</div>
-            <div>Bloom Color:</div>
-            
-          </GridItem>
-          <GridItem column="2 " row="1" >
-            <div>{post.primarycolor}</div>
-            <div>{post.stresscolors}</div>
-            <div>{post.bloomcolor}</div>
-            
-          </GridItem>
-          <GridItem column="3" row="1">
-            <div>Pet Safe:</div>
-            <div>Seasonality:</div> 
-            <div>Temperature:</div>
-          </GridItem>
-          <GridItem column="4" row="1">
-            <div>{post.petsafe}</div>
-            <div>{post.seasonality}</div>
-            <div>{post.temperature}</div>
-          </GridItem>
-         
-        </Grid> */}
-        <table>
-          <caption>Plant Details</caption>
+        
+        <Table>
+          <thead>
+            <tr>
+              <th colspan="2" >Plant Details</th>
+            </tr>
+          </thead>
           <tbody>
               <tr>
                   <th scope="row">Primary Color: </th>
@@ -119,8 +112,6 @@ const ItemContent = ({ post }) => {
                   <th scope="row">Bloom Color: </th>
                   <td>{post.bloomcolor}</td>
               </tr>
-          </tbody>
-          <tbody>
               <tr>
                   <th scope="row">Pet Safe: </th>
                   <td>{post.petsafe}</td>
@@ -134,7 +125,7 @@ const ItemContent = ({ post }) => {
                   <td>{post.temperature}</td>
               </tr>
           </tbody>
-        </table>
+        </Table>
     </Wrapper>    
   )
 }
