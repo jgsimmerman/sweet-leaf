@@ -21,7 +21,7 @@ const CatalogWrapper = styled.div`
   }
 `;
 
-const Aeonium = ({ data }) => {
+const MoreSoftVarieties = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
   return (
     <Layout>
@@ -32,7 +32,7 @@ const Aeonium = ({ data }) => {
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
       <script id="snipcart" src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" data-api-key="YjdiNWIyOTUtZTIyMy00MWMwLTkwNDUtMzI1M2M2NTgxYjE0"></script>
       </Helmet> */}
-      <Header title="Aeonium">Sweet Leaf Succulents and Ornamental Plants</Header>
+      <Header title="More Soft Varieties">Sweet Leaf Succulents and Ornamental Plants</Header>
       <CatalogWrapper>
       {edges.map(({ node }) => (
         <BlogList
@@ -50,9 +50,9 @@ const Aeonium = ({ data }) => {
   );
 };
 
-export default Aeonium;
+export default MoreSoftVarieties;
 
-Aeonium.propTypes = {
+MoreSoftVarieties.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.arrayOf(
@@ -75,7 +75,7 @@ Aeonium.propTypes = {
 
 export const query = graphql`
   query {
-    allMarkdownRemark(filter: {frontmatter: {id: {eq: 8}}}) {
+    allMarkdownRemark(filter: {frontmatter: {id: {eq: 7}}}) {
       edges {
         node {
           id
