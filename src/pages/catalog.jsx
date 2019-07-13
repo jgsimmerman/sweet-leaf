@@ -77,7 +77,7 @@ Catalog.propTypes = {
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___date] }) {
+    allMarkdownRemark(filter: {frontmatter: {id: {lt: 999}}}) {
       edges {
         node {
           id

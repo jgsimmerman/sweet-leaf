@@ -186,6 +186,16 @@ const Index = ({ data }) => {
         </Wrapper>
         <Wrapper>
           <Image>
+              <Img fluid={data.imageTwo.childImageSharp.fluid} />  
+          </Image>
+          <StyledLink to="/catalog/aeonium/">
+            <Info>
+              <Title>Aeonium</Title>
+            </Info>
+          </StyledLink>
+        </Wrapper>
+        <Wrapper>
+          <Image>
               <Img fluid={data.imageOne.childImageSharp.fluid} />  
           </Image>
           <StyledLink to="/catalog/senecio/">
@@ -211,6 +221,16 @@ const Index = ({ data }) => {
           <StyledLink to="/catalog/hybrids/">
             <Info>
               <Title>Hybrids</Title>
+            </Info>
+          </StyledLink>
+        </Wrapper>
+        <Wrapper>
+          <Image>
+              <Img fluid={data.imageOne.childImageSharp.fluid} />  
+          </Image>
+          <StyledLink to="/catalog/more-soft-varieties/">
+            <Info>
+              <Title>More Soft Varieties</Title>
             </Info>
           </StyledLink>
         </Wrapper>
@@ -257,6 +277,9 @@ export const pageQuery = graphql`
   query {
     imageOne: file(relativePath: { eq: "echeveria.jpg" }) {
       ...fluidImage
-    } 
+    }
+    imageTwo: file(relativePath: { eq: "kiwi.jpg" }) {
+      ...fluidImage
+    }  
   }
 `;
