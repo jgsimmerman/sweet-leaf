@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 import Headroom from 'react-headroom';
 import logo from '../../static/logo/header-logo.png';
 import { CartQty } from 'react-snipcart'
+import PropTypes from 'prop-types';
 
 
+
+{/**   Below Works   */}
 const StyledLink = styled(Link)`
   display: flex;
   font-weight: 700;
