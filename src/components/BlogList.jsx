@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
@@ -87,6 +87,7 @@ const Title = styled.h1`
 `;
 
 const BlogList = ({ path, cover, title, date, excerpt, tags }) => (
+  
   <Container>
     <Wrapper>
       <Image>
