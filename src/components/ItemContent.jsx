@@ -90,8 +90,9 @@ const ItemContent = ({ post }) => {
             </p>
           <br />
           </GridItem>
-          <hr></hr>
         </Grid>
+
+        <hr></hr>
         
         <Table>
           <thead>

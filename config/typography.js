@@ -1,10 +1,11 @@
 import Typography from 'typography';
 
 export const typography = new Typography({
-  title: 'GatsbyTutorial',
+  title: 'Succulents',
   baseFontSize: '18px',
   baseLineHeight: 1.45,
   headerFontFamily: [
+    'Playfair Display',
     'Candal',
     '-apple-system',
     'BlinkMacSystemFont',
@@ -15,7 +16,7 @@ export const typography = new Typography({
     'sans-serif',
   ],
   bodyFontFamily: [
-    'Open Sans',
+    'Georgia',
     '-apple-system',
     'BlinkMacSystemFont',
     'Segoe UI',
