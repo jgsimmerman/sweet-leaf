@@ -7,17 +7,20 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  background: grey;
+  background: #C5CBE3;
   font-weight: 500;
   font-size: 1.1rem;
   align-items: center;
   a {
+    padding: 2px 6px 2px 6px;
     color: ${props => props.theme.colors.white.base};
     margin-left: 2rem;
     transition: all ${props => props.theme.transitions.default.duration};
     &:hover {
-      color: ${props => props.theme.colors.white.grey};
-    }
+/*       color: ${props => props.theme.colors.white.grey};
+ */      background-color: #EFE2BA;
+         border-radius: 10%;
+}
   }
 `;
 

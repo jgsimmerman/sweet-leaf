@@ -3,7 +3,7 @@ import { graphql, Link } from 'gatsby';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 import { Layout, Container, Content } from 'layouts';
-import { TagsBlock, Header, SEO } from 'components';
+import { TagsBlock, Header, SEO, SecondNav } from 'components';
 import Helmet from 'react-helmet';
 import BuyButton from './BuyButton'
 import Img from 'gatsby-image'
@@ -79,7 +79,7 @@ const ItemContent = ({ post }) => {
           </GridItem>
           <hr></hr>
         </Grid>
-        <Grid display="flex" flex-wrap="wrap" width="80" height="100%" templateColumns="repeat(2, 1fr)" gap="70px" autoRows="max-content">
+        {/* <Grid display="flex" flex-wrap="wrap" width="80" height="100%" templateColumns="repeat(2, 1fr)" gap="70px" autoRows="max-content">
           <GridItem column="1" row="1" >
             <div>Primary Color:</div>
             <div>Stress Colors:</div>
@@ -103,7 +103,38 @@ const ItemContent = ({ post }) => {
             <div>{post.temperature}</div>
           </GridItem>
          
-        </Grid>
+        </Grid> */}
+        <table>
+          <caption>Plant Details</caption>
+          <tbody>
+              <tr>
+                  <th scope="row">Primary Color: </th>
+                  <td>{post.primarycolor}</td>
+              </tr>
+              <tr>
+                  <th scope="row">Stress Color:</th>
+                  <td>{post.stresscolors}</td>
+              </tr>
+              <tr>
+                  <th scope="row">Bloom Color: </th>
+                  <td>{post.bloomcolor}</td>
+              </tr>
+          </tbody>
+          <tbody>
+              <tr>
+                  <th scope="row">Pet Safe: </th>
+                  <td>{post.petsafe}</td>
+              </tr>
+              <tr>
+                  <th scope="row">Seasonality:</th>
+                  <td>{post.seasonality}</td>
+              </tr>
+              <tr>
+                  <th scope="row">Temperature: </th>
+                  <td>{post.temperature}</td>
+              </tr>
+          </tbody>
+        </table>
     </Wrapper>    
   )
 }

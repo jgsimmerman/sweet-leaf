@@ -3,7 +3,7 @@ import { graphql, Link } from 'gatsby';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 import { Layout, Container, Content } from 'layouts';
-import { TagsBlock, Header, SEO } from 'components';
+import { TagsBlock, Header, SEO, SecondNav } from 'components';
 import '../styles/prism';
 import Helmet from 'react-helmet';
 import BuyButton from '../components/BuyButton'
@@ -46,8 +46,9 @@ const Post = ({ data, pageContext }) => {
         article
       />
       <Header title={title} cover={image} />
+      <SecondNav />
       <Container>
-        
+       
         <ItemContent post={post.frontmatter} />
         
       </Container>

@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
-import { Header, BlogList } from 'components';
+import { Header, BlogList, SecondNav } from 'components';
 import { Layout } from 'layouts';
 
 
@@ -33,6 +33,7 @@ const Hybrids = ({ data }) => {
       <script id="snipcart" src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" data-api-key="YjdiNWIyOTUtZTIyMy00MWMwLTkwNDUtMzI1M2M2NTgxYjE0"></script>
       </Helmet> */}
       <Header title="Hybrids">Sweet Leaf Succulents and Ornamental Plants</Header>
+      <SecondNav />
       <CatalogWrapper>
       {edges.map(({ node }) => (
         <BlogList
