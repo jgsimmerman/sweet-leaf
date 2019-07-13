@@ -1,6 +1,7 @@
 ---
 path: "/catalog/sempervivum/red-flush"
 cover: "./succ5.jpg"
+pic: "./succ5.jpg"
 date: "2018-10-19"
 title: "Red Flush"
 scientificname: "Sempervivum Tectorum"

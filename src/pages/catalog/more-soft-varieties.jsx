@@ -21,7 +21,7 @@ const CatalogWrapper = styled.div`
   }
 `;
 
-const MoreSoftVarieties = ({ data }) => {
+const echeveria = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
   return (
     <Layout>
@@ -32,7 +32,7 @@ const MoreSoftVarieties = ({ data }) => {
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
       <script id="snipcart" src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" data-api-key="YjdiNWIyOTUtZTIyMy00MWMwLTkwNDUtMzI1M2M2NTgxYjE0"></script>
       </Helmet> */}
-      <Header title="More Soft Varieties">Sweet Leaf Succulents and Ornamental Plants</Header>
+      <Header title="Echeveria">Sweet Leaf Succulents and Ornamental Plants</Header>
       <SecondNav />
       <CatalogWrapper>
       {edges.map(({ node }) => (
@@ -51,9 +51,9 @@ const MoreSoftVarieties = ({ data }) => {
   );
 };
 
-export default MoreSoftVarieties;
+export default echeveria;
 
-MoreSoftVarieties.propTypes = {
+echeveria.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.arrayOf(
