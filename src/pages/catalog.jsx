@@ -5,6 +5,7 @@ import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 import { Header, BlogList } from 'components';
 import { Layout } from 'layouts';
+import { Link } from 'gatsby';
 
 
 const CatalogWrapper = styled.div`
@@ -21,6 +22,24 @@ const CatalogWrapper = styled.div`
   }
 `;
 
+const Nav = styled.nav`
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background: grey;
+  font-weight: 500;
+  font-size: 1.1rem;
+  align-items: center;
+  a {
+    color: ${props => props.theme.colors.white.base};
+    margin-left: 2rem;
+    transition: all ${props => props.theme.transitions.default.duration};
+    &:hover {
+      color: ${props => props.theme.colors.white.grey};
+    }
+  }
+`;
+
 const Catalog = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
   return (
@@ -33,10 +52,19 @@ const Catalog = ({ data }) => {
       <script id="snipcart" src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" data-api-key="YjdiNWIyOTUtZTIyMy00MWMwLTkwNDUtMzI1M2M2NTgxYjE0"></script>
     </Helmet> */}
       <Header title="Full Catalog">Sweet Leaf Succulents and Ornamental Plants</Header>
-      <div>test1</div>
+      <Nav>
+{/*         <Link to="/">Home</Link>
+ */}        
+        <Link to="/catalog/echeveria">Echeveria</Link>
+        <Link to="/catalog/sempervivum-heuffelii">Sempervivum Heuffelii</Link>
+        <Link to="/catalog/aeonium">Aeonium</Link>
+        <Link to="/catalog/senecio">Senecio</Link>
+        <Link to="/catalog/soft-sedum">Soft Sedum</Link>
+        <Link to="/catalog/hybrids">Hybrids</Link>
+        <Link to="/catalog/more-soft-varieties">More Soft Varieties</Link>
+      </Nav>
       <CatalogWrapper>
-        <div>test2</div>
-      {edges.map(({ node }) => (
+        {edges.map(({ node }) => (
         <BlogList
           key={node.id}
           cover={node.frontmatter.cover.childImageSharp.fluid}
