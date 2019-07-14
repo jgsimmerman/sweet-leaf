@@ -44,7 +44,7 @@ const BurgerMenu = () => {
     <div id="outer-container">
       <div id="menu-wrap">
         <Menu
-          right
+          /* right */
           styles={styles}
           id="push"
           pageWrapId="page-wrap"
