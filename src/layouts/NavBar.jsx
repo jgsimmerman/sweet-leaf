@@ -11,36 +11,38 @@ import { FaBars, FaWindowClose } from 'react-icons/fa';
 
 
 const Menu = styled.div`
-  font-family: ${props => props.theme.fontFamily.body};
 
-  
 ul {
-    padding: 0;
+  padding: 0;
+}
+li {
+  display: inline;
+  font-size: 1.1rem;
+  list-style-type: none;
+  margin-left: 30px;
+}
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: ${props => props.theme.colors.white.base};;
+  &:hover {
+    color: ${props => props.theme.colors.white.grey};;
+  }
+}
+@media (max-width: 750px) {
+  padding: 10px 0;
+  ul {
+    background: ${props => props.theme.colors.white.grey};
+    width: 50%;
+    z-index: 1000000000000;
   }
   li {
-    
-    font-weight: 500;
-    font-size: 1.1rem;
-    list-style-type: none;
-    margin-left: 30px;
+    padding: 5px 0;
+    display: block;
+    margin-left: 0;
   }
-  a {
-    color: ${props => props.theme.colors.white.base};
-    transition: all ${props => props.theme.transitions.default.duration};
-    &:hover {
-      color: ${props => props.theme.colors.white.grey};
-    }
-  }
-  @media (max-width: 600px) {
-    background: ${props => props.theme.colors.background.light};;
-    padding: 10px 0;
-    li {
-
-      padding: 10px 0;
-      display: block;
-      margin-left: 0;
-    }
-  }
+}
 `;
 
 
@@ -104,17 +106,18 @@ export default class NavBar extends Component {
        {/*  <StyledLink to="/">
           <img src={logo} alt="Cactus Logo" />
         </StyledLink> */}
+        {/* <img src={logo} alt="Cactus Logo" /> */}
       <div>
         <ResponsiveMenu
           
           menuOpenButton={<FaBars size={30} color="black" />}
           menuCloseButton={<FaWindowClose size={30} color="black" />}
-          changeMenuOn="600px"
+          changeMenuOn="750px"
           largeMenuClassName="large-menu"
           smallMenuClassName="small-menu"
           menu={
             <Menu>
-              <img src={logo} alt="Cactus Logo" />
+              
               <ul>
                 <li>
                 <Link to="/">Home</Link>
