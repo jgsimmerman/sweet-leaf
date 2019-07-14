@@ -8,6 +8,8 @@ import PropTypes from 'prop-types';
 import ResponsiveMenu from 'react-responsive-navbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { FaBars, FaWindowClose } from 'react-icons/fa';
+import { BurgerMenu } from 'layouts';
+
 
 
 const Menu = styled.div`
@@ -104,11 +106,9 @@ export default class NavBar extends Component {
     return (
 
       <Headroom calcHeightOnResize disableInlineStyles>
-        <StyledLink to="/">
-          <img src={logo} alt="Cactus Logo" />
-        </StyledLink>  
+        
         {/* <img src={logo} alt="Cactus Logo" /> */}
-      <div>
+      <div>{/* 
         <ResponsiveMenu
           
           menuOpenButton={<FaBars size={30} color="black" />}
@@ -135,16 +135,19 @@ export default class NavBar extends Component {
                 <li>
                     <a className="Header__summary snipcart-checkout snipcart-summary" href="#" >
                       Cart: <CartQty />
-                    {/* |<span class="snipcart-total-price"></span> */}
+                     |<span class="snipcart-total-price"></span> 
                   </a>
                 </li>
               </ul>
             </Menu>
             
           }
-        />
+        /> */}
        
-
+        <BurgerMenu right/>
+        <StyledLink to="/">
+          <img src={logo} alt="Cactus Logo" />
+        </StyledLink>  
       </div>
       <br/>  
 
