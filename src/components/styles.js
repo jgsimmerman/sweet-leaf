@@ -43,5 +43,8 @@ export default {
     },
     pageWrapId: {
         overflow: 'auto',
+    },
+    menuItem: {
+      color: '#b8b7ad',
     }
   }
