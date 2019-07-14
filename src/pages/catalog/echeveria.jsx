@@ -12,6 +12,8 @@ const CatalogWrapper = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: flex-start;
+
   margin: 4rem 4rem 1rem 4rem;
   @media (max-width: 1000px) {
     margin: 4rem 2rem 1rem 2rem;
