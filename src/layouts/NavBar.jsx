@@ -17,7 +17,7 @@ ul {
 }
 li {
   display: inline;
-  font-size: 1.1rem;
+  font-size: 13px;
   list-style-type: none;
   margin-left: 30px;
 }
@@ -25,20 +25,21 @@ a {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 20px;
-  color: ${props => props.theme.colors.white.base};;
+  color: ${props => props.theme.colors.white.base};
   &:hover {
-    color: ${props => props.theme.colors.white.grey};;
+    color: ${props => props.theme.colors.white.grey};
   }
 }
 @media (max-width: 750px) {
   padding: 10px 0;
   ul {
-    background: ${props => props.theme.colors.white.grey};
-    width: 50%;
-    z-index: 1000000000000;
+    background: gray;
+    width: 150%;
+    justify: center;
   }
   li {
-    padding: 5px 0;
+    color: black;
+    padding: 10px 0;
     display: block;
     margin-left: 0;
   }
@@ -47,11 +48,11 @@ a {
 
 
 {/**   Below Works   */}
-/* const StyledLink = styled(Link)`
+const StyledLink = styled(Link)`
   display: flex;
   font-weight: 700;
   align-items: center;
-`;
+`; 
 
 const Nav = styled.nav`
   display: flex;
@@ -68,7 +69,7 @@ const Nav = styled.nav`
       color: ${props => props.theme.colors.white.grey};
     }
   }
-`; */
+`;
 
 /* const NavBar = () => (
   <Headroom calcHeightOnResize disableInlineStyles>
@@ -103,9 +104,9 @@ export default class NavBar extends Component {
     return (
 
       <Headroom calcHeightOnResize disableInlineStyles>
-       {/*  <StyledLink to="/">
+        <StyledLink to="/">
           <img src={logo} alt="Cactus Logo" />
-        </StyledLink> */}
+        </StyledLink>  
         {/* <img src={logo} alt="Cactus Logo" /> */}
       <div>
         <ResponsiveMenu
