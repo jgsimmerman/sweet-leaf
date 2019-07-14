@@ -208,7 +208,7 @@ const Index = ({ data }) => {
           <Image>
               <Img fluid={data.imageOne.childImageSharp.fluid} />  
           </Image>
-          <StyledLink to="/catalog/soft-seedum/">
+          <StyledLink to="/catalog/soft-sedum/">
             <Info>
               <Title>Soft Sedum</Title>
             </Info>
