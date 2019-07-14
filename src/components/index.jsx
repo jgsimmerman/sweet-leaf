@@ -4,5 +4,6 @@ import PostList from './PostList';
 import SEO from './SEO';
 import TagsBlock from './TagsBlock';
 import SecondNav from './SecondNav';
+import BurgerMenu from './BurgerMenu';
 
-export { BlogList, Header, PostList, SEO, TagsBlock, SecondNav };
+export { BlogList, Header, PostList, SEO, TagsBlock, SecondNav, BurgerMenu };
