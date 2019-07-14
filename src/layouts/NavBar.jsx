@@ -145,9 +145,9 @@ export default class NavBar extends Component {
         /> */}
        
         <BurgerMenu right/>
-        <StyledLink to="/">
+        {/* <StyledLink to="/">
           <img src={logo} alt="Cactus Logo" />
-        </StyledLink>  
+        </StyledLink>   */}
       </div>
       <br/>  
 
