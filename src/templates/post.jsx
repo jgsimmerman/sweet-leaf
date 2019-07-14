@@ -46,7 +46,7 @@ const Post = ({ data, pageContext }) => {
         article
       />
       <Header title={title} cover={image} />
-      <SecondNav />
+        
       <Container>
        
         <ItemContent post={post.frontmatter} />

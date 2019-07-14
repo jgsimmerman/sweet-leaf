@@ -6,8 +6,6 @@ import PropTypes from 'prop-types';
 import { Header, BlogList } from 'components';
 import { Layout } from 'layouts';
 import { Link } from 'gatsby';
-import SecondNav from '../components/SecondNav'
-
 
 const CatalogWrapper = styled.div`
   display: flex;
@@ -53,7 +51,7 @@ const Catalog = ({ data }) => {
       <script id="snipcart" src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" data-api-key="YjdiNWIyOTUtZTIyMy00MWMwLTkwNDUtMzI1M2M2NTgxYjE0"></script>
     </Helmet> */}
       <Header title="Full Catalog">Sweet Leaf Succulents and Ornamental Plants</Header>
-      <SecondNav />
+        
       <CatalogWrapper>
         {edges.map(({ node }) => (
         <BlogList
