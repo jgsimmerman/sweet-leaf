@@ -6,7 +6,7 @@ import { SocialIcon } from 'react-social-icons';
 
 
 const Wrapper = styled.header`
-
+  
   @media (max-width: ${props => props.theme.breakpoints.s}) {
    
   }
@@ -26,7 +26,7 @@ const Text = styled.div`
   color: ${props => props.theme.colors.white.base};
   z-index: 0;
   position: absolute;
-  top: 50%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;

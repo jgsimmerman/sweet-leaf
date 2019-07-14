@@ -9,24 +9,20 @@ import ResponsiveMenu from 'react-responsive-navbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { FaBars, FaWindowClose } from 'react-icons/fa';
 
+
 const Menu = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-font-family: ${props => props.theme.fontFamily.body};
+  font-family: ${props => props.theme.fontFamily.body};
 
   
 ul {
-    display: flex;
-    justify-content: flex-end;
     padding: 0;
   }
   li {
-    display: flex;
+    
     font-weight: 500;
     font-size: 1.1rem;
     list-style-type: none;
-    margin-left: 60px;
+    margin-left: 30px;
   }
   a {
     color: ${props => props.theme.colors.white.base};
@@ -35,10 +31,11 @@ ul {
       color: ${props => props.theme.colors.white.grey};
     }
   }
-  @media (max-width: 700px) {
+  @media (max-width: 600px) {
     background: ${props => props.theme.colors.background.light};;
     padding: 10px 0;
     li {
+
       padding: 10px 0;
       display: block;
       margin-left: 0;
@@ -112,7 +109,7 @@ export default class NavBar extends Component {
           
           menuOpenButton={<FaBars size={30} color="black" />}
           menuCloseButton={<FaWindowClose size={30} color="black" />}
-          changeMenuOn="700px"
+          changeMenuOn="600px"
           largeMenuClassName="large-menu"
           smallMenuClassName="small-menu"
           menu={
