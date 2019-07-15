@@ -3,6 +3,7 @@ import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 import Headroom from 'react-headroom';
 import logo from '../../static/logo/header-logo.png';
+import { FaShoppingCart } from 'react-icons/fa';
 import { CartQty } from 'react-snipcart'
 
 
@@ -46,7 +47,7 @@ const NavBar = () => (
       <Link to="/blog">Blog</Link>
       <div>
         <a className="Header__summary snipcart-checkout snipcart-summary" href="#" >
-          Cart: <CartQty />
+          <FaShoppingCart />{/* : <CartQty /> */}
           {/* |<span class="snipcart-total-price"></span> */}
         </a>
       </div>
