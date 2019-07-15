@@ -1,10 +1,10 @@
 export default {
     bmBurgerButton: {
         position: 'fixed',
-        width: "56px", // 36
-        height: "50px", // 30
-        left: "46px", // 36
-        top: "46px", // 36
+        width: "36px", // 36
+        height: "30px", // 30
+        left: "36px", // 36
+        top: "36px", // 36
     },
     bmBurgerBars: {
       background: '#000000',
@@ -46,5 +46,8 @@ export default {
     },
     menuItem: {
       color: '#b8b7ad',
+    },
+    outerContainerId: {
+      padding: '0px',
     }
   }

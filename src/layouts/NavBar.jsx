@@ -73,7 +73,7 @@ const Nav = styled.nav`
   }
 `;
 
-/* const NavBar = () => (
+const NavBar = () => (
   <Headroom calcHeightOnResize disableInlineStyles>
     <StyledLink to="/">
       <img src={logo} alt="Cactus Logo" />
@@ -99,59 +99,5 @@ const Nav = styled.nav`
   </Headroom>
 );
 
-export default NavBar; */
+export default NavBar; 
 
-export default class NavBar extends Component {
-  render() {
-    return (
-
-      <Headroom calcHeightOnResize disableInlineStyles>
-        
-        {/* <img src={logo} alt="Cactus Logo" /> */}
-      <div>{/* 
-        <ResponsiveMenu
-          
-          menuOpenButton={<FaBars size={30} color="black" />}
-          menuCloseButton={<FaWindowClose size={30} color="black" />}
-          changeMenuOn="750px"
-          largeMenuClassName="large-menu"
-          smallMenuClassName="small-menu"
-          menu={
-            <Menu>
-              
-              <ul>
-                <li>
-                <Link to="/">Home</Link>
-                </li>
-                <li>
-                <Link to="/catalog">Full Catalog</Link>
-                </li>
-                <li>
-                <Link to="/about">About</Link>
-                </li>
-                <li>
-                <Link to="/blog">Blog</Link>
-                </li>
-                <li>
-                    <a className="Header__summary snipcart-checkout snipcart-summary" href="#" >
-                      Cart: <CartQty />
-                     |<span class="snipcart-total-price"></span> 
-                  </a>
-                </li>
-              </ul>
-            </Menu>
-            
-          }
-        /> */}
-       
-        <BurgerMenu right/>
-        {/* <StyledLink to="/">
-          <img src={logo} alt="Cactus Logo" />
-        </StyledLink>   */}
-      </div>
-      <br/>  
-
-      </Headroom>
-    );
-  }
-}

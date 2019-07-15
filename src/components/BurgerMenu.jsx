@@ -74,17 +74,17 @@ const BurgerMenu = () => {
 
   return (
     <div id="outer-container">
-      <div id="menu-wrap">
-        <Menu
-          /* right */
+       <Menu
+          
           styles={styles}
           id="push"
           pageWrapId="page-wrap"
-          outerContainerId="outer-container"
-          menuItem="menu-item"
+          outerContainerId="outer-container" 
+          menuItem="menu-item" 
           isOpen={menuIsOpen}
           onStateChange={handleMenuStateChange}
           noOverlay
+          border="0px"
         >
           <div>
             <Head><Link to="/">Sweet Leaf Succulents</Link></Head>
@@ -103,31 +103,19 @@ const BurgerMenu = () => {
                 <Link to="/catalog/more-soft-varieties">More Soft Varieties</Link>
               </Nav2>
               <Link to="/about">About</Link>
-              <Link to="/blog">Blog</Link>
-
+              {/* <Link to="/blog">Blog</Link>
+ */}
               <div>
                 <FaShoppingCart />
                 <a className="Header__summary snipcart-checkout snipcart-summary" href="#" >
                   <CartQty />
-                  |<span class="snipcart-total-price"></span>
+                  {/* |<span class="snipcart-total-price"></span> */}
                 </a>
               </div>
             </Nav>
           </div>
         </Menu>
-      </div>
-
-      <main id="page-wrap">
-       {/*  <button
-          type="button"
-          onClick={handleMenuButtonClick}
-          className="btn btn-info btn-lg bg-inverse"
-        /> */}
-        
-
-        
-      </main>
-    </div>
+  </div>
   )
 }
 
