@@ -9,24 +9,7 @@ import { CartQty } from 'react-snipcart'
 
 import styles from './styles';
 
-//import styled from '@emotion/styled';
-/* import React from "react";
-import { Link } from 'gatsby';
-import styled from '@emotion/styled';
-import { slide as Menu } from "react-burger-menu"; */
-/* 
-export default props => {
-    return (
-      <BurgerMenu>
-        <Menu>
-          <a id="home" className="menu-item" href="/">Home</a>
-          <a id="about" className="menu-item" href="/about">About</a>
-          <a id="contact" className="menu-item" href="/contact">Contact</a>
-        </Menu>
-      </BurgerMenu>
-    );
-}; */
- 
+
 const Nav = styled.nav`
   display: flex;
   flex-direction: column;
