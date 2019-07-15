@@ -106,9 +106,9 @@ const BurgerMenu = () => {
               {/* <Link to="/blog">Blog</Link>
  */}
               <div>
-                <FaShoppingCart />
+               
                 <a className="Header__summary snipcart-checkout snipcart-summary" href="#" >
-                  <CartQty />
+                <FaShoppingCart /> <CartQty /> 
                   {/* |<span class="snipcart-total-price"></span> */}
                 </a>
               </div>
