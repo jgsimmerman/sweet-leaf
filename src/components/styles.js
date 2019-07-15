@@ -1,13 +1,13 @@
 export default {
     bmBurgerButton: {
         position: 'fixed',
-        width: "36px",
-        height: "30px",
-        left: "36px",
-        top: "36px",
+        width: "56px", // 36
+        height: "50px", // 30
+        left: "46px", // 36
+        top: "46px", // 36
     },
     bmBurgerBars: {
-      background: '#373a47',
+      background: '#000000',
     },
     bmBurgerBarsHover: {
       background: '#a90000',
