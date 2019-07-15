@@ -59,6 +59,7 @@ const Layout = ({ children }) => (
       />
       <SEO />
       <BurgerMenu />
+      <NavBar />
       {children}
       <Footer  />
     </Fragment>

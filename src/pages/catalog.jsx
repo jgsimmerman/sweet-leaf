@@ -23,7 +23,7 @@ const CatalogWrapper = styled.div`
 
 const Nav = styled.nav`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
   background: grey;
   font-weight: 500;
