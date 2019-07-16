@@ -3,8 +3,8 @@ export default {
         position: 'fixed',
         width: "36px", // 36
         height: "30px", // 30
-        left: "16px", // 36
-        top: "16px", // 36
+        left: "26px", // 36
+        top: "26px", // 36
     },
     bmBurgerBars: {
       background: '#000000',
