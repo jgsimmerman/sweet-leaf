@@ -112,7 +112,13 @@ const BurgerMenu = () => {
                   {/* |<span class="snipcart-total-price"></span> */}
                 </a>
               </div>
+              <hr/>
+              <a href="#" class="snipcart-user-profile">
+                Log In
+              </a>
+              Members will be eligible for discounts and coupon codes. 
             </Nav>
+            
           </div>
         </Menu>
   </div>

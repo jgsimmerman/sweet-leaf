@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import styled from '@emotion/styled';
-import { Header, PostList, IndexContent } from 'components';
+import { Header, PostList } from 'components';
 import { Layout } from 'layouts';
 import { SocialIcon } from 'react-social-icons';
 import theme from '../../config/theme';
