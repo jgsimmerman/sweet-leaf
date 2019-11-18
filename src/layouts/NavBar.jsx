@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import Headroom from 'react-headroom';
 import logo from '../../static/logo/header-logo.png';
 import { FaShoppingCart } from 'react-icons/fa';
-import { CartQty } from 'react-snipcart'
+//import { CartQty } from 'react-snipcart'
 
 
 const StyledLink = styled(Link)`
@@ -29,6 +29,11 @@ const Nav = styled.nav`
     }
   }
 
+  .snipcart-items-count {
+    vertical-align: top;
+    font-size: 0.75rem;
+  }
+
   @media (max-width: 600px) {
     
       display: none;
@@ -47,7 +52,7 @@ const NavBar = () => (
       <Link to="/blog">Blog</Link>
       <div>
         <a className="Header__summary snipcart-checkout snipcart-summary" href="#" >
-          <FaShoppingCart />{/* : <CartQty /> */}
+          <FaShoppingCart /> <span class="snipcart-items-count"></span>
           {/* |<span class="snipcart-total-price"></span> */}
         </a>
       </div>

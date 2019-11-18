@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 
 import { FaShoppingCart } from 'react-icons/fa';
-import { CartQty } from 'react-snipcart'
+// import { CartQty } from 'react-snipcart'
 
 
 import styles from './styles';
@@ -28,6 +28,11 @@ const Nav = styled.nav`
       color: ${props => props.theme.colors.white.base};
     }
   }
+
+  .snipcart-items-count {
+    vertical-align: 1.5em;
+    font-size: 0.75rem;
+  }
 `;
 
 const Nav2 = styled.nav`
@@ -50,13 +55,13 @@ const Nav2 = styled.nav`
 `;
 
 const Head = styled.h1`
-a {
-  color: ${props => props.theme.colors.white.grey};
-  margin: .2rem;
-  transition: all ${props => props.theme.transitions.default.duration};
-  &:hover {
-    color: ${props => props.theme.colors.white.base};
-  }
+  a {
+    color: ${props => props.theme.colors.white.grey};
+    margin: .2rem;
+    transition: all ${props => props.theme.transitions.default.duration};
+    &:hover {
+      color: ${props => props.theme.colors.white.base};
+    }
 `;
 
 
@@ -69,6 +74,9 @@ const BurgerMenu = () => {
 
   const handleMenuButtonClick = () => {
     setMenuIsOpen(!menuIsOpen)
+  }
+  const handleStateChange = (state) => {
+    this.setState({menuOpen: state.isOpen})  
   }
 
 
@@ -83,6 +91,7 @@ const BurgerMenu = () => {
           menuItem="menu-item" 
           isOpen={menuIsOpen}
           onStateChange={handleMenuStateChange}
+          // onStateChange={(state) => this.handleStateChange(state)}
           noOverlay
           border="0px"
         >
@@ -108,12 +117,12 @@ const BurgerMenu = () => {
               <div>
                
                 <a className="Header__summary snipcart-checkout snipcart-summary" href="#" >
-                <FaShoppingCart /> <CartQty /> 
+                 <FaShoppingCart /> <span class="snipcart-items-count"></span>
                   {/* |<span class="snipcart-total-price"></span> */}
                 </a>
               </div>
               <hr/>
-              <a href="#" class="snipcart-user-profile">
+              <a href="#" class="snipcart-user-profile" onClick={handleStateChange}>
                 Log In
               </a>
               Members will be eligible for discounts and coupon codes. 

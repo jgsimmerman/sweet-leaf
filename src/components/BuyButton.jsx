@@ -38,8 +38,15 @@ let BuyButton = React.memo(({post, images}) => {
                 paddingLeft: "35px",
                 fontSize: "24"
             }}
+            class="snipcart-add-item"
+            data-item-id= {post.id}
+            data-item-price={post.price}
+            data-item-url={post.path}
+            data-item-name={post.title}
+            data-item-image={post.snipPic} // This doesn't work.
         >
-            <AddToCart data={{
+            Add to Cart
+            {/* <AddToCart data={{
                 id: post.id,
                 name: post.title,
                 url: 'http://localhost:8000' + post.path,
@@ -47,7 +54,7 @@ let BuyButton = React.memo(({post, images}) => {
                 openCart: true,
                 }}>
                 Add to Cart 
-            </AddToCart>
+            </AddToCart> */}
         </button>
     </div>
     )

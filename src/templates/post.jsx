@@ -31,7 +31,8 @@ const Post = ({ data, pageContext }) => {
   const date = post.frontmatter.date;
   const html = post.html;
   const story = post.frontmatter.story;
-  const pic = post.frontmatter.pic.childImageSharp.fluid
+  const pic = post.frontmatter.pic.childImageSharp.fluid;
+  const snipPic = post.frontmatter.pic;
   const scientificname = post.frontmatter.scientificname;
 
   return (
