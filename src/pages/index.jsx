@@ -33,7 +33,7 @@ const PostWrapper = styled.div`
 const Wrapper = styled.article`
   margin-bottom: 2rem;
   position: relative;
-  z-index: 100;
+  z-index: 1;
   border-radius: ${props => props.theme.borderRadius.default};
   box-shadow: ${props => props.theme.shadow.feature.small.default};
   height: 17rem;
