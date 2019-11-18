@@ -37,7 +37,7 @@ const Nav = styled.nav`
   @media (max-width: 600px) {
     
       display: none;
-    
+  }
 `;
 
 const NavBar = () => (

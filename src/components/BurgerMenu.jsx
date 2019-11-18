@@ -62,6 +62,7 @@ const Head = styled.h1`
     &:hover {
       color: ${props => props.theme.colors.white.base};
     }
+  }
 `;
 
 
