@@ -34,12 +34,21 @@ const Nav = styled.nav`
     font-size: 0.75rem;
   }
 
-  @media (max-width: 600px) {
+  // @media (max-width: 600px) {
     
-      display: none;
-  }
+  //     display: none;
+  // }
 `;
 
+/******************************************
+ * 
+ * Commented Out NavBar media query
+ * 
+ * Remember to undo the commenting out!!!!
+ * 
+ * IMPORTANT
+ * 
+ *******************************************/
 const NavBar = () => (
   <Headroom calcHeightOnResize disableInlineStyles>
     <StyledLink to="/">
