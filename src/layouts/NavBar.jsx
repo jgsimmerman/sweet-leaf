@@ -34,10 +34,10 @@ const Nav = styled.nav`
     font-size: 0.75rem;
   }
 
-  // @media (max-width: 600px) {
+  @media (max-width: 600px) {
     
-  //     display: none;
-  // }
+      display: none;
+  }
 `;
 
 /******************************************

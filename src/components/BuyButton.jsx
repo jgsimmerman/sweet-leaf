@@ -28,12 +28,14 @@ let BuyButton = React.memo(({post, images}) => {
 
         <button 
             style={{
-                backgroundColor: "#212121",
+                backgroundColor: "hsla(228, 34.9%, 83.1%)",
                 borderRadius: "5px",
-                color: "#F5F5F5",
-                fontWeight: "bold",
+                marginTop: "36px",
+                border: "0",
+                color: "hsl(228, 34.9%, 23.1%)",
+                fontWeight: "500",
                 paddingBottom: "15px",
-                paddingTop: "5px",
+                paddingTop: "15px",
                 paddingRight: "35px",
                 paddingLeft: "35px",
                 fontSize: "24"

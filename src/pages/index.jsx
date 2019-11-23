@@ -9,12 +9,12 @@ import { SocialIcon } from 'react-social-icons';
 import theme from '../../config/theme';
 import Img from 'gatsby-image'
 
-const PostWrapper = styled.div`
+const PostWrapper = styled.main`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 4rem 4rem 1rem 4rem;
+  justify-content: space-evenly;
+  margin: 4rem 4rem 4rem 4rem;
   .SocialIcon {
     display: flex;
     flex-direction: row;
@@ -30,7 +30,7 @@ const PostWrapper = styled.div`
   }
 `;
 
-const Wrapper = styled.article`
+const Wrapper = styled.section`
   margin-bottom: 2rem;
   position: relative;
   z-index: 1;

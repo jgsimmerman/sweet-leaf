@@ -14,6 +14,8 @@ const Wrapper = styled.div`
   display: flex
   flex-wrap: wrap
   flex-direction: column
+  color: hsl(0, 0%, 29%)
+  font-weight: 400;
 `
 
 const Image = styled.span`
@@ -25,14 +27,19 @@ const Image = styled.span`
 const Info = styled.span`
   margin-top: 2rem
   flex: 1
+  line-height: 1.75;
+  color: hsl(228, 34.9%, 23.1%)
 `
 
 const ItemName = styled.h3`
   margin: 1rem 0 .5rem 0
+  font-weight: 700;
+  //color: hsl(228, 34.9%, 23.1%)
 `
 
 const Cost = styled.span`
-  color: lighten($black, 20%)
+  // color: lighten($black, 20%)
+  //color: hsl(228, 34.9%, 23.1%);
   font-size: 1.5rem
   margin: 1rem 0
   font-weight: 500
@@ -49,7 +56,16 @@ const Table = styled.table`
   table-layout: fixed;
   width: 100%;
   border-collapse: collapse;
-  border: 3px solid black;
+  border: 0px solid black;
+  background: hsl(220, 12%, 95%);
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+  border-radius: 10px 10px 10px 10px;
+   tr {
+     :nth-child(even) {
+       background-color: hsla(228, 34.9%, 83.1%, 0.3);
+     }
+     color: hsl(228, 34.9%, 23.1%);
+   }
 
   thead {
     background: #C5CBE3;
@@ -95,11 +111,11 @@ const ItemContent = ({ post }) => {
         <hr></hr>
         
         <Table>
-          <thead>
+          {/* <thead>
             <tr>
               <th colspan="2" >Plant Details</th>
             </tr>
-          </thead>
+          </thead> */}
           <tbody>
               <tr>
                   <th scope="row">Primary Color: </th>

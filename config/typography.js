@@ -3,7 +3,7 @@ import Typography from 'typography';
 export const typography = new Typography({
   title: 'Succulents',
   baseFontSize: '18px',
-  baseLineHeight: 1.45,
+  baseLineHeight: 1.50,
   headerFontFamily: [
     'Patua One',
     'Merriweather',
