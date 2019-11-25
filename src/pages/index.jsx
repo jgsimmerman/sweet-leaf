@@ -144,13 +144,13 @@ const Index = ({ data }) => {
       <Helmet title={'Sweet Leaf Succulents'} />
 
       <Header title="Sweet Leaf Succulents">{/* and Ornamental Plants */}
-        <SocialWrapper className="SocialIcon">
+        {/* <SocialWrapper className="SocialIcon">
           <SocialIcon url="https://www.facebook.com/SweetLeafSucculents" bgColor="#000000" />
           <SocialIcon url="https://twitter.com/sweetleafsuccs" bgColor="#000000"/>
           <SocialIcon url="http://pinterest.com/" bgColor="#000000"/>
           <SocialIcon url="https://www.instagram.com/sweetleafsucculents/" bgColor="#000000" />
           <SocialIcon url="https://www.reddit.com/user/SweetLeafSucculents/" bgColor="#000000" />
-        </SocialWrapper>
+        </SocialWrapper> */}
       </Header>
 
       <PostWrapper>

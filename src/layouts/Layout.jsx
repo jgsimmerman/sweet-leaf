@@ -2,6 +2,8 @@ import React, { Fragment } from 'react';
 import { ThemeProvider } from 'emotion-theming';
 import { css, Global } from '@emotion/core';
 import PropTypes from 'prop-types';
+//import 'typeface-patua-one';
+//import 'typeface-merriweather';
 import 'typeface-open-sans';
 import 'typeface-candal';
 import { SEO } from 'components';

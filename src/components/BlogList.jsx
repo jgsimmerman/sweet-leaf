@@ -92,7 +92,7 @@ const CatalogContainer = styled(Container)`
   max-width: calc(99.9% * 1 / 3 - 2.5rem);
   width: calc(99.9% * 1 / 3 - 2.5rem);
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1300px) {
     flex-basis: 50%;
     max-width: 50%;
     width: 50%;

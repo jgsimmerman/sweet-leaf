@@ -61,15 +61,7 @@ const Header = ({ children, title, date, cover }) => (
 
       {children && <Subtitle>{children}</Subtitle>}
     </Text>
-    {/* 
-      <SocialWrapper className="SocialIcon">
-          <SocialIcon url="https://www.facebook.com/" bgColor="#000000" />
-          <SocialIcon url="http://twitter.com/jacobsimmerman" bgColor="#000000"/>
-          <SocialIcon url="http://pinterest.com/jacobsimmerman" bgColor="#000000"/>
-          <SocialIcon url="http://instagram.com/jacobsimmerman" bgColor="#000000" />
-          <SocialIcon url="http://reddit.com/u/jacobsimmerman" bgColor="#000000" />
-      </SocialWrapper> 
-      */}
+   
   </Wrapper>
 );
 
