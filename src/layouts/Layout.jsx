@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import 'typeface-open-sans';
 import 'typeface-candal';
 import { SEO } from 'components';
-import { NavBar, Footer, BurgerMenu } from 'layouts';
+import { NavBar, Footer, BurgerMenu, SocialIcons } from 'layouts';
 import theme from '../../config/theme';
 import headroom from '../styles/headroom';
 

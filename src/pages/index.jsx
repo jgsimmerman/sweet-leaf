@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import styled from '@emotion/styled';
-import { Header, PostList } from 'components';
+import { Header, PostList, SocialIcons } from 'components';
 import { Layout } from 'layouts';
 import { SocialIcon } from 'react-social-icons';
 import theme from '../../config/theme';
@@ -60,14 +60,6 @@ const Wrapper = styled.section`
   }
 `;
 
-const SocialWrapper = styled.span`
-  display: flex;
-   flex-direction: row;
-   justify-content: flex-end;
-
-  /* width: 75%;
-  height: 75%; */
-`;
 
 const StyledLink = styled(Link)`
   position: absolute;
@@ -144,13 +136,7 @@ const Index = ({ data }) => {
       <Helmet title={'Sweet Leaf Succulents'} />
 
       <Header title="Sweet Leaf Succulents">{/* and Ornamental Plants */}
-        {/* <SocialWrapper className="SocialIcon">
-          <SocialIcon url="https://www.facebook.com/SweetLeafSucculents" bgColor="#000000" />
-          <SocialIcon url="https://twitter.com/sweetleafsuccs" bgColor="#000000"/>
-          <SocialIcon url="http://pinterest.com/" bgColor="#000000"/>
-          <SocialIcon url="https://www.instagram.com/sweetleafsucculents/" bgColor="#000000" />
-          <SocialIcon url="https://www.reddit.com/user/SweetLeafSucculents/" bgColor="#000000" />
-        </SocialWrapper> */}
+        <SocialIcons />
       </Header>
 
       <PostWrapper>

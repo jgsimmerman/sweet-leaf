@@ -44,13 +44,7 @@ const Subtitle = styled.p`
   color: ${props => props.theme.colors.white.light};
 `;
 
-const SocialWrapper = styled.span`
-display: flex;
-align-items: right;
-position: right;
-/* width: 75%;
-height: 75%; */
-`;
+
 
 const Header = ({ children, title, date, cover }) => (
   <Wrapper>
