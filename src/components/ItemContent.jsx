@@ -61,7 +61,7 @@ const Table = styled.table`
   box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
   border-radius: 10px 10px 10px 10px;
    tr {
-     :nth-child(even) {
+     :nth-of-type(even) {
        background-color: hsla(228, 34.9%, 83.1%, 0.3);
      }
      color: hsl(228, 34.9%, 23.1%);

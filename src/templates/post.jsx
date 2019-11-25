@@ -9,6 +9,8 @@ import Helmet from 'react-helmet';
 import BuyButton from '../components/BuyButton'
 import ItemContent from '../components/ItemContent'
 
+
+
 const SuggestionBar = styled.div`
   display: flex;
   flex-wrap: nowrap;
@@ -48,11 +50,11 @@ const Post = ({ data, pageContext }) => {
       />
       <Header title={title} cover={image} />
         
-      <Container>
-       
+      <Container> 
+        
         <ItemContent post={post.frontmatter} />
         
-      </Container>
+       </Container>
       
     </Layout>
   );

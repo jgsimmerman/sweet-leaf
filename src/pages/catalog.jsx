@@ -43,13 +43,7 @@ const Catalog = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
   return (
     <Layout>
-      {/*<Helmet title={'Catalog'} /> */}
-      {/* <Helmet htmlAttributes={{ lang: 'en' }}>
-      <title>{'Catalog'}</title>
-      <link href="https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css" rel="stylesheet" type="text/css" />
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-      <script id="snipcart" src="https://cdn.snipcart.com/scripts/2.0/snipcart.js" data-api-key="YjdiNWIyOTUtZTIyMy00MWMwLTkwNDUtMzI1M2M2NTgxYjE0"></script>
-    </Helmet> */}
+      
       <Header title="Full Catalog">Sweet Leaf Succulents and Ornamental Plants</Header>
         
       <CatalogWrapper>
@@ -59,7 +53,7 @@ const Catalog = ({ data }) => {
           cover={node.frontmatter.cover.childImageSharp.fluid}
           path={node.frontmatter.path}
           title={node.frontmatter.title}
-          date={node.frontmatter.date}
+          //date={node.frontmatter.date}
           tags={node.frontmatter.tags}
           excerpt={node.excerpt}
           //pic={node.frontmatter.pic.childImageSharp.fluid}
@@ -84,7 +78,7 @@ Catalog.propTypes = {
               cover: PropTypes.object.isRequired,
               path: PropTypes.string.isRequired,
               title: PropTypes.string.isRequired,
-              date: PropTypes.string.isRequired,
+              //date: PropTypes.string.isRequired,
               tags: PropTypes.array,
             }),
           }),

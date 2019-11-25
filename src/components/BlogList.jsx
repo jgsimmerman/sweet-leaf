@@ -86,9 +86,31 @@ const Title = styled.h1`
   margin: 0;
 `;
 
+const CatalogContainer = styled(Container)`
+  margin-top: 0;
+  flex-basis: calc(99.9% * 1 / 3 - 2.5rem);
+  max-width: calc(99.9% * 1 / 3 - 2.5rem);
+  width: calc(99.9% * 1 / 3 - 2.5rem);
+
+  @media (max-width: 1024px) {
+    flex-basis: 50%;
+    max-width: 50%;
+    width: 50%;
+  }
+  @media (max-width: 800px) {
+    flex-basis: 100%;
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  @media (max-width: 500px) {
+    min-height: 200px;
+  }
+`;
+
 const BlogList = ({ path, cover, title, date, excerpt, tags }) => (
-  
-  <Container>
+
+  <CatalogContainer>
     <Wrapper>
       <Image>
         <Link to={path} title={title}>
@@ -104,7 +126,7 @@ const BlogList = ({ path, cover, title, date, excerpt, tags }) => (
         {excerpt}
       </Information>
     </Wrapper>
-  </Container>
+  </CatalogContainer>
 );
 
 export default BlogList;

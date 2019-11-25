@@ -118,12 +118,12 @@ const BurgerMenu = () => {
               <div>
                
                 <a className="Header__summary snipcart-checkout snipcart-summary" href="#" >
-                 <FaShoppingCart /> <span class="snipcart-items-count"></span>
-                  {/* |<span class="snipcart-total-price"></span> */}
+                 <FaShoppingCart /> <span className="snipcart-items-count"></span>
+                  {/* |<span className="snipcart-total-price"></span> */}
                 </a>
               </div>
               <hr/>
-              <a href="#" class="snipcart-user-profile" onClick={handleStateChange}>
+              <a href="#" className="snipcart-user-profile" onClick={handleStateChange}>
                 Log In
               </a>
               Members will be eligible for discounts and coupon codes. 

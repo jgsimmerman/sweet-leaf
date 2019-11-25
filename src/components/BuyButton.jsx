@@ -28,7 +28,7 @@ let BuyButton = React.memo(({post, images}) => {
 
         <button 
             style={{
-                backgroundColor: "hsla(228, 34.9%, 83.1%)",
+                backgroundColor: "hsl(228, 34.9%, 83.1%)",
                 borderRadius: "5px",
                 marginTop: "36px",
                 border: "0",
@@ -40,7 +40,7 @@ let BuyButton = React.memo(({post, images}) => {
                 paddingLeft: "35px",
                 fontSize: "24"
             }}
-            class="snipcart-add-item"
+            className="snipcart-add-item"
             data-item-id= {post.id}
             data-item-price={post.price}
             data-item-url={post.path}

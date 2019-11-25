@@ -61,8 +61,8 @@ const NavBar = () => (
       <Link to="/blog">Blog</Link>
       <div>
         <a className="Header__summary snipcart-checkout snipcart-summary" href="#" >
-          <FaShoppingCart /> <span class="snipcart-items-count"></span>
-          {/* |<span class="snipcart-total-price"></span> */}
+          <FaShoppingCart /> <span className="snipcart-items-count"></span>
+          {/* |<span className="snipcart-total-price"></span> */}
         </a>
       </div>
     </Nav>
