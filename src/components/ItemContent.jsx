@@ -148,6 +148,4 @@ const ItemContent = ({ post }) => {
 }
 
 
-
-
 export default ItemContent;
