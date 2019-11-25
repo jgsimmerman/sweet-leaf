@@ -10,47 +10,47 @@ import Img from 'gatsby-image'
 import { Grid, GridItem } from 'styled-grid-component';
 
 const Wrapper = styled.div`
-  padding: 1rem 0 2rem 0
-  display: flex
-  flex-wrap: wrap
-  flex-direction: column
-  color: hsl(0, 0%, 29%)
+  padding: 1rem 0 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  color: hsl(0, 0%, 29%);
   font-weight: 400;
 `
 
 const Image = styled.span`
-  background: #eee
-  flex: 1
-  min-height: 50vh
+  background: #eee;
+  flex: 1;
+  min-height: 50vh;
 `
 
 const Info = styled.span`
-  margin-top: 2rem
-  flex: 1
-  line-height: 1.75;
-  color: hsl(228, 34.9%, 23.1%)
+  margin-top: 2rem;
+  flex: 1;
+  line-height: 1.75;;
+  color: hsl(228, 34.9%, 23.1%);
 `
 
 const ItemName = styled.h3`
-  margin: 1rem 0 .5rem 0
+  margin: 1rem 0 .5rem 0;
   font-weight: 700;
-  //color: hsl(228, 34.9%, 23.1%)
+  //color: hsl(228, 34.9%, 23.1%);
 `
 
 const Cost = styled.span`
-  // color: lighten($black, 20%)
+  //color: lighten($black, 20%);
   //color: hsl(228, 34.9%, 23.1%);
-  font-size: 1.5rem
-  margin: 1rem 0
-  font-weight: 500
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  font-weight: 500;
 `
 const StyledImg = styled(Img)`
-  display: block
-  margin: 0 auto
-  width: 10%
+  display: block;
+  margin: 0 auto;
+  width: 10%;
 `
 const Story = styled.p`
-  grid-column-start: span 2
+  grid-column-start: span 2;
 `
 const Table = styled.table`
   table-layout: fixed;
