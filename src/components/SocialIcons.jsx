@@ -2,23 +2,79 @@ import React from 'react';
 import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 import { FaFacebook, FaTwitter, FaPinterest, FaInstagram, FaReddit, FaEtsy } from 'react-icons/fa';
-import { SocialIcon } from 'react-social-icons';
 
 const SocialWrapper = styled.span`
-    display: flex;
-    align-items: right;
-    position: right;
+        ul {
+            display: flex;
+            list-style-type: none;
+            justify-content: center;
+            font-size: 2rem;
+        }
+        a {
+            padding: 1rem 2rem;
+            svg {
+              color: white;
+              &:hover {
+                color: hsla(228, 34.9%, 83.1%, 0.3);
+              }
+            }
+          }
 `;
 
-const SocialIcons = () => (
 
-        <SocialWrapper className="SocialIcon">
-            <SocialIcon url="https://www.facebook.com/" bgColor="#000000" />
-            <SocialIcon url="http://twitter.com/jacobsimmerman" bgColor="#000000"/>
-            <SocialIcon url="http://pinterest.com/jacobsimmerman" bgColor="#000000"/>
-            <SocialIcon url="http://instagram.com/jacobsimmerman" bgColor="#000000" />
-            <SocialIcon url="http://reddit.com/u/jacobsimmerman" bgColor="#000000" />
-        </SocialWrapper> 
-)
+const SocialIcons =  () => {
+
+    // https://www.johnvincent.io/gatsby/react-icons/
+
+
+    //const mailToUrl = `mailto:${config.email}?Subject=Hello`;
+    const twitterUrl = `http://twitter.com/jacobsimmerman`;
+    const facebookURL = `https://facebook.com/`;
+    const pinterestUrl = `https://pinterest.com/jacobsimmerman`;
+    const instagramUrl = `http://instagram.com/jacobsimmerman`;
+    const redditUrl = `https://reddit.com/u/jacobsimmerman`;
+    const etsyUrl = `https://etsy.com`;
+    //const angelUrl = `https://www.angel.co/${config.angelUsername}`;
+    //const rssFeed = `${config.siteUrl}/feed.xml`;
+    return (
+    <SocialWrapper className="SocialIcon">        
+        <ul>
+
+            <li>
+                <a href={twitterUrl} target="_blank" title="Follow us on Twitter" rel="noopener noreferrer">
+                    <FaTwitter />
+                </a>
+            </li>
+            <li>
+                <a href={facebookURL} target="_blank" title="Follow us on Facebook" rel="noopener noreferrer">
+                    <FaFacebook />
+                </a>
+            </li>
+            <li>
+                <a href={instagramUrl} target="_blank" title="Follow us on Instagram" rel="noopener noreferrer">
+                    <FaInstagram />
+                </a>
+            </li>
+
+            <li>
+                <a href={pinterestUrl} target="_blank" title="Follow us on Pinterest" rel="noopener noreferrer">
+                    <FaPinterest />
+                </a>
+            </li>
+            <li>
+                <a href={etsyUrl} target="_blank" title="Follow us on Etsy" rel="noopener noreferrer">
+                    <FaEtsy />
+                </a>
+            </li>
+            <li>
+                <a href={redditUrl} target="_blank" title="Follow us at Reddit" rel="noopener noreferrer">
+                    <FaReddit />
+                </a>
+            </li>
+            
+        </ul>
+        </SocialWrapper>    
+        );
+}
 
 export default SocialIcons;
