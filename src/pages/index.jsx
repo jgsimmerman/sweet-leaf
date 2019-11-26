@@ -5,7 +5,6 @@ import Helmet from 'react-helmet';
 import styled from '@emotion/styled';
 import { Header, PostList, SocialIcons } from 'components';
 import { Layout } from 'layouts';
-import { SocialIcon } from 'react-social-icons';
 import theme from '../../config/theme';
 import Img from 'gatsby-image'
 
