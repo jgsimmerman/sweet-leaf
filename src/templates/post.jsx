@@ -9,19 +9,6 @@ import Helmet from 'react-helmet';
 import BuyButton from '../components/BuyButton';
 import ItemContent from '../components/ItemContent';
 
-const SuggestionBar = styled.div`
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  background: ${props => props.theme.colors.white.light};
-  box-shadow: ${props => props.theme.shadow.suggestion};
-`;
-const PostSuggestion = styled.div`
-  display: flex;
-  align-items: center;
-  margin: 1rem 3rem 0 3rem;
-`;
-
 const Post = ({ data, pageContext }) => {
   const { next, prev } = pageContext;
   const post = data.markdownRemark;
