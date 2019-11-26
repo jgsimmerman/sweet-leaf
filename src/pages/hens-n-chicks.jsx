@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 import { Header, BlogList } from 'components';
 import { Layout } from 'layouts';
 
-
 const CatalogWrapper = styled.div`
   display: flex;
   flex-direction: row;
@@ -25,20 +24,21 @@ const HensAndChicks = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
   return (
     <Layout>
-      
-      <Header title="Hens and Chicks">Sweet Leaf Succulents and Ornamental Plants</Header>
+      <Header title="Hens and Chicks">
+        Sweet Leaf Succulents and Ornamental Plants
+      </Header>
       <CatalogWrapper>
-      {edges.map(({ node }) => (
-        <BlogList
-          key={node.id = 1}
-          cover={node.frontmatter.cover.childImageSharp.fluid}
-          path={node.frontmatter.path}
-          title={node.frontmatter.title}
-          date={node.frontmatter.date}
-          tags={node.frontmatter.tags}
-          excerpt={node.excerpt}
-        />
-      ))}
+        {edges.map(({ node }) => (
+          <BlogList
+            key={(node.id = 1)}
+            cover={node.frontmatter.cover.childImageSharp.fluid}
+            path={node.frontmatter.path}
+            title={node.frontmatter.title}
+            date={node.frontmatter.date}
+            tags={node.frontmatter.tags}
+            excerpt={node.excerpt}
+          />
+        ))}
       </CatalogWrapper>
     </Layout>
   );

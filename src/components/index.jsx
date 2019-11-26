@@ -7,5 +7,4 @@ import TagsBlock from './TagsBlock';
 import BurgerMenu from './BurgerMenu';
 import SocialIcons from './SocialIcons';
 
-
 export { BlogList, Header, PostList, SEO, TagsBlock, BurgerMenu, SocialIcons };

@@ -51,8 +51,11 @@ Blog.propTypes = {
 
 export const query = graphql`
   query {
-    allMarkdownRemark(filter: {frontmatter: {id: {eq: 1000}}}, sort: {order: DESC, fields: [frontmatter___date]}) {
-        edges {
+    allMarkdownRemark(
+      filter: { frontmatter: { id: { eq: 1000 } } }
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
+      edges {
         node {
           id
           excerpt(pruneLength: 200)

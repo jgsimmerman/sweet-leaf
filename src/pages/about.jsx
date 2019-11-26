@@ -9,9 +9,7 @@ const About = center => (
     <Helmet title={'About Page'} />
     <Header title="About Page">Sweet Leaf Succulents</Header>
     <Container center={center}>
-      <h3>
-        We sell succulents and stuff.
-      </h3>
+      <h3>We sell succulents and stuff.</h3>
     </Container>
   </Layout>
 );

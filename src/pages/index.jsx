@@ -6,7 +6,7 @@ import styled from '@emotion/styled';
 import { Header, PostList, SocialIcons } from 'components';
 import { Layout } from 'layouts';
 import theme from '../../config/theme';
-import Img from 'gatsby-image'
+import Img from 'gatsby-image';
 
 const PostWrapper = styled.main`
   display: flex;
@@ -58,7 +58,6 @@ const Wrapper = styled.section`
     height: 15rem;
   }
 `;
-
 
 const StyledLink = styled(Link)`
   position: absolute;
@@ -134,24 +133,25 @@ const Index = ({ data }) => {
     <Layout>
       <Helmet title={'Sweet Leaf Succulents'} />
 
-      <Header title="Sweet Leaf Succulents">{/* and Ornamental Plants */}
+      <Header title="Sweet Leaf Succulents">
+        {/* and Ornamental Plants */}
         <SocialIcons />
       </Header>
 
       <PostWrapper>
         <Wrapper>
           <Image>
-              <Img fluid={data.imageOne.childImageSharp.fluid} />  
+            <Img fluid={data.imageOne.childImageSharp.fluid} />
           </Image>
           <StyledLink to="/catalog/echeveria/">
             <Info>
               <Title>Echeveria</Title>
             </Info>
-         </StyledLink>
+          </StyledLink>
         </Wrapper>
         <Wrapper>
           <Image>
-              <Img fluid={data.imageOne.childImageSharp.fluid} />  
+            <Img fluid={data.imageOne.childImageSharp.fluid} />
           </Image>
           <StyledLink to="/catalog/sempervivum-heuffelii/">
             <Info>
@@ -161,7 +161,7 @@ const Index = ({ data }) => {
         </Wrapper>
         <Wrapper>
           <Image>
-              <Img fluid={data.imageOne.childImageSharp.fluid} />  
+            <Img fluid={data.imageOne.childImageSharp.fluid} />
           </Image>
           <StyledLink to="/catalog/hens-n-chicks/">
             <Info>
@@ -171,7 +171,7 @@ const Index = ({ data }) => {
         </Wrapper>
         <Wrapper>
           <Image>
-              <Img fluid={data.imageTwo.childImageSharp.fluid} />  
+            <Img fluid={data.imageTwo.childImageSharp.fluid} />
           </Image>
           <StyledLink to="/catalog/aeonium/">
             <Info>
@@ -181,7 +181,7 @@ const Index = ({ data }) => {
         </Wrapper>
         <Wrapper>
           <Image>
-              <Img fluid={data.imageOne.childImageSharp.fluid} />  
+            <Img fluid={data.imageOne.childImageSharp.fluid} />
           </Image>
           <StyledLink to="/catalog/senecio/">
             <Info>
@@ -191,7 +191,7 @@ const Index = ({ data }) => {
         </Wrapper>
         <Wrapper>
           <Image>
-              <Img fluid={data.imageOne.childImageSharp.fluid} />  
+            <Img fluid={data.imageOne.childImageSharp.fluid} />
           </Image>
           <StyledLink to="/catalog/soft-sedum/">
             <Info>
@@ -201,7 +201,7 @@ const Index = ({ data }) => {
         </Wrapper>
         <Wrapper>
           <Image>
-              <Img fluid={data.imageOne.childImageSharp.fluid} />  
+            <Img fluid={data.imageOne.childImageSharp.fluid} />
           </Image>
           <StyledLink to="/catalog/hybrids/">
             <Info>
@@ -211,7 +211,7 @@ const Index = ({ data }) => {
         </Wrapper>
         <Wrapper>
           <Image>
-              <Img fluid={data.imageOne.childImageSharp.fluid} />  
+            <Img fluid={data.imageOne.childImageSharp.fluid} />
           </Image>
           <StyledLink to="/catalog/more-soft-varieties/">
             <Info>
@@ -219,7 +219,7 @@ const Index = ({ data }) => {
             </Info>
           </StyledLink>
         </Wrapper>
-        <hr/>
+        <hr />
       </PostWrapper>
     </Layout>
   );
@@ -249,13 +249,13 @@ Index.propTypes = {
 };
 
 export const fluidImage = graphql`
-fragment fluidImage on File {
-  childImageSharp {
-    fluid(maxWidth: 1000, quality: 90, traceSVG: {color: "#2B2B2F"}) {
-      ...GatsbyImageSharpFluid
+  fragment fluidImage on File {
+    childImageSharp {
+      fluid(maxWidth: 1000, quality: 90, traceSVG: { color: "#2B2B2F" }) {
+        ...GatsbyImageSharpFluid
+      }
     }
   }
-}
 `;
 
 export const pageQuery = graphql`
@@ -265,6 +265,6 @@ export const pageQuery = graphql`
     }
     imageTwo: file(relativePath: { eq: "kiwi.jpg" }) {
       ...fluidImage
-    }  
+    }
   }
 `;

@@ -19,7 +19,8 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "lint-errors": "eslint src/**/*.{js,jsx} --quiet",
     "lint": "eslint src/**/*.{js,jsx}",
-    "start": "npm run develop"
+    "start": "npm run develop",
+    "prettier": "prettier --write '**/*.{ts,js,css,html}'"
   },
   "dependencies": {
     "@babel/core": "^7.5.4",

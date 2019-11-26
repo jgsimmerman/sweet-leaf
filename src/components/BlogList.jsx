@@ -109,7 +109,6 @@ const CatalogContainer = styled(Container)`
 `;
 
 const BlogList = ({ path, cover, title, date, excerpt, tags }) => (
-
   <CatalogContainer>
     <Wrapper>
       <Image>

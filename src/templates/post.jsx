@@ -6,10 +6,8 @@ import { Layout, Container, Content, SocialIcons } from 'layouts';
 import { TagsBlock, Header, SEO, SecondNav } from 'components';
 import '../styles/prism';
 import Helmet from 'react-helmet';
-import BuyButton from '../components/BuyButton'
-import ItemContent from '../components/ItemContent'
-
-
+import BuyButton from '../components/BuyButton';
+import ItemContent from '../components/ItemContent';
 
 const SuggestionBar = styled.div`
   display: flex;
@@ -39,7 +37,6 @@ const Post = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      
       <SEO
         title={title}
         story={story}
@@ -49,13 +46,10 @@ const Post = ({ data, pageContext }) => {
         article
       />
       <Header title={title} cover={image} />
-        
-      <Container> 
-        
+
+      <Container>
         <ItemContent post={post.frontmatter} />
-        
-       </Container>
-      
+      </Container>
     </Layout>
   );
 };
@@ -91,13 +85,9 @@ export const query = graphql`
         temperature
         pic {
           childImageSharp {
-            fluid(
-              maxWidth: 1000
-               quality: 90
-               traceSVG: {color: "#2B2B2F"}
-              ){
-                ...GatsbyImageSharpFluid_withWebp_tracedSVG
-              }
+            fluid(maxWidth: 1000, quality: 90, traceSVG: { color: "#2B2B2F" }) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
           }
         }
         cover {

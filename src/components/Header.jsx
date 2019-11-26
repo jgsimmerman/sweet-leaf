@@ -4,11 +4,8 @@ import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 import { SocialIcon } from 'react-social-icons';
 
-
 const Wrapper = styled.header`
-  
   @media (max-width: ${props => props.theme.breakpoints.s}) {
-   
   }
   background: ${props => props.theme.gradient.rightToLeft};
   height: 300px;
@@ -44,8 +41,6 @@ const Subtitle = styled.p`
   color: ${props => props.theme.colors.white.light};
 `;
 
-
-
 const Header = ({ children, title, date, cover }) => (
   <Wrapper>
     <Img fluid={cover || {} || [] || ''} />
@@ -55,7 +50,6 @@ const Header = ({ children, title, date, cover }) => (
 
       {children && <Subtitle>{children}</Subtitle>}
     </Text>
-   
   </Wrapper>
 );
 

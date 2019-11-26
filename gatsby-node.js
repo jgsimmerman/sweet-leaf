@@ -5,7 +5,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   return new Promise((resolve, reject) => {
     const postTemplate = path.resolve('src/templates/post.jsx');
-      const blogTemplate = path.resolve('src/templates/blog2.jsx');
+    const blogTemplate = path.resolve('src/templates/blog2.jsx');
 
     const tagPage = path.resolve('src/pages/tags.jsx');
     const tagPosts = path.resolve('src/templates/tag.jsx');
@@ -74,17 +74,16 @@ exports.createPages = ({ graphql, actions }) => {
           });
         });
 
-        
-
         posts.forEach(({ node }, index) => {
           const id = node.frontmatter.id;
           const path = node.frontmatter.path;
 
-            const prev = index === 0 ? null : posts[index - 1].node;
-            const next =
-              index === posts.length - 1 ? null : posts[index + 1].node;
+          const prev = index === 0 ? null : posts[index - 1].node;
+          const next =
+            index === posts.length - 1 ? null : posts[index + 1].node;
 
-          if(id === 1000) { // OR if(node.frontmatter.id === 1000) similar to above tags function
+          if (id === 1000) {
+            // OR if(node.frontmatter.id === 1000) similar to above tags function
             createPage({
               path,
               component: blogTemplate,
@@ -94,11 +93,8 @@ exports.createPages = ({ graphql, actions }) => {
                 next,
               },
             });
-          };
+          }
         });
-
-
-        
 
         //create posts
         posts.forEach(({ node }, index) => {

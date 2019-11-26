@@ -60,7 +60,6 @@ const Wrapper = styled.div`
 `;
 
 const Content = ({ input }) => (
-  
   <Wrapper dangerouslySetInnerHTML={{ __html: input }} />
 );
 

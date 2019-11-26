@@ -99,7 +99,7 @@ module.exports = {
           credentials: require('./succulents-eceeb0db1c4f.json')
       }
     }, */
-    { 
+    {
       resolve: `gatsby-plugin-purgecss`,
       options: {
         printRejected: true, // Print removed selectors and processed file names
@@ -108,7 +108,7 @@ module.exports = {
         // whitelist: ['whitelist'], // Don't remove this selector
         // ignore: ['/ignored.css', 'prismjs/', 'docsearch.js/'], // Ignore files/folders
         // purgeOnly : ['components/', '/main.css', 'bootstrap/'], // Purge only these files/folders
-      }
-    }
+      },
+    },
   ],
 };

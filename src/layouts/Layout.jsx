@@ -63,7 +63,7 @@ const Layout = ({ children }) => (
       <BurgerMenu />
       <NavBar />
       {children}
-      <Footer  />
+      <Footer />
     </Fragment>
   </ThemeProvider>
 );

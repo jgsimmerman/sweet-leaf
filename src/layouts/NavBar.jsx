@@ -6,7 +6,6 @@ import logo from '../../static/logo/header-logo.png';
 import { FaShoppingCart } from 'react-icons/fa';
 //import { CartQty } from 'react-snipcart'
 
-
 const StyledLink = styled(Link)`
   display: flex;
   font-weight: 700;
@@ -35,19 +34,18 @@ const Nav = styled.nav`
   }
 
   @media (max-width: 600px) {
-    
-      display: none;
+    display: none;
   }
 `;
 
 /******************************************
- * 
+ *
  * Commented Out NavBar media query
- * 
+ *
  * Remember to undo the commenting out!!!!
- * 
+ *
  * IMPORTANT
- * 
+ *
  *******************************************/
 const NavBar = () => (
   <Headroom calcHeightOnResize disableInlineStyles>
@@ -60,7 +58,10 @@ const NavBar = () => (
       <Link to="/about">About</Link>
       <Link to="/blog">Blog</Link>
       <div>
-        <a className="Header__summary snipcart-checkout snipcart-summary" href="#" >
+        <a
+          className="Header__summary snipcart-checkout snipcart-summary"
+          href="#"
+        >
           <FaShoppingCart /> <span className="snipcart-items-count"></span>
           {/* |<span className="snipcart-total-price"></span> */}
         </a>
@@ -70,4 +71,3 @@ const NavBar = () => (
 );
 
 export default NavBar;
-

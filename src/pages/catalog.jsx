@@ -43,23 +43,23 @@ const Catalog = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
   return (
     <Layout>
-      
-      <Header title="Full Catalog">Sweet Leaf Succulents and Ornamental Plants</Header>
-        
+      <Header title="Full Catalog">
+        Sweet Leaf Succulents and Ornamental Plants
+      </Header>
+
       <CatalogWrapper>
         {edges.map(({ node }) => (
-        <BlogList
-          key={node.id}
-          cover={node.frontmatter.cover.childImageSharp.fluid}
-          path={node.frontmatter.path}
-          title={node.frontmatter.title}
-          //date={node.frontmatter.date}
-          tags={node.frontmatter.tags}
-          excerpt={node.excerpt}
-          //pic={node.frontmatter.pic.childImageSharp.fluid}
-
-        />
-      ))}
+          <BlogList
+            key={node.id}
+            cover={node.frontmatter.cover.childImageSharp.fluid}
+            path={node.frontmatter.path}
+            title={node.frontmatter.title}
+            //date={node.frontmatter.date}
+            tags={node.frontmatter.tags}
+            excerpt={node.excerpt}
+            //pic={node.frontmatter.pic.childImageSharp.fluid}
+          />
+        ))}
       </CatalogWrapper>
     </Layout>
   );
@@ -90,7 +90,7 @@ Catalog.propTypes = {
 
 export const query = graphql`
   query {
-    allMarkdownRemark(filter: {frontmatter: {id: {lt: 999}}}) {
+    allMarkdownRemark(filter: { frontmatter: { id: { lt: 999 } } }) {
       edges {
         node {
           id
@@ -106,11 +106,11 @@ export const query = graphql`
               childImageSharp {
                 fluid(
                   maxWidth: 1000
-                   quality: 90
-                   traceSVG: {color: "#2B2B2F"}
-                  ){
-                    ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                  }
+                  quality: 90
+                  traceSVG: { color: "#2B2B2F" }
+                ) {
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                }
               }
             }
             cover {

@@ -26,9 +26,8 @@ const Footer = () => (
   <Wrapper>
     <Text>
       <span>
-      Sweet Leaf Succulents and Ornamental Plants, LLC {' '}
+        Sweet Leaf Succulents and Ornamental Plants, LLC{' '}
         {/* <a href="https://twitter.com/jacobsimmerman">Follow us on twitter!</a> */}
-        
       </span>
     </Text>
   </Wrapper>

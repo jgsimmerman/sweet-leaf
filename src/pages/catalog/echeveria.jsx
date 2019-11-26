@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 import { Header, BlogList } from 'components';
 import { Layout } from 'layouts';
 
-
 const CatalogWrapper = styled.div`
   display: flex;
   flex-direction: row;
@@ -27,21 +26,22 @@ const echeveria = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
   return (
     <Layout>
-      
-      <Header title="Echeveria">Sweet Leaf Succulents and Ornamental Plants</Header>
-        
+      <Header title="Echeveria">
+        Sweet Leaf Succulents and Ornamental Plants
+      </Header>
+
       <CatalogWrapper>
-      {edges.map(({ node }) => (
-        <BlogList
-          key={node.id}
-          cover={node.frontmatter.cover.childImageSharp.fluid}
-          path={node.frontmatter.path}
-          title={node.frontmatter.title}
-          date={node.frontmatter.date}
-          tags={node.frontmatter.tags}
-          excerpt={node.excerpt}
-        />
-      ))}
+        {edges.map(({ node }) => (
+          <BlogList
+            key={node.id}
+            cover={node.frontmatter.cover.childImageSharp.fluid}
+            path={node.frontmatter.path}
+            title={node.frontmatter.title}
+            date={node.frontmatter.date}
+            tags={node.frontmatter.tags}
+            excerpt={node.excerpt}
+          />
+        ))}
       </CatalogWrapper>
     </Layout>
   );
@@ -72,7 +72,7 @@ echeveria.propTypes = {
 
 export const query = graphql`
   query {
-    allMarkdownRemark(filter: {frontmatter: {id: {eq: 4}}}) {
+    allMarkdownRemark(filter: { frontmatter: { id: { eq: 4 } } }) {
       edges {
         node {
           id
@@ -86,10 +86,7 @@ export const query = graphql`
             date(formatString: "MM.DD.YYYY")
             cover {
               childImageSharp {
-                fluid(
-                  maxWidth: 1000
-                  quality: 90
-                ) {
+                fluid(maxWidth: 1000, quality: 90) {
                   ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
               }
