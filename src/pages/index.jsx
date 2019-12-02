@@ -24,7 +24,7 @@ function Loading(props) {
 const LoadableSocialIcons = Loadable({
   loader: () => import('../components/SocialIcons'),
   loading: Loading,
-  delay: 5000, // 5 seconds
+  delay: 1000, // 5 seconds
   timeout: 150000, // 15 seconds
 });
 
