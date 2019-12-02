@@ -1,4 +1,5 @@
 import React from 'react';
+import Loadable from 'react-loadable';
 import { Link, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
@@ -7,6 +8,25 @@ import { Header, PostList, SocialIcons } from 'components';
 import { Layout } from 'layouts';
 import theme from '../../config/theme';
 import Img from 'gatsby-image';
+
+function Loading(props) {
+  if (props.error) {
+    return <div>Something went wrong! <button onClick= { props.retry }>Retry</button></div>;
+  } else if (props.timedOut) {
+    return <div>Seems like your net is slow.. <button onClick={ props.retry }>Retry</button> </div>
+  } else if (props.pastDelay) {
+    return <p>Loading Social Icons...</p>;
+  } else {
+    return null;
+  }
+}
+
+const LoadableSocialIcons = Loadable({
+  loader: () => import('../components/SocialIcons'),
+  loading: Loading,
+  delay: 5000, // 5 seconds
+  timeout: 150000, // 15 seconds
+});
 
 const PostWrapper = styled.main`
   display: flex;
@@ -135,7 +155,7 @@ const Index = ({ data }) => {
 
       <Header title="Sweet Leaf Succulents">
         {/* and Ornamental Plants */}
-        <SocialIcons />
+        <LoadableSocialIcons />
       </Header>
 
       <PostWrapper>
