@@ -1,4 +1,6 @@
 import React, { Fragment } from 'react';
+import Loadable from 'react-loadable';
+
 import { ThemeProvider } from 'emotion-theming';
 import { css, Global } from '@emotion/core';
 import PropTypes from 'prop-types';
@@ -10,6 +12,26 @@ import { SEO } from 'components';
 import { NavBar, Footer, BurgerMenu, SocialIcons } from 'layouts';
 import theme from '../../config/theme';
 import headroom from '../styles/headroom';
+
+function Loading(props) {
+  if (props.error) {
+    return <div>Something went wrong! <button onClick= { props.retry }>Retry</button></div>;
+  } else if (props.timedOut) {
+    return <div>Seems like your net is slow.. <button onClick={ props.retry }>Retry</button> </div>
+  } else if (props.pastDelay) {
+    return <p>Loading...</p>;
+  } else {
+    return null;
+  }
+}
+
+const LoadableBurgerMenu = Loadable({
+  loader: () => import('../components/BurgerMenu'),
+  loading: Loading,
+  delay: 500, // .5 seconds
+  timeout: 150000, // 15 seconds
+});
+
 
 const Layout = ({ children }) => (
   <ThemeProvider theme={theme}>
@@ -60,7 +82,7 @@ const Layout = ({ children }) => (
         `}
       />
       <SEO />
-      {/* <BurgerMenu /> */}
+      <LoadableBurgerMenu />
       <NavBar />
       {children}
       <Footer />
