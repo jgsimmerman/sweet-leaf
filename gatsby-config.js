@@ -76,8 +76,8 @@ module.exports = {
       resolve: 'gatsby-plugin-snipcart',
       options: {
         jquery: '', //'https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js',
-        js: 'https://cdn.snipcart.com/themes/v3.0.3/default/snipcart.js',
-        styles: 'https://cdn.snipcart.com/themes/v3.0.3/default/snipcart.css',
+        js: 'https://cdn.snipcart.com/themes/v3.0.4/default/snipcart.js',
+        styles: 'https://cdn.snipcart.com/themes/v3.0.4/default/snipcart.css',
         apiKey:
           'OWRmMjdlZWUtNzM1NS00YmQzLWFlN2EtOGU2MTIyOGQyZDQ4NjM2OTUwMjk5ODUzNDc5OTgw',
         autopop: true,
@@ -110,5 +110,23 @@ module.exports = {
         // purgeOnly : ['components/', '/main.css', 'bootstrap/'], // Purge only these files/folders
       },
     },
+    // {
+    //   resolve: "gatsby-plugin-guess-js",
+    //   options: {
+    //     // Find the view id in the GA admin in a section labeled "views"
+    //     GAViewID: `VIEW_ID`,
+    //     // Add a JWT to get data from GA
+    //     jwt: {
+    //       client_email: `GOOGLE_SERVICE_ACCOUNT_EMAIL`,
+    //       private_key: `GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY`,
+    //     },
+    //     minimumThreshold: 0.03,
+    //     // The "period" for fetching analytic data.
+    //     period: {
+    //       startDate: new Date("2018-1-1"),
+    //       endDate: new Date(),
+    //     },
+    //   },
+    // },
   ],
 };
