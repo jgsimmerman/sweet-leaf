@@ -185,7 +185,7 @@ const Index = ({ data }) => {
         </Wrapper>
         <Wrapper>
           <Image>
-            <Img fluid={data.imageOne.childImageSharp.fluid} />
+            <Img fluid={data.imageFour.childImageSharp.fluid} />
           </Image>
           <StyledLink to="/catalog/carnivorous-plants/alata/">
             <Info>
@@ -338,6 +338,9 @@ export const pageQuery = graphql`
       ...fluidImage
     }
     imageThree: file(relativePath: { eq: "alata.jpg" }) {
+      ...fluidImage
+    }
+    imageFour: file(relativePath: { eq: "wandering.jpeg" }) {
       ...fluidImage
     }
   }
