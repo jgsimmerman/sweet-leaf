@@ -89,7 +89,7 @@ const StyledLink = styled(Link)`
   flex-direction: row;
   justify-content: space-between;
   padding: 1rem;
-  z-index: 3;
+  z-index: 1;
   border-radius: ${props => props.theme.borderRadius.default};
   &:after {
     content: '';
@@ -157,6 +157,47 @@ const Index = ({ data }) => {
         {/* and Ornamental Plants */}
         <LoadableSocialIcons />
       </Header>
+
+      <PostWrapper>
+          <h2> Featured Plants </h2>
+      </PostWrapper>
+
+      <PostWrapper>
+        <Wrapper>
+          <Image>
+            <Img fluid={data.imageOne.childImageSharp.fluid} />
+          </Image>
+          <StyledLink to="/catalog/echeveria/">
+            <Info>
+              <Title>Nepenthes 'Miranda'</Title>
+            </Info>
+          </StyledLink>
+        </Wrapper>
+        <Wrapper>
+          <Image>
+            <Img fluid={data.imageThree.childImageSharp.fluid} />
+          </Image>
+          <StyledLink to="/catalog/carnivorous-plants/alata/">
+            <Info>
+              <Title>Nepenthes Alata</Title>
+            </Info>
+          </StyledLink>
+        </Wrapper>
+        <Wrapper>
+          <Image>
+            <Img fluid={data.imageOne.childImageSharp.fluid} />
+          </Image>
+          <StyledLink to="/catalog/carnivorous-plants/alata/">
+            <Info>
+              <Title>Wandering Jew</Title>
+            </Info>
+          </StyledLink>
+        </Wrapper>
+      </PostWrapper>
+      
+      <PostWrapper>
+          <h2> Catalog of Plants </h2>
+      </PostWrapper>
 
       <PostWrapper>
         <Wrapper>
@@ -239,7 +280,17 @@ const Index = ({ data }) => {
             </Info>
           </StyledLink>
         </Wrapper>
-        <hr />
+        <Wrapper>
+          <Image>
+            <Img fluid={data.imageOne.childImageSharp.fluid} />
+          </Image>
+          <StyledLink to="/catalog/carnivorous-plants/">
+            <Info>
+              <Title>Carnivorous Plants</Title>
+            </Info>
+          </StyledLink>
+        </Wrapper>
+
       </PostWrapper>
     </Layout>
   );
@@ -284,6 +335,9 @@ export const pageQuery = graphql`
       ...fluidImage
     }
     imageTwo: file(relativePath: { eq: "kiwi.jpg" }) {
+      ...fluidImage
+    }
+    imageThree: file(relativePath: { eq: "alata.jpg" }) {
       ...fluidImage
     }
   }
