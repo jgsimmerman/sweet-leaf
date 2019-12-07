@@ -196,7 +196,7 @@ const Index = ({ data }) => {
       </PostWrapper>
       
       <PostWrapper>
-          <h2> Catalog of Plants </h2>
+          <h2> Shop by Category </h2>
       </PostWrapper>
 
       <PostWrapper>
@@ -332,16 +332,32 @@ export const fluidImage = graphql`
 export const pageQuery = graphql`
   query {
     imageOne: file(relativePath: { eq: "echeveria.jpg" }) {
-      ...fluidImage
+      childImageSharp {
+        fluid(maxWidth: 1000, quality: 90) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
     }
     imageTwo: file(relativePath: { eq: "kiwi.jpg" }) {
-      ...fluidImage
+      childImageSharp {
+        fluid(maxWidth: 1000, quality: 90) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
     }
     imageThree: file(relativePath: { eq: "alata.jpg" }) {
-      ...fluidImage
+      childImageSharp {
+        fluid(maxWidth: 1000, quality: 90) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
     }
-    imageFour: file(relativePath: { eq: "wandering.jpeg" }) {
-      ...fluidImage
+    imageFour: file(relativePath: { eq: "wandering.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000, quality: 90) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
     }
   }
 `;
