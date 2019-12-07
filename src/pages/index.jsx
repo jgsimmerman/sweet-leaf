@@ -345,7 +345,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    imageThree: file(relativePath: { eq: "alata.jpg" }) {
+    imageThree: file(relativePath: { eq: "alata1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1000, quality: 90) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
