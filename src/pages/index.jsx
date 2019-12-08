@@ -169,7 +169,7 @@ const Index = ({ data }) => {
           <Image>
             <Img fluid={data.imageThree.childImageSharp.fluid} />
           </Image>
-          <StyledLink to="/catalog/echeveria/">
+          <StyledLink to="/catalog/carnivorous-plants/alata/">
             <Info>
               <Title>Nepenthes 'Miranda'</Title>
               <Price>$14.95</Price>

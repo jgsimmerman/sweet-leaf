@@ -56,7 +56,7 @@ const NavBar = () => (
       <Link to="/">Home</Link>
       <Link to="/catalog">Catalog</Link>
       <Link to="/about">About</Link>
-      <Link to="/blog">Blog</Link>
+      {/* <Link to="/blog">Blog</Link> */}
       <div>
         <a
           className="Header__summary snipcart-checkout snipcart-summary"
