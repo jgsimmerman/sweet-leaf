@@ -35,7 +35,7 @@ const Post = ({ data, pageContext }) => {
       <Header title={title} cover={image} />
 
       <Container>
-        <ItemContent post={post.frontmatter} />
+        <ItemContent post={post.frontmatter} html={html} />
       </Container>
     </Layout>
   );

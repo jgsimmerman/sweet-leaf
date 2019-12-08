@@ -22,6 +22,7 @@ const Image = styled.span`
   background: #eee;
   flex: 1;
   min-height: 50vh;
+  
 `;
 
 const Info = styled.span`
@@ -48,8 +49,9 @@ const StyledImg = styled(Img)`
   display: block;
   margin: 0 auto;
   width: 10%;
+  border-radius: 5;
 `;
-const Story = styled.p`
+const Story = styled.article`
   grid-column-start: span 2;
 `;
 const Table = styled.table`
@@ -75,7 +77,7 @@ const Table = styled.table`
   }
 `;
 
-const ItemContent = ({ post }) => {
+const ItemContent = ({ post, html }) => {
   return (
     <Wrapper>
       <Grid
@@ -111,7 +113,10 @@ const ItemContent = ({ post }) => {
       <Grid>
         <br />
         <GridItem column=" 1 / 2" row="2">
-          <p className="ItemName">{post.story}</p>
+        <Story
+          className="blog-post-content"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
           <br />
         </GridItem>
       </Grid>
