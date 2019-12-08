@@ -52,6 +52,7 @@ const StyledImg = styled(Img)`
   border-radius: 5;
 `;
 const Story = styled.article`
+  padding-top: 1rem;
   grid-column-start: span 2;
 `;
 const Table = styled.table`
