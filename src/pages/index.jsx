@@ -147,6 +147,8 @@ const Title = styled.h2`
   margin-bottom: 0.6rem;
 `;
 
+const Price = styled.p``;
+
 const Index = ({ data }) => {
   //const { edges } = data.allMarkdownRemark;
   return (
@@ -165,11 +167,12 @@ const Index = ({ data }) => {
       <PostWrapper>
         <Wrapper>
           <Image>
-            <Img fluid={data.imageOne.childImageSharp.fluid} />
+            <Img fluid={data.imageThree.childImageSharp.fluid} />
           </Image>
           <StyledLink to="/catalog/echeveria/">
             <Info>
               <Title>Nepenthes 'Miranda'</Title>
+              <Price>$14.95</Price>
             </Info>
           </StyledLink>
         </Wrapper>
@@ -180,6 +183,7 @@ const Index = ({ data }) => {
           <StyledLink to="/catalog/carnivorous-plants/alata/">
             <Info>
               <Title>Nepenthes Alata</Title>
+              <Price>$14.95</Price>
             </Info>
           </StyledLink>
         </Wrapper>
@@ -190,6 +194,7 @@ const Index = ({ data }) => {
           <StyledLink to="/catalog/carnivorous-plants/alata/">
             <Info>
               <Title>Wandering Jew</Title>
+              <Price>$4.95</Price>
             </Info>
           </StyledLink>
         </Wrapper>
