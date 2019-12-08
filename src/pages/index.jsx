@@ -169,7 +169,7 @@ const Index = ({ data }) => {
           <Image>
             <Img fluid={data.imageThree.childImageSharp.fluid} />
           </Image>
-          <StyledLink to="/catalog/carnivorous-plants/alata">
+          <StyledLink to="/catalog/carnivorous-plants/alata/#">
             <Info>
               <Title>Nepenthes 'Miranda'</Title>
               <Price>$14.95</Price>
@@ -180,7 +180,7 @@ const Index = ({ data }) => {
           <Image>
             <Img fluid={data.imageThree.childImageSharp.fluid} />
           </Image>
-          <StyledLink to="/catalog/carnivorous-plants/alata">
+          <StyledLink to="/catalog/carnivorous-plants/alata/#">
             <Info>
               <Title>Nepenthes Alata</Title>
               <Price>$14.95</Price>
@@ -191,7 +191,7 @@ const Index = ({ data }) => {
           <Image>
             <Img fluid={data.imageFour.childImageSharp.fluid} />
           </Image>
-          <StyledLink to="/catalog/carnivorous-plants/alata">
+          <StyledLink to="/catalog/carnivorous-plants/alata/#">
             <Info>
               <Title>Wandering Jew</Title>
               <Price>$4.95</Price>
