@@ -60,6 +60,7 @@ export const query = graphql`
         title
         tags
         id
+        dataItemId
         price
         path
         story
@@ -70,6 +71,7 @@ export const query = graphql`
         seasonality
         bloomcolor
         temperature
+
         pic {
           childImageSharp {
             fluid(maxWidth: 1000, quality: 90, traceSVG: { color: "#2B2B2F" }) {

@@ -2,9 +2,11 @@
 path: "/catalog/carnivorous-plants/alata"
 cover: "./alata1.jpg"
 pic: "./alata1.jpg"
+snipPic: "./alata1.jpg"
 title: "Nepenthes Alata"
 scientificname: "Nepenthes alata"
-id: 9
+id: 9 
+dataItemId: 123456
 catalog-section: "carnivorous-plants"
 tags: ['carnivorous', 'nepenthes']
 primarycolor: "Green"

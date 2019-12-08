@@ -43,7 +43,7 @@ let BuyButton = React.memo(({ post, images }) => {
           fontSize: '24',
         }}
         className="snipcart-add-item"
-        data-item-id={post.id}
+        data-item-id={post.dataItemId}
         data-item-price={post.price}
         data-item-url={post.path}
         data-item-name={post.title}

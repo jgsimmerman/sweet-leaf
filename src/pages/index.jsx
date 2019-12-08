@@ -149,6 +149,7 @@ const Title = styled.h2`
 
 const Price = styled.p``;
 
+
 const Index = ({ data }) => {
   //const { edges } = data.allMarkdownRemark;
   return (
@@ -199,7 +200,6 @@ const Index = ({ data }) => {
           </StyledLink>
         </Wrapper>
       </PostWrapper>
-      
       <PostWrapper>
           <h2> Shop by Category </h2>
       </PostWrapper>

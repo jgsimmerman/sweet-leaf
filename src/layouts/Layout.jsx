@@ -44,6 +44,8 @@ const Layout = ({ children }) => (
             box-sizing: inherit;
           }
           html {
+                        background-color: hsla(228, 34.9%, 88.1%, 0.3);
+
             text-rendering: optimizeLegibility;
             overflow-x: hidden;
             box-sizing: border-box;
@@ -59,6 +61,8 @@ const Layout = ({ children }) => (
             display: flex;
             flex-direction: column;
             min-height: 100vh;
+            background-color: hsla(228, 34.9%, 88.1%, 0.3);
+
           }
           a {
             color: ${theme.colors.link};
