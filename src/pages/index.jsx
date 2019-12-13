@@ -168,12 +168,12 @@ const Index = ({ data }) => {
       <PostWrapper>
         <Wrapper>
           <Image>
-            <Img fluid={data.imageThree.childImageSharp.fluid} />
+            <Img fluid={data.imageFive.childImageSharp.fluid} />
           </Image>
-          <StyledLink to="/catalog/carnivorous-plants/alata/#">
+          <StyledLink to="/catalog/houseplants/mini-pixie/#">
             <Info>
-              <Title>Nepenthes 'Miranda'</Title>
-              <Price>$14.95</Price>
+              <Title>Mini Pixie</Title>
+              <Price>$8.95</Price>
             </Info>
           </StyledLink>
         </Wrapper>
@@ -192,9 +192,9 @@ const Index = ({ data }) => {
           <Image>
             <Img fluid={data.imageFour.childImageSharp.fluid} />
           </Image>
-          <StyledLink to="/catalog/carnivorous-plants/alata/#">
+          <StyledLink to="/catalog/houseplants/wandering-jew/#">
             <Info>
-              <Title>Wandering Jew</Title>
+              <Title>Wandering Jew Cuttings</Title>
               <Price>$4.95</Price>
             </Info>
           </StyledLink>
@@ -358,6 +358,13 @@ export const pageQuery = graphql`
       }
     }
     imageFour: file(relativePath: { eq: "wandering.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000, quality: 90) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
+    imageFive: file(relativePath: { eq: "miniPixie.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1000, quality: 90) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
