@@ -48,6 +48,9 @@ let BuyButton = React.memo(({ post, images }) => {
         data-item-url={post.path}
         data-item-name={post.title}
         data-item-image={post.snipPic} // This doesn't work.
+        data-item-custom1-name={post.dataItemCustom1Name}
+        data-item-custom1-options={post.dataItemCustom1Options}
+        data-item-weight={post.dataItemWeight}
       >
         Add to Cart
         {/* <AddToCart data={{

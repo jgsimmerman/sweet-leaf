@@ -16,7 +16,10 @@ petsafe: ""
 temperature: ""
 seasonality: ""
 inventory: 14
-price: 8.95
+price: 6.95
+dataItemCustom1Name: "Pot Options"
+dataItemCustom1Options: "Plastic Nursery Pot|Terra Cotta Pot (+$2.00)[+2]"
+dataItemWeight: ""
 published: true
 story: "Semi-tropical plant perfect for fairy gardens, doll houses or just a really cute house plant for tiny spaces! Plant comes in a two inch plastic nursery pot or a 2.5 inch terra cotta pot and only grows to be about six inches tall at maturity."
 

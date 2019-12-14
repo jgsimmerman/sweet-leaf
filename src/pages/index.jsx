@@ -192,9 +192,9 @@ const Index = ({ data }) => {
           <Image>
             <Img fluid={data.imageFour.childImageSharp.fluid} />
           </Image>
-          <StyledLink to="/catalog/houseplants/wandering-jew/#">
+          <StyledLink to="/catalog/houseplants/wandering-dude/#">
             <Info>
-              <Title>Wandering Jew Cuttings</Title>
+              <Title>Wandering Dude Cuttings</Title>
               <Price>$4.95</Price>
             </Info>
           </StyledLink>

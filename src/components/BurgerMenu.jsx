@@ -110,6 +110,8 @@ const BurgerMenu = () => {
               <Link to="/catalog/hybrids">Hybrids</Link>
               <Link to="/catalog/more-soft-varieties">More Soft Varieties</Link>
               <Link to="/catalog/carnivorous-plants">Carnivorous Plants</Link>
+              <Link to="/catalog/houseplants">Houseplants</Link>
+
             </Nav2>
             <Link to="/about">About</Link>
             {/* <Link to="/blog">Blog</Link>

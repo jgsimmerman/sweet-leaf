@@ -21,6 +21,9 @@ const Post = ({ data, pageContext }) => {
   const pic = post.frontmatter.pic.childImageSharp.fluid;
   const snipPic = post.frontmatter.pic;
   const scientificname = post.frontmatter.scientificname;
+  const dataItemCustom1Name = post.frontmatter.dataItemCustom1Name;
+  const dataItemCustom1Options = post.frontmatter.dataItemCustom1Options;
+  const dataItemWeight = post.frontmatter.dataItemWeight;
 
   return (
     <Layout>
@@ -71,7 +74,9 @@ export const query = graphql`
         seasonality
         bloomcolor
         temperature
-
+        dataItemCustom1Name
+        dataItemCustom1Options
+        dataItemWeight
         pic {
           childImageSharp {
             fluid(maxWidth: 1000, quality: 90, traceSVG: { color: "#2B2B2F" }) {
