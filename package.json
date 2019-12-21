@@ -26,6 +26,8 @@
     "@babel/core": "^7.5.4",
     "@emotion/core": "^10.0.14",
     "@emotion/styled": "^10.0.14",
+    "@escaladesports/zygote-cart": "^3.0.54",
+    "@escaladesports/zygote-plugin-esca-api": "^2.1.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
     "@fortawesome/free-brands-svg-icons": "^5.9.0",
     "@fortawesome/free-regular-svg-icons": "^5.9.0",

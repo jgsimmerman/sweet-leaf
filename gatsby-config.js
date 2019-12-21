@@ -76,8 +76,8 @@ module.exports = {
       resolve: 'gatsby-plugin-snipcart',
       options: {
         jquery: '', 
-        js: 'https://cdn.snipcart.com/themes/v3.0.4/default/snipcart.js',
-        styles: 'https://cdn.snipcart.com/themes/v3.0.4/default/snipcart.css',
+        js: 'https://cdn.snipcart.com/themes/v3.0.5/default/snipcart.js',
+        styles: 'https://cdn.snipcart.com/themes/v3.0.5/default/snipcart.css',
         // jquery: 'https://code.jquery.com/jquery-3.4.1.min.js',
         // js: 'https://cdn.snipcart.com/scripts/2.0/snipcart.js',
         // styles: 'https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css',

@@ -8,6 +8,10 @@ import Helmet from 'react-helmet';
 import BuyButton from './BuyButton';
 import Img from 'gatsby-image';
 import { Grid, GridItem } from 'styled-grid-component';
+import { Cart, openCart, addToCart } from '@escaladesports/zygote-cart';
+import * as EscaAPI from '@escaladesports/zygote-plugin-esca-api'
+
+
 
 const Wrapper = styled.div`
   padding: 1rem 0 2rem 0;
@@ -108,6 +112,40 @@ const ItemContent = ({ post, html }) => {
                   {post.story}
               </p>  */}
             <BuyButton post={post}></BuyButton>
+
+            <button onClick={() => addToCart({
+              id: `TESTID`,
+              name: post.title,
+              image: `https://via.placeholder.com/75x75`,
+              description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit...`,
+              price: post.price*100,
+              shippable: true,
+              quantity: 1,
+            })}>
+              Add to Zygote Cart!
+            </button>
+
+            <button onClick={openCart}>Open Cart</button>
+            <Cart
+
+              stripeApiKey='pk_test_kuLPajeHN54EmoQl9DN6OTXh00Nbu3XDXV'
+              orderWebhook='/api/place-order'
+              
+              totalModifications={[
+                {
+                  id: `shipping`,
+                  description: `Shipping`,
+                  value: 595,
+                },
+                {
+                  id: `tax`,
+                  description: `Tax`,
+                  value: 0,
+                  displayValue: `-`,
+                },
+              ]}
+            />
+
           </Info>
         </GridItem>
       </Grid>
