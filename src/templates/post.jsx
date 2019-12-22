@@ -8,6 +8,8 @@ import '../styles/prism';
 import Helmet from 'react-helmet';
 import BuyButton from '../components/BuyButton';
 import ItemContent from '../components/ItemContent';
+import { Cart, openCart, addToCart, Totals } from '@escaladesports/zygote-cart';
+
 
 const Post = ({ data, pageContext }) => {
   const { next, prev } = pageContext;
@@ -16,6 +18,7 @@ const Post = ({ data, pageContext }) => {
   //const pic = post.frontmatter.image.childImageSharp.fluid;
   const title = post.frontmatter.title;
   const date = post.frontmatter.date;
+  const id = post.frontmatter.id;
   const html = post.html;
   const story = post.frontmatter.story;
   const pic = post.frontmatter.pic.childImageSharp.fluid;
@@ -27,6 +30,7 @@ const Post = ({ data, pageContext }) => {
 
   return (
     <Layout>
+     
       <SEO
         title={title}
         story={story}

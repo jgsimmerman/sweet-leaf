@@ -3,13 +3,15 @@ import { graphql, Link } from 'gatsby';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 import { Layout, Container, Content } from 'layouts';
-import { TagsBlock, Header, SEO, SecondNav } from 'components';
+import { TagsBlock, Header, SEO, SecondNav, Zygote } from 'components';
 import Helmet from 'react-helmet';
 import BuyButton from './BuyButton';
 import Img from 'gatsby-image';
 import { Grid, GridItem } from 'styled-grid-component';
-import { Cart, openCart, addToCart } from '@escaladesports/zygote-cart';
-import * as EscaAPI from '@escaladesports/zygote-plugin-esca-api'
+import { Cart, openCart, addToCart, Totals } from '@escaladesports/zygote-cart';
+// //import { Cart, openCart, addToCart, Totals, utils} from '@escaladesports/zygote-cart/src/export/utils/calculate-total';
+
+// import * as EscaAPI from '@escaladesports/zygote-plugin-esca-api'
 
 
 
@@ -114,7 +116,7 @@ const ItemContent = ({ post, html }) => {
             <BuyButton post={post}></BuyButton>
 
             <button onClick={() => addToCart({
-              id: `TESTID`,
+              id: `${post.id}`,
               name: post.title,
               image: `https://via.placeholder.com/75x75`,
               description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit...`,
@@ -126,26 +128,6 @@ const ItemContent = ({ post, html }) => {
             </button>
 
             <button onClick={openCart}>Open Cart</button>
-            <Cart
-
-              stripeApiKey='pk_test_kuLPajeHN54EmoQl9DN6OTXh00Nbu3XDXV'
-              orderWebhook='/api/place-order'
-              
-              totalModifications={[
-                {
-                  id: `shipping`,
-                  description: `Shipping`,
-                  value: 595,
-                },
-                {
-                  id: `tax`,
-                  description: `Tax`,
-                  value: 0,
-                  displayValue: `-`,
-                },
-              ]}
-            />
-
           </Info>
         </GridItem>
       </Grid>

@@ -5,6 +5,10 @@ import Headroom from 'react-headroom';
 import logo from '../../static/logo/header-logo.png';
 import { FaShoppingCart } from 'react-icons/fa';
 //import { CartQty } from 'react-snipcart'
+import { Cart, openCart, addToCart, Totals } from '@escaladesports/zygote-cart';
+import { Zygote } from 'components';
+
+
 
 const StyledLink = styled(Link)`
   display: flex;
@@ -47,8 +51,14 @@ const Nav = styled.nav`
  * IMPORTANT
  *
  *******************************************/
-const NavBar = () => (
+const NavBar = (props) => (
+  <>
+     
+
+
+
   <Headroom calcHeightOnResize disableInlineStyles>
+     
     <StyledLink to="/">
       <img src="" alt="" />
     </StyledLink>
@@ -68,6 +78,7 @@ const NavBar = () => (
       </div>
     </Nav>
   </Headroom>
+  </>
 );
 
 export default NavBar;
