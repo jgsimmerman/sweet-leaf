@@ -12,6 +12,11 @@ import { Cart, openCart, addToCart, Totals, utils, addModification } from '@esca
 //import { Cart, openCart, addToCart, Totals, utils} from '@escaladesports/zygote-cart/src/export/utils/calculate-total';
 //import { totalState } from '@escaladesports/zygote-cart/src/export/state/totals';
 
+// import * as preinfo from "preinfo";
+import * as calculatetax from "calculatetax";
+// import * as secondplugin from "secondplugin";
+//import * as componentTest from "componentTest";
+
 import * as EscaAPI from '@escaladesports/zygote-plugin-esca-api';
 
 const ZygoteCart = props => {
@@ -29,12 +34,17 @@ const ZygoteCart = props => {
   
    // addModification(tenPercent);
 
+  
+   
   return(
     <>
     
     <Cart
       stripeApiKey="pk_test_kuLPajeHN54EmoQl9DN6OTXh00Nbu3XDXV"
       orderWebhook="/api/place-order"
+      //infoWebhook="/api/order-info"
+      //plugins={[]}
+
 
       totalModifications={[
         {
@@ -43,21 +53,22 @@ const ZygoteCart = props => {
           value: 0,
           displayValue: `Free`,
         },
-        // {
-        //   id: `tax`,
-        //   description: `Tax`,
-        //   value: 325,
-        //   displayValue: `Calculated at checkout`,
-        // },
         {
-          id: `sale-1`,
-          description: `Super Sale!`,
-          value: -2000,
+          id: `tax`,
+          description: `Tax`,
+          value: 0,
+          displayValue: `Calculated at checkout`,
         },
+        // {
+        //   id: `sale-1`,
+        //   description: `Super Sale!`,
+        //   value: -2000,
+        // },
         //tenPercent,
       ]}
-
+     
     />
+    
     </>
   );
 };
