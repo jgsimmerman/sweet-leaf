@@ -8,8 +8,7 @@ export default async function submitStripeInfo({ stripeApiSecret, body, verbose 
 		log = console.log
 		error = console.error
 	}
-	//const stripe = Stripe(stripeApiSecret)
-	const stripe = require(Stripe)(stripeApiSecret)
+	const stripe = Stripe(stripeApiSecret)
 	
 	if(typeof body === `string`){
 		body = JSON.parse(body)
@@ -36,15 +35,15 @@ export default async function submitStripeInfo({ stripeApiSecret, body, verbose 
 			items: body.products.map(({ id, quantity, type }) => {
 				switch (type) {
 
-				case `plan`:
-					if (!body.customer)
-						throw new Error(`You must sign in to purchase this subscription.`)
-					orderType = `subscription`
-					return {
-						customer: body.customer,
-						plan: id,
-						quantity,
-					}
+				// case `plan`:
+				// 	if (!body.customer)
+				// 		throw new Error(`You must sign in to purchase this subscription.`)
+				// 	orderType = `subscription`
+				// 	return {
+				// 		customer: body.customer,
+				// 		plan: id,
+				// 		quantity,
+				// 	}
 				case `sku`:		
 				default:
 					return {
@@ -71,9 +70,9 @@ export default async function submitStripeInfo({ stripeApiSecret, body, verbose 
 		// Determine if we are subscribing to plans, or placing an order
 		switch (orderType) {
 
-		case `subscription`:
-			order = await stripe.subscriptions.create(obj)
-			break
+		// case `subscription`:
+		// 	order = await stripe.subscriptions.create(obj)
+		// 	break
 		
 		case `order`:
 		default:

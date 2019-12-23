@@ -8,8 +8,8 @@ export default async function submitStripeOrder({ stripeApiSecret, body, verbose
 		log = console.log
 		error = console.error
 	}
-		//const stripe = Stripe(stripeApiSecret)
-		const stripe = require(Stripe)(stripeApiSecret)
+		const stripe = Stripe(stripeApiSecret)
+		//const stripe = require(Stripe)(stripeApiSecret)
 	if(typeof body === `string`){
 		body = JSON.parse(body)
 	}
