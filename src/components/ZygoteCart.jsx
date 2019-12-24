@@ -16,7 +16,7 @@ import { Cart } from '@escaladesports/zygote-cart';
 // import * as calculatetax from "calculatetax";
 // import * as secondplugin from "secondplugin";
 // import * as componentTest from "componentTest";
-import * as getShippingMethod from "getShippingMethod";
+import * as getShippingMethods from "getShippingMethod";
 
 //import * as EscaAPI from '@escaladesports/zygote-plugin-esca-api';
 
