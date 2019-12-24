@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import { Layout, Container, Content } from 'layouts';
 import { TagsBlock, Header, SEO, SecondNav, Zygote } from 'components';
 import Helmet from 'react-helmet';
-//import BuyButton from './BuyButton';
+import BuyButton from './BuyButton';
 import Img from 'gatsby-image';
 import { Grid, GridItem } from 'styled-grid-component';
 //import { openCart, addToCart } from '@escaladesports/zygote-cart';

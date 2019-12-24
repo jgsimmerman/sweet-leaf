@@ -13,7 +13,7 @@ import { Cart } from 'zygote-cart-clone';
 //import { Cart, openCart, addToCart, Totals, utils} from '@escaladesports/zygote-cart/src/export/utils/calculate-total';
 //import { totalState } from '@escaladesports/zygote-cart/src/export/state/totals';
 
-import * as preinfo from "preinfo";
+// import * as preinfo from "preinfo";
 // import * as calculatetax from "calculatetax";
 // import * as secondplugin from "secondplugin";
 // import * as componentTest from "componentTest";
