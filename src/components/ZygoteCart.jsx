@@ -37,7 +37,6 @@ const ZygoteCart = props => {
   
    
   return(
-    <>
     
     <Cart
       stripeApiKey="pk_test_kuLPajeHN54EmoQl9DN6OTXh00Nbu3XDXV"
@@ -67,11 +66,10 @@ const ZygoteCart = props => {
       //   //   description: `Super Sale!`,
       //   //   value: -2000,
       //   // },
-      ]}
+      // ]}
      
     />
     
-    </>
   );
 };
 
