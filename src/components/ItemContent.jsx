@@ -116,7 +116,7 @@ const ItemContent = ({ post, html }) => {
             <BuyButton post={post}></BuyButton>
 
             <button onClick={() => addToCart({
-              id: `${post.dataItemId}`,
+              id: `${post.sku}`,
               name: post.title,
               image: `https://via.placeholder.com/75x75`,
               description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit...`,

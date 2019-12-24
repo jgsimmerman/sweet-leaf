@@ -6,7 +6,8 @@ snipPic: "./wandering.jpg"
 title: "Purple Wandering Dude (Cuttings)"
 scientificname: "Tradescantia zebrina"
 id: 10 
-dataItemId: sku_GPu0QAkPXeCkzD
+dataItemId: 123456
+sku: "sku_GPu0QAkPXeCkzD"
 catalog-section: "houseplants"
 tags: ['houseplants', 'zebrina']
 primarycolor: "Purple"

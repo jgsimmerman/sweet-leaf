@@ -6,7 +6,8 @@ snipPic: "./back2.jpg"
 title: "Nepenthes Alata"
 scientificname: "Nepenthes alata"
 id: 9 
-dataItemId: 123456
+dataItemId: 12345678
+sku: "sku_GPu6Hg898ywjUZ"
 catalog-section: "carnivorous-plants"
 tags: ['carnivorous', 'nepenthes']
 primarycolor: "Green"
