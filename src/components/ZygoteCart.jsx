@@ -40,8 +40,8 @@ const ZygoteCart = props => {
     <>
     
     <Cart
-      stripeApiKey="pk_test_kuLPajeHN54EmoQl9DN6OTXh00Nbu3XDXV"
-      //infoWebhook='/.netlify/functions/info-stripe'
+      // stripeApiKey="pk_test_kuLPajeHN54EmoQl9DN6OTXh00Nbu3XDXV"
+      // infoWebhook='/.netlify/functions/info-stripe'
 			orderWebhook='/.netlify/functions/order-stripe'
       //plugins={[]}
 
