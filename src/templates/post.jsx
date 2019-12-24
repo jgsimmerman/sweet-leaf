@@ -27,6 +27,7 @@ const Post = ({ data, pageContext }) => {
   const dataItemCustom1Name = post.frontmatter.dataItemCustom1Name;
   const dataItemCustom1Options = post.frontmatter.dataItemCustom1Options;
   const dataItemWeight = post.frontmatter.dataItemWeight;
+  const sku = post.frontmatter.sku;
 
   return (
     <Layout>
