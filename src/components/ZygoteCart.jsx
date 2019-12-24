@@ -42,7 +42,7 @@ const ZygoteCart = props => {
       //stripeApiKey=`${process.env.STRIPE_API_PUBLIC}`
       infoWebhook='/.netlify/functions/info-stripe'
 			orderWebhook='/.netlify/functions/order-stripe'
-      plugins={[payment]}
+      plugins={[ payment ]}
 
       cartHeader={<div>Sweet Leaf Succulents</div>}
 
