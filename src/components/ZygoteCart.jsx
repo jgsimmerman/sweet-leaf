@@ -16,6 +16,7 @@ import { Cart } from '@escaladesports/zygote-cart';
 // import * as calculatetax from "calculatetax";
 // import * as secondplugin from "secondplugin";
 // import * as componentTest from "componentTest";
+import * as payment from "payment";
 
 //import * as EscaAPI from '@escaladesports/zygote-plugin-esca-api';
 
@@ -43,7 +44,7 @@ const ZygoteCart = props => {
       //stripeApiKey=`${process.env.STRIPE_API_PUBLIC}`
       infoWebhook='/.netlify/functions/info-stripe'
 			orderWebhook='/.netlify/functions/order-stripe'
-      //plugins={[]}
+      plugins={[payment]}
 
       cartHeader={<div>Sweet Leaf Succulents</div>}
 

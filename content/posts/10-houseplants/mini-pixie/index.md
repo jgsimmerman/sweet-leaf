@@ -7,7 +7,7 @@ title: "Mini Pixie"
 scientificname: "Syngonium podophyllum"
 id: 10 
 dataItemId: 1234567
-sku: "sku_GPu4z7x1Q62yja"
+sku: "prod_GPv9tQ4yjrjWRV"
 catalog-section: "houseplants"
 tags: ['houseplants', 'syngonium']
 primarycolor: "Green"

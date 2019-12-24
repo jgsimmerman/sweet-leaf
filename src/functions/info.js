@@ -20,18 +20,58 @@ export async function handler({ body }) {
 			{
 				id: `ship-0`,
 				description: `Standard Shipping`,
-				value: 0,
+				value: () => {
+					if(totals.subtotal < 3001) {
+						return 795;
+					}
+					else if (totals.subtotal < 4501) {
+						return 895;
+					}
+					else if (totals.subtotal < 6001) {
+						return 995;
+					}
+        }
 			},
 			{
 				id: `ship-1`,
 				description: `Express Shipping`,
-				value: 1150,
+				value: () => {
+					if(totals.subtotal < 3001) {
+						return 1595;
+					}
+					else if (totals.subtotal < 4501) {
+						return 1795;
+					}
+					else if (totals.subtotal < 6001) {
+						return 1895;
+					}
+        }
 			},
 			{
 				id: `ship-2`,
 				description: `Overnight Shipping`,
-				value: 4999,
+				value: () => {
+					if(totals.subtotal < 3001) {
+						return 2995;
+					}
+					else if (totals.subtotal < 4501) {
+						return 3295;
+					}
+					else if (totals.subtotal < 6001) {
+						return 3495;
+					}
+        }
 			},
+			{
+				id: `ship-3`,
+				description: `Free Shipping`,
+				value: () => {
+					if (totals.subtotal > 4999){
+						return 0;
+					}
+					else return `Spend $50 or more to unlock free shipping!`
+				}
+			}
 		],
 		selectedShippingMethod: `ship-0`,
 		quantityModifications: [
