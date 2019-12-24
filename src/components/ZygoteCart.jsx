@@ -8,7 +8,8 @@ import Helmet from 'react-helmet';
 import BuyButton from './BuyButton';
 import Img from 'gatsby-image';
 import { Grid, GridItem } from 'styled-grid-component';
-import { Cart } from '@escaladesports/zygote-cart';
+//import { Cart } from '@escaladesports/zygote-cart';
+import { Cart } from 'zygote-cart-clone';
 //import { Cart, openCart, addToCart, Totals, utils} from '@escaladesports/zygote-cart/src/export/utils/calculate-total';
 //import { totalState } from '@escaladesports/zygote-cart/src/export/state/totals';
 
@@ -16,7 +17,7 @@ import * as preinfo from "preinfo";
 // import * as calculatetax from "calculatetax";
 // import * as secondplugin from "secondplugin";
 // import * as componentTest from "componentTest";
-//import * as shipping from "shipping";
+//import * as helpers from "helpers";
 
 //import * as EscaAPI from '@escaladesports/zygote-plugin-esca-api';
 
@@ -43,7 +44,7 @@ const ZygoteCart = props => {
       infoWebhook='/.netlify/functions/info-stripe'
 			orderWebhook='/.netlify/functions/order-stripe'
       
-      plugins={[ preinfo ]}
+      plugins={[ helpers ]}
 
       cartHeader={<div>Sweet Leaf Succulents</div>}
 

@@ -5,7 +5,6 @@ import Headroom from 'react-headroom';
 import logo from '../../static/logo/header-logo.png';
 import { FaShoppingCart } from 'react-icons/fa';
 //import { CartQty } from 'react-snipcart'
-import { Cart, openCart, addToCart, Totals } from '@escaladesports/zygote-cart';
 import { Zygote } from 'components';
 
 
