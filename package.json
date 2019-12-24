@@ -16,7 +16,7 @@
     "build:app": "gatsby build",
     "build:lambda": "netlify-lambda build src/lambda",
     "dev": "run-p dev:functions dev:gatsby",
-    "dev:gatsby": "NODE_TLS_REJECT_UNAUTHORIZED=0 gatsby develop --https ",
+    "dev:gatsby": "NODE_TLS_REJECT_UNAUTHORIZED=0 gatsby develop -- --https ",
     "dev:functions": "netlify-lambda serve src/lambda --config lambda-webpack-config.js",
     "serve": "gatsby serve",
     "clean": "rm -rf public && rm -rf .cache",
