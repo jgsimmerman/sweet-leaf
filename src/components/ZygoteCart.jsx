@@ -12,7 +12,7 @@ import { Cart } from '@escaladesports/zygote-cart';
 //import { Cart, openCart, addToCart, Totals, utils} from '@escaladesports/zygote-cart/src/export/utils/calculate-total';
 //import { totalState } from '@escaladesports/zygote-cart/src/export/state/totals';
 
-// import * as preinfo from "preinfo";
+import * as preinfo from "preinfo";
 // import * as calculatetax from "calculatetax";
 // import * as secondplugin from "secondplugin";
 // import * as componentTest from "componentTest";
@@ -43,7 +43,7 @@ const ZygoteCart = props => {
       infoWebhook='/.netlify/functions/info-stripe'
 			orderWebhook='/.netlify/functions/order-stripe'
       
-      //plugins={[ shipping ]}
+      plugins={[ preinfo ]}
 
       cartHeader={<div>Sweet Leaf Succulents</div>}
 
