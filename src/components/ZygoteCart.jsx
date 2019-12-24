@@ -41,24 +41,24 @@ const ZygoteCart = props => {
     
     <Cart
       stripeApiKey="pk_test_kuLPajeHN54EmoQl9DN6OTXh00Nbu3XDXV"
-      infoWebhook='/.netlify/functions/info-stripe'
+      //infoWebhook='/.netlify/functions/info-stripe'
 			orderWebhook='/.netlify/functions/order-stripe'
       //plugins={[]}
 
 
       totalModifications={[
-        {
-          id: `shipping`,
-          description: `Shipping`,
-          value: 0,
-          displayValue: `Free`,
-        },
-        {
-          id: `tax`,
-          description: `Tax`,
-          value: 0,
-          displayValue: `Calculated at checkout`,
-        },
+        // {
+        //   id: `shipping`,
+        //   description: `Shipping`,
+        //   value: 0,
+        //   displayValue: `Free`,
+        // },
+        // {
+        //   id: `tax`,
+        //   description: `Tax`,
+        //   value: 0,
+        //   displayValue: `Calculated at checkout`,
+        // },
         // {
         //   id: `sale-1`,
         //   description: `Super Sale!`,
