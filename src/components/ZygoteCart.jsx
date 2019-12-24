@@ -1,7 +1,5 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
-import dotenv from 'dotenv'
-
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 import { Layout, Container, Content } from 'layouts';
@@ -21,7 +19,7 @@ import { Cart } from '@escaladesports/zygote-cart';
 
 //import * as EscaAPI from '@escaladesports/zygote-plugin-esca-api';
 
-const ZygoteCart = () => {
+const ZygoteCart = props => {
 
   //const { subtotal } = props.Totals.totalsState.state
 
@@ -43,7 +41,7 @@ const ZygoteCart = () => {
     
     <Cart
       stripeApiKey="pk_test_kuLPajeHN54EmoQl9DN6OTXh00Nbu3XDXV"
-      //stripeApiKey=process.env.STRIPE_API_SECRET
+      //stripeApiKey=`${process.env.STRIPE_API_PUBLIC}`
       infoWebhook='/.netlify/functions/info-stripe'
 			orderWebhook='/.netlify/functions/order-stripe'
       //plugins={[]}
