@@ -33,8 +33,6 @@ const ZygoteCart = props => {
 	// 	}
   // })
   
-   // addModification(tenPercent);
-
   
    
   return(
