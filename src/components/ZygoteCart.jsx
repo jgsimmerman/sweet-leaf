@@ -1,5 +1,7 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
+import dotenv from 'dotenv'
+
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 import { Layout, Container, Content } from 'layouts';
@@ -8,7 +10,7 @@ import Helmet from 'react-helmet';
 import BuyButton from './BuyButton';
 import Img from 'gatsby-image';
 import { Grid, GridItem } from 'styled-grid-component';
-import { Cart, openCart, addToCart, Totals, utils, addModification } from '@escaladesports/zygote-cart';
+import { Cart } from '@escaladesports/zygote-cart';
 //import { Cart, openCart, addToCart, Totals, utils} from '@escaladesports/zygote-cart/src/export/utils/calculate-total';
 //import { totalState } from '@escaladesports/zygote-cart/src/export/state/totals';
 
@@ -19,7 +21,7 @@ import { Cart, openCart, addToCart, Totals, utils, addModification } from '@esca
 
 //import * as EscaAPI from '@escaladesports/zygote-plugin-esca-api';
 
-const ZygoteCart = props => {
+const ZygoteCart = () => {
 
   //const { subtotal } = props.Totals.totalsState.state
 
@@ -40,33 +42,33 @@ const ZygoteCart = props => {
     <>
     
     <Cart
-      // stripeApiKey="pk_test_kuLPajeHN54EmoQl9DN6OTXh00Nbu3XDXV"
-      // infoWebhook='/.netlify/functions/info-stripe'
+      stripeApiKey="pk_test_kuLPajeHN54EmoQl9DN6OTXh00Nbu3XDXV"
+      //stripeApiKey=process.env.STRIPE_API_SECRET
+      infoWebhook='/.netlify/functions/info-stripe'
 			orderWebhook='/.netlify/functions/order-stripe'
       //plugins={[]}
 
       cartHeader={<div>Sweet Leaf Succulents</div>}
 
 
-      totalModifications={[
-        // {
-        //   id: `shipping`,
-        //   description: `Shipping`,
-        //   value: 0,
-        //   displayValue: `Free`,
-        // },
-        // {
-        //   id: `tax`,
-        //   description: `Tax`,
-        //   value: 0,
-        //   displayValue: `Calculated at checkout`,
-        // },
-        // {
-        //   id: `sale-1`,
-        //   description: `Super Sale!`,
-        //   value: -2000,
-        // },
-        //tenPercent,
+      // totalModifications={[
+      //   // {
+      //   //   id: `shipping`,
+      //   //   description: `Shipping`,
+      //   //   value: 0,
+      //   //   displayValue: `Free`,
+      //   // },
+      //   // {
+      //   //   id: `tax`,
+      //   //   description: `Tax`,
+      //   //   value: 0,
+      //   //   displayValue: `Calculated at checkout`,
+      //   // },
+      //   // {
+      //   //   id: `sale-1`,
+      //   //   description: `Super Sale!`,
+      //   //   value: -2000,
+      //   // },
       ]}
      
     />
