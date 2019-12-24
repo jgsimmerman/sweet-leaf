@@ -83,7 +83,6 @@ const Layout = ({ children }) => (
         `}
       />
       <SEO />
-      <ZygoteCart />
       {/* <Cart
         stripeApiKey="pk_test_kuLPajeHN54EmoQl9DN6OTXh00Nbu3XDXV"
         orderWebhook="/api/place-order"
@@ -127,6 +126,7 @@ const Layout = ({ children }) => (
       
       {children}
       <Footer />
+      <ZygoteCart />
     </Fragment>
   </ThemeProvider>
 );
