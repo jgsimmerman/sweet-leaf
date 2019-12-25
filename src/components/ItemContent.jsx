@@ -10,7 +10,7 @@ import Img from 'gatsby-image';
 import { Grid, GridItem } from 'styled-grid-component';
 //import { openCart, addToCart } from '@escaladesports/zygote-cart';
 // //import { Cart, openCart, addToCart, Totals, utils} from '@escaladesports/zygote-cart/src/export/utils/calculate-total';
-import { Cart, openCart, addToCart } from 'zygote-cart-clone';
+import { openCart, addToCart } from 'zygote-cart-clone';
 
 // import * as EscaAPI from '@escaladesports/zygote-plugin-esca-api'
 
@@ -116,7 +116,7 @@ const ItemContent = ({ post, html }) => {
               </p>  */}
             <BuyButton post={post}></BuyButton>
 
-            <button onClick={() => addToCart({
+            {/* <button onClick={() => addToCart({
               id: `${post.sku}`,
               name: post.title,
               image: `https://via.placeholder.com/75x75`,
@@ -126,7 +126,7 @@ const ItemContent = ({ post, html }) => {
               quantity: 1,
             })}>
               Add to Zygote Cart!
-            </button>
+            </button> */}
 
             <button onClick={openCart}>Open Cart</button>
           </Info>
