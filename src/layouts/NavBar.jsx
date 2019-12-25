@@ -73,7 +73,6 @@ const NavBar = (props) => (
             )}
           </CartQuantity>
           {/* |<span className="snipcart-total-price"></span> */}
-        </a>
       </div>
     </Nav>
   </Headroom>
