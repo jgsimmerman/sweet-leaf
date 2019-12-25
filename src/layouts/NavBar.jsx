@@ -59,10 +59,6 @@ const NavBar = (props) => (
       <Link to="/about">About</Link>
       {/* <Link to="/blog">Blog</Link> */}
       <div>
-        <a
-          className="Header__summary snipcart-checkout snipcart-summary"
-          href="#"
-        >
           <FaShoppingCart onClick={openCart} styles={{color: `${props => props.theme.colors.white.base}` }} /> 
           <CartQuantity 
             styles={{

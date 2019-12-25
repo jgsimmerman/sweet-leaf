@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { AddToCart } from 'react-snipcart';
+//import { AddToCart } from 'react-snipcart';
 
 let BuyButton = React.memo(({ post, images }) => {
   const [selected, setSelected] = post.customField
@@ -42,7 +42,7 @@ let BuyButton = React.memo(({ post, images }) => {
           paddingLeft: '35px',
           fontSize: '24',
         }}
-        className="snipcart-add-item"
+        // className="snipcart-add-item"
         data-item-id={post.dataItemId}
         data-item-price={post.price}
         data-item-url={post.path}
