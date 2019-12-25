@@ -4,8 +4,8 @@ import styled from '@emotion/styled';
 import Headroom from 'react-headroom';
 import logo from '../../static/logo/header-logo.png';
 import { FaShoppingCart } from 'react-icons/fa';
-//import { CartQty } from 'react-snipcart'
 import { Zygote } from 'components';
+import { CartQuantity, openCart } from 'zygote-cart-clone'
 
 
 
@@ -31,11 +31,6 @@ const Nav = styled.nav`
     }
   }
 
-  .snipcart-items-count {
-    vertical-align: top;
-    font-size: 0.75rem;
-  }
-
   @media (max-width: 600px) {
     display: none;
   }
@@ -53,9 +48,6 @@ const Nav = styled.nav`
 const NavBar = (props) => (
   <>
      
-
-
-
   <Headroom calcHeightOnResize disableInlineStyles>
      
     <StyledLink to="/">
@@ -71,7 +63,19 @@ const NavBar = (props) => (
           className="Header__summary snipcart-checkout snipcart-summary"
           href="#"
         >
-          <FaShoppingCart /> <span className="snipcart-items-count"></span>
+          <FaShoppingCart onClick={openCart} styles={{color: `${props => props.theme.colors.white.base}` }} /> 
+          <CartQuantity 
+            styles={{
+              verticalAlign: `top`,
+              fontSize: `0.75rem` 
+            }}
+          >
+            {qty => (
+              <React.Fragment>
+                {qty}
+              </React.Fragment>
+            )}
+          </CartQuantity>
           {/* |<span className="snipcart-total-price"></span> */}
         </a>
       </div>

@@ -8,10 +8,9 @@ import Helmet from 'react-helmet';
 import BuyButton from './BuyButton';
 import Img from 'gatsby-image';
 import { Grid, GridItem } from 'styled-grid-component';
-//import { Cart } from '@escaladesports/zygote-cart';
+
 import { Cart } from 'zygote-cart-clone';
-//import { Cart, openCart, addToCart, Totals, utils} from '@escaladesports/zygote-cart/src/export/utils/calculate-total';
-//import { totalState } from '@escaladesports/zygote-cart/src/export/state/totals';
+
 
 // import * as preinfo from "preinfo";
 // import * as calculatetax from "calculatetax";

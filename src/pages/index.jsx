@@ -170,7 +170,7 @@ const Index = ({ data }) => {
           <Image>
             <Img fluid={data.imageFive.childImageSharp.fluid} />
           </Image>
-          <StyledLink to="/catalog/houseplants/mini-pixie/#">
+          <StyledLink to="/catalog/houseplants/mini-pixie/">
             <Info>
               <Title>Mini Pixie</Title>
               <Price>$8.95</Price>
@@ -181,7 +181,7 @@ const Index = ({ data }) => {
           <Image>
             <Img fluid={data.imageThree.childImageSharp.fluid} />
           </Image>
-          <StyledLink to="/catalog/carnivorous-plants/alata/#">
+          <StyledLink to="/catalog/carnivorous-plants/alata/">
             <Info>
               <Title>Nepenthes Alata</Title>
               <Price>$14.95</Price>
@@ -192,7 +192,7 @@ const Index = ({ data }) => {
           <Image>
             <Img fluid={data.imageFour.childImageSharp.fluid} />
           </Image>
-          <StyledLink to="/catalog/houseplants/wandering-dude/#">
+          <StyledLink to="/catalog/houseplants/wandering-dude/">
             <Info>
               <Title>Wandering Dude Cuttings</Title>
               <Price>$4.95</Price>

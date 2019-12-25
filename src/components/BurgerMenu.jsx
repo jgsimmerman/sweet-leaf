@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 
 import { FaShoppingCart } from 'react-icons/fa';
-// import { CartQty } from 'react-snipcart'
+import { CartQuantity, openCart } from 'zygote-cart-clone'
 
 import styles from './styles';
 
@@ -117,24 +117,32 @@ const BurgerMenu = () => {
             {/* <Link to="/blog">Blog</Link>
              */}
             <div>
-              <a
-                className="Header__summary snipcart-checkout snipcart-summary"
-                href="#"
-              >
-                <FaShoppingCart />{' '}
-                <span className="snipcart-items-count"></span>
+                <FaShoppingCart onClick={openCart} styles={{color: `${props => props.theme.colors.white.base}` }} /> 
+                {' '}
+                <CartQuantity 
+                  styles={{ 
+                    verticalAlign: `1.5em`, 
+                    fontSize: `0.75rem`}}
+                >
+                  {qty => (
+                    <React.Fragment>
+                      {qty}
+                    </React.Fragment>
+                  )}
+                </CartQuantity>
+                {/* <span className="snipcart-items-count"></span> */}
                 {/* |<span className="snipcart-total-price"></span> */}
-              </a>
+              
             </div>
             <hr />
-            <a
+            {/* <a
               href="#"
               className="snipcart-user-profile"
               onClick={handleStateChange}
             >
               Log In
             </a>
-            Members will be eligible for discounts and coupon codes.
+            Members will be eligible for discounts and coupon codes. */}
           </Nav>
         </div>
       </Menu>
