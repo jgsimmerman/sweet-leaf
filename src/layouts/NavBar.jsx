@@ -63,7 +63,8 @@ const NavBar = (props) => (
           <CartQuantity 
             styles={{
               verticalAlign: `top`,
-              fontSize: `0.75rem` 
+              fontSize: `0.75rem` ,
+              color: `${props => props.theme.colors.white.base}`,
             }}
           >
             {qty => (
