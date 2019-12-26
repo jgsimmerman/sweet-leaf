@@ -84,7 +84,7 @@ const SocialIcons = () => {
             <FaPinterest />
           </a>
         </li>
-        <li>
+        {/* <li>
           <a
             href={etsyUrl}
             target="_blank"
@@ -93,7 +93,7 @@ const SocialIcons = () => {
           >
             <FaEtsy />
           </a>
-        </li>
+        </li> */}
         <li>
           <a
             href={redditUrl}
