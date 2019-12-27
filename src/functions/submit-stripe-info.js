@@ -64,9 +64,7 @@ export default async function submitStripeInfo({ stripeApiSecret, body, verbose 
 				},
 			},
 			shipping_methods: [
-				{
-					id: body.id,  
-				},
+			
 			],
 		}
 		if (body.coupon) {
@@ -142,9 +140,9 @@ export default async function submitStripeInfo({ stripeApiSecret, body, verbose 
 	if (order.shipping_methods) {
 		res.shippingMethods = order.shipping_methods.map(({ id, amount, description }) => {
 			return {
-				id,
-				value: amount,
-				description,
+				id: body.id,
+				value: body.amount,
+				description: body.description,
 			}
 		})
 	}
