@@ -65,13 +65,13 @@ export default async function submitStripeInfo({ stripeApiSecret, body, verbose 
 			},
 			shipping_methods: [
 				{
-					id: ship0,  
+					id: `ship0`,  
 				},
 				{
-					id: ship1,				
+					id: `ship1`,				
 				},
 				{
-					id: ship2,
+					id: `ship2`,
 				}
 			],
 		}
