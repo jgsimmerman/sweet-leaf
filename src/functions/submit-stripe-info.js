@@ -64,7 +64,7 @@ export default async function submitStripeInfo({ stripeApiSecret, body, verbose 
 				},
 			},
 			shipping_methods: [
-			
+				id: body.id,
 			],
 		}
 		if (body.coupon) {
