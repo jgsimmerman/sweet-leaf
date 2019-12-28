@@ -135,7 +135,7 @@ export default async function submitStripeInfo({ stripeApiSecret, body, verbose 
 		})
 	}
 
-
+	
 	// Get shipping
 	if (order.shipping_methods) {
 		res.shippingMethods = order.shipping_methods.map(({ id, amount, description }) => {
