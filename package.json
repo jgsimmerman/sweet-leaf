@@ -82,7 +82,7 @@
     "typeface-candal": "0.0.72",
     "typeface-open-sans": "0.0.54",
     "typography": "^0.16.19",
-    "zygote-cart-clone": "^3.0.15"
+    "zygote-cart-clone": "^3.0.16"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",

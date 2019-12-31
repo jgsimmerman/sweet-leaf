@@ -86,7 +86,7 @@ export const query = graphql`
         dataItemWeight
         pic {
           childImageSharp {
-            fluid(maxWidth: 500, quality: 90, traceSVG: { color: "#2B2B2F" }) {
+            fluid( maxWidth: 800, quality: 90, traceSVG: { color: "#2B2B2F" }) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
