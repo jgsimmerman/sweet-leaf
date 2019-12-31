@@ -116,10 +116,10 @@ export async function handler({ body }) {
 			],
 		},
 	]
-	res.selectedShippingMethod = {
-		ship1: `method1`,
-		ship2: `method1`,
-	}
+	// res.selectedShippingMethod = {
+	// 	ship1: `method1`,
+	// 	ship2: `method1`,
+	// }
 
 
 	res.success = order.statusCode === 200
