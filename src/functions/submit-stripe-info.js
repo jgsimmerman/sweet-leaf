@@ -63,33 +63,7 @@ export default async function submitStripeInfo({ stripeApiSecret, body, verbose 
 					country: `US`,
 				},
 			},
-			shipping_methods: [
-				{
-					id: `ship0`,
-					description: `Standard Shipping`,
-					
-				},
-				{
-					id: `ship1`,
-					description: `Express Shipping`,
-					
-				},
-				{
-					id: `ship2`,
-					description: `Overnight Shipping`,
-					
-				},
-			// {
-			// 	id: `ship3`,
-			// 	description: `Free Shipping`,
-			// 	value: (subtotal) => {
-			// 		if (subtotal > 7499) {
-			// 			return 0
-			// 		} else return `Ineligible`
-			// 	},
-			// 	addInfo: `Free standard shipping on orders over $75!`,
-			// },
-			],
+			
 			
 		}
 		if (body.coupon) {
