@@ -63,7 +63,7 @@ export default async function submitStripeInfo({ stripeApiSecret, body, verbose 
 					country: `US`,
 				},
 			},
-			
+			shipping_methods: [],
 			
 		}
 		if (body.coupon) {
@@ -147,9 +147,9 @@ export default async function submitStripeInfo({ stripeApiSecret, body, verbose 
 		})
 	}
 
-	// if (order.selected_shipping_method) {
-	// 	res.selectedShippingMethod = order.selected_shipping_method
-	// }
+	if (order.selected_shipping_method) {
+		res.selectedShippingMethod = order.selected_shipping_method
+	}
 	if (order.id) {
 		res.meta.orderId = order.id
 	}
