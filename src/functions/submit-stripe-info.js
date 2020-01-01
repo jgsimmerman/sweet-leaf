@@ -53,6 +53,23 @@ export default async function submitStripeInfo({ stripeApiSecret, body, verbose 
 					}
 				}
 			}),
+			shipping_methods: [
+				{
+					id: `ship0`,
+					description: `Standard Shipping`,
+					amount: 1200,
+				},
+				{
+					id: `ship1`,
+					description: `Standard Shipping`,
+					amount: 1700,
+				},
+				{
+					id: `ship2`,
+					description: `Standard Shipping`,
+					amount: 2200,
+				}
+			],
 			shipping: {
 				name: body.infoName,
 				address: {
