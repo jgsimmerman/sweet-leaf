@@ -1,7 +1,9 @@
 
-
 export async function handler({ body }) {
-	let subtotal = body.subtotal
+	// eslint-disable-next-line no-unused-vars
+	let shipping = JSON.parse(body)
+	// eslint-disable-next-line no-unused-vars
+	let subtotal = shipping.subtotal
 
 	let shippingOptions = [
 		{
@@ -54,7 +56,7 @@ export async function handler({ body }) {
 					return 9695
 				}
 			},
-			addInfo: ``
+			addInfo: ``,
 		},
 		{
 			id: `ship2`,
@@ -88,20 +90,20 @@ export async function handler({ body }) {
 					return 16995
 				}
 			},
-			addInfo: ``
-		}
+			addInfo: ``,
+		},
 	]
 
+	console.log(`Shipping Plugin, Shipping Options: ${shippingOptions}`)
 	// const res = await submitStripeInfo({
 	// 	stripeApiSecret: process.env.STRIPE_API_SECRET,
 	// 	body,
 	// 	verbose: true
 	// })
-  console.log(`Returning from shipping ... ${JSON.stringify(shippingOptions)}`)
+
 	// Response
 	return {
 		statusCode: 200,
-		body: JSON.stringify(shippingOptions)
+		body: shippingOptions,
 	}
 }
-
