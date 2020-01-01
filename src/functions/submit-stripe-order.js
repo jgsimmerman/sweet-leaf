@@ -64,6 +64,17 @@ export default async function submitStripeOrder({ stripeApiSecret, body, verbose
 	if (body.selectedShippingMethod) {
 		try {
 			const req = await stripe.orders.update(res.meta.orderId, {
+				shipping_methods: [
+					{
+						id: `ship0`,
+					},
+					{
+						id: `ship1`,
+					},
+					{
+						id: `ship2`,
+					},
+				],
 				selected_shipping_method: body.selectedShippingMethod,
 			})
 			res.success = true
