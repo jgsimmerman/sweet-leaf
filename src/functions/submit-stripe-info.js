@@ -131,9 +131,6 @@ export default async function submitStripeInfo({ stripeApiSecret, body, verbose 
 					description,
 				})
 			}
-			if(type === `shipping`){
-				order.shipping_methods.push({"id": selected_shipping_method, "value": amount, "description": description})
-			}
 		})
 	}
 
