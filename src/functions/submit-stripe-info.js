@@ -62,6 +62,17 @@ export default async function submitStripeInfo({ stripeApiSecret, body, verbose 
 					country: `US`,
 				},
 			},
+			shipping_methods: [
+				{
+					id: `shipping-0`
+				},
+				{
+					id: `shipping-1`
+				},
+				{
+					id: `shipping-2`
+				},
+			]
 		}
 		if (body.coupon) {
 			obj.coupon = body.coupon
@@ -134,6 +145,7 @@ export default async function submitStripeInfo({ stripeApiSecret, body, verbose 
 
 	// Get shipping
 	if (order.shipping_methods) {
+		console.log(`order.shipping_methods : ` + order.shipping_methods)
 		res.shippingMethods = order.shipping_methods.map(({ id, amount, description }) => {
 			return {
 				id,
@@ -142,6 +154,7 @@ export default async function submitStripeInfo({ stripeApiSecret, body, verbose 
 			}
 		})
 	}
+	else {console.log(`No order.shipping_methods` + order.shipping_methods)}
 
 	if (order.selected_shipping_method) {
 		res.selectedShippingMethod = order.selected_shipping_method
