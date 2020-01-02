@@ -15,7 +15,7 @@
     "build": "gatsby build && netlify-lambda build src/lambda",
     "build:app": "gatsby build",
     "build:lambda": "netlify-lambda build src/lambda",
-    "dev": "run-p dev:functions dev:gatsby",
+    "dev": "run-p dev:functions dev:gatsby --S",
     "dev:gatsby": "NODE_TLS_REJECT_UNAUTHORIZED=0 gatsby develop --S ",
     "dev:functions": "netlify-lambda serve src/lambda --config lambda-webpack-config.js",
     "serve": "gatsby serve -S",
@@ -69,6 +69,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-burger-menu": "^2.6.13",
+    "react-cart-test": "^1.0.0",
     "react-dom": "^16.12.0",
     "react-headroom": "^2.2.8",
     "react-helmet": "^5.2.1",
@@ -81,8 +82,7 @@
     "styled-grid-component": "^1.1.13",
     "typeface-candal": "0.0.72",
     "typeface-open-sans": "0.0.54",
-    "typography": "^0.16.19",
-    "zygote-cart-clone": "^3.1.25"
+    "typography": "^0.16.19"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",

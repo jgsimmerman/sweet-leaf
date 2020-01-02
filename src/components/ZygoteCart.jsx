@@ -9,14 +9,14 @@ import BuyButton from './BuyButton';
 import Img from 'gatsby-image';
 import { Grid, GridItem } from 'styled-grid-component';
 
-import { Cart } from 'zygote-cart-clone';
+import { Cart } from 'react-cart-test';
 
 
 // import * as preinfo from "preinfo";
 // import * as calculatetax from "calculatetax";
 // import * as secondplugin from "secondplugin";
 // import * as componentTest from "componentTest";
- import getShippingMethods from "./getShippingMethods";
+import getShippingMethods from "./getShippingMethods";
 
 //import * as EscaAPI from '@escaladesports/zygote-plugin-esca-api';
 
@@ -44,7 +44,7 @@ const ZygoteCart = props => {
 			orderWebhook='/.netlify/functions/order-stripe'
       
       plugins={[ 
-        //getShippingMethods 
+        getShippingMethods 
       ]}
 
       cartHeader={<div>Sweet Leaf Succulents</div>}

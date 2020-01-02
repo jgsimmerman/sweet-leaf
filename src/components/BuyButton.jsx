@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 //import { AddToCart } from 'react-snipcart';
-import { openCart, addToCart } from 'zygote-cart-clone';
+import { openCart, addToCart } from 'react-cart-test';
 
 let BuyButton = React.memo(({ post, images }) => {
   const [selected, setSelected] = post.customField

@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 
 import { FaShoppingCart } from 'react-icons/fa';
-import { CartQuantity, openCart } from 'zygote-cart-clone'
+import { CartQuantity, openCart } from 'react-cart-test'
 
 import styles from './styles';
 
