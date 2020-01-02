@@ -16,7 +16,7 @@ import { Cart } from 'react-cart-test';
 // import * as calculatetax from "calculatetax";
 // import * as secondplugin from "secondplugin";
 // import * as componentTest from "componentTest";
-//import getShippingMethods from "./getShippingMethods";
+import getShippingMethods from "./getShippingMethods";
 
 //import * as EscaAPI from '@escaladesports/zygote-plugin-esca-api';
 
@@ -43,9 +43,9 @@ const ZygoteCart = props => {
       infoWebhook='/.netlify/functions/info-stripe'
 			orderWebhook='/.netlify/functions/order-stripe'
       
-      // plugins={[ 
-      //   getShippingMethods 
-      // ]}
+      plugins={[ 
+        getShippingMethods 
+      ]}
 
       // cartHeader={<div>Sweet Leaf Succulents</div>}
 
