@@ -62,17 +62,17 @@ export default async function submitStripeInfo({ stripeApiSecret, body, verbose 
 					country: `US`,
 				},
 			},
-			shipping_methods: [
-				{				
-					id: `shipping-0`,
-				},
-				{
-					id: `shipping-1`,
-				},
-				{
-					id: `shipping-2`,
-				}			
-			]
+			// shipping_methods: [
+			// 	{				
+			// 		id: `shipping-0`,
+			// 	},
+			// 	{
+			// 		id: `shipping-1`,
+			// 	},
+			// 	{
+			// 		id: `shipping-2`,
+			// 	}			
+			// ]
 		}
 		if (body.coupon) {
 			obj.coupon = body.coupon
