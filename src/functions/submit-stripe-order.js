@@ -1,6 +1,6 @@
 
 import Stripe from 'stripe'
-import noop from './utils/noop'
+import noop from './noop'
 
 export default async function submitStripeOrder({ stripeApiSecret, body, verbose }) {
 	let log = noop
