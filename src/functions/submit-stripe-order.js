@@ -1,4 +1,3 @@
-
 import Stripe from 'stripe'
 import noop from './noop'
 
@@ -30,7 +29,6 @@ export default async function submitStripeOrder({ stripeApiSecret, body, verbose
 		try {
 			const req = await stripe.orders.update(res.meta.orderId, {
 				selected_shipping_method: body.selectedShippingMethod,
-				shippingMethods: body.shippingMethods,
 			})
 			res.success = true
 			log(`submitStripeOrder received from Stripe after updated shipping:`, req)
