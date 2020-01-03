@@ -163,7 +163,7 @@ const getShippingMethods = async ({ response, info, preFetchData }) => {
 		}
 	))
 
-
+	console.log(shippingMethods);
 	return {
 		...response,
 		methods: shippingMethods,
@@ -171,4 +171,4 @@ const getShippingMethods = async ({ response, info, preFetchData }) => {
 	}
 }
 
-export {getShippingMethods}
+export default {getShippingMethods}
