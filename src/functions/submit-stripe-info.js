@@ -52,7 +52,7 @@ export default async function submitStripeInfo({ stripeApiSecret, body, verbose 
 					}
 				}
 			}),
-			
+
 			shipping: {
 				name: body.infoName,
 				address: {
@@ -63,16 +63,16 @@ export default async function submitStripeInfo({ stripeApiSecret, body, verbose 
 					country: `US`,
 				},
 			},
-			shipping_methods: [
-				{
-					id: "shipping-0",
-				},
-				{
-					id: "shipping-1"
-				},
-				{
-					id: "shipping2",
-				},
+			// shipping_methods: [
+			// 	{
+			// 		id: "shipping-0",
+			// 	},
+			// 	{
+			// 		id: "shipping-1"
+			// 	},
+			// 	{
+			// 		id: "shipping2",
+			// 	},
 			],
 		}
 		if (body.coupon) {
@@ -145,7 +145,7 @@ export default async function submitStripeInfo({ stripeApiSecret, body, verbose 
 
 
 	// Get shipping
-	if (order.shipping_methods) {
+	// if (order.shipping_methods) {
 		// res.shippingMethods = order.shipping_methods.map(({ id, amount, description }) => {
 		// 	return {
 		// 		id,
@@ -153,11 +153,11 @@ export default async function submitStripeInfo({ stripeApiSecret, body, verbose 
 		// 		description,
 		// 	}
 		// })
-	}
+	// }
 
-	if (order.selected_shipping_method) {
+	// if (order.selected_shipping_method) {
 		//res.selectedShippingMethod = order.selected_shipping_method
-	}
+	// }
 	if (order.id) {
 		res.meta.orderId = order.id
 	}
