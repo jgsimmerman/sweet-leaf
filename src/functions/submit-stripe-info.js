@@ -143,21 +143,22 @@ export default async function submitStripeInfo({ stripeApiSecret, body, verbose 
 		})
 	}
 
+	
 
-	// Get shipping
-	// if (order.shipping_methods) {
-		// res.shippingMethods = order.shipping_methods.map(({ id, amount, description }) => {
-		// 	return {
-		// 		id,
-		// 		value: amount,
-		// 		description,
-		// 	}
-		// })
-	// }
+	Get shipping
+	if (order.shipping_methods) {
+		res.shippingMethods = order.shipping_methods.map(({ id, amount, description }) => {
+			return {
+				id,
+				value: amount,
+				description,
+			}
+		})
+	}
 
-	// if (order.selected_shipping_method) {
-		//res.selectedShippingMethod = order.selected_shipping_method
-	// }
+	if (order.selected_shipping_method) {
+		res.selectedShippingMethod = order.selected_shipping_method
+	}
 	if (order.id) {
 		res.meta.orderId = order.id
 	}
