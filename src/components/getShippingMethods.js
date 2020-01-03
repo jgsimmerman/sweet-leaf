@@ -166,7 +166,7 @@ const getShippingMethods = async ({ response, info, preFetchData }) => {
 
 	return {
 		...response,
-		shippingMethods: shippingMethods,
+		methods: shippingMethods,
 		selectedShippingMethod: shippingMethods[0], // Default selected one
 	}
 }
