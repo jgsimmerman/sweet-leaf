@@ -73,7 +73,7 @@ export default async function submitStripeInfo({ stripeApiSecret, body, verbose 
 			// 	{
 			// 		id: "shipping2",
 			// 	},
-			],
+			// ],
 		}
 		if (body.coupon) {
 			obj.coupon = body.coupon
@@ -146,19 +146,42 @@ export default async function submitStripeInfo({ stripeApiSecret, body, verbose 
 	
 
 	//Get shipping
-	if (order.shipping_methods) {
-		res.shippingMethods = order.shipping_methods.map(({ id, amount, description }) => {
-			return {
-				id,
-				value: amount,
-				description,
-			}
-		})
-	}
+	// if (order.shipping_methods) {
+	// 	res.shippingMethods = order.shipping_methods.map(({ id, amount, description }) => {
+	// 		return {
+	// 			id,
+	// 			value: amount,
+	// 			description,
+	// 		}
+	// 	})
+	// }
 
-	if (order.selected_shipping_method) {
+	// if (order.selected_shipping_method) {
+	// 	res.selectedShippingMethod = order.selected_shipping_method
+	// }
+
+	res.shippingMethods = [
+		{
+			id: `shipping-0`,
+			description: `Standard Shipping`,
+		},
+		{
+			id: `shipping-1`,
+			description: `Express Shipping`,
+		},
+		{
+			id: `shipping-2`,
+			description: `Overnight Shipping`,
+		},
+	]
+	// res.selectedShippingMethod = {
+	// 	ship1: `method1`,
+	// 	ship2: `method1`,
+	// }	
+	if(order.selected_shipping_method) {
 		res.selectedShippingMethod = order.selected_shipping_method
 	}
+	
 	if (order.id) {
 		res.meta.orderId = order.id
 	}
