@@ -39,7 +39,7 @@ const ZygoteCart = props => {
     
     <Cart
       stripeApiKey="pk_test_kuLPajeHN54EmoQl9DN6OTXh00Nbu3XDXV"
-      // //stripeApiKey=`${process.env.STRIPE_API_PUBLIC}`
+      //stripeApiKey=`${process.env.STRIPE_API_PUBLIC}`
       infoWebhook='/.netlify/functions/info-stripe'
 			orderWebhook='/.netlify/functions/order-stripe'
       
@@ -50,25 +50,25 @@ const ZygoteCart = props => {
       // cartHeader={<div>Sweet Leaf Succulents</div>}
 
 
-      // // totalModifications={[
-      // //   // {
-      // //   //   id: `shipping`,
-      // //   //   description: `Shipping`,
-      // //   //   value: 0,
-      // //   //   displayValue: `Free`,
-      // //   // },
-      // //   // {
-      // //   //   id: `tax`,
-      // //   //   description: `Tax`,
-      // //   //   value: 0,
-      // //   //   displayValue: `Calculated at checkout`,
-      // //   // },
-      // //   // {
-      // //   //   id: `sale-1`,
-      // //   //   description: `Super Sale!`,
-      // //   //   value: -2000,
-      // //   // },
-      // // ]}
+      totalModifications={[
+        // {
+        //   id: `shipping`,
+        //   description: `Shipping`,
+        //   value: 0,
+        //   displayValue: `Free`,
+        // },
+        // {
+        //   id: `tax`,
+        //   description: `Tax`,
+        //   value: 0,
+        //   displayValue: `Calculated at checkout`,
+        // },
+        {
+          id: `sale-1`,
+          description: `Super Sale!`,
+          value: -2000,
+        },
+      ]}
      
     />
     
