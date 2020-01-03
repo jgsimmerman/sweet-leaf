@@ -52,15 +52,15 @@ const getShippingMethods = async ({ response, info, preFetchData }) => {
 				} else if (subtotal < 4500) {
 					return 895
 				}
-				else if (subtotal < 6000) {
+				else if (subtotal < 5000) {
 					return 995
 				}
-				else if (subtotal <= 7500) {
-					return 1195
+				else if (subtotal >= 5000) {
+					return 0 //1195
 				}
-				else if (subtotal > 7501) {
-					return 0
-				}
+				// else if (subtotal > 7501) {
+				// 	return 0
+				// }
 			},
 			addInfo:  `Free standard shipping on orders over $75!`,
 		},

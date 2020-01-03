@@ -17,12 +17,12 @@ export default async function submitStripeOrder({ stripeApiSecret, body, verbose
 	console.log(`submitStripeOrder received from invoke:`, body)
 
 	// Create empty result object to be sent later
-	let rel = {
-		messages: {
-			error: [],
-		},
-		meta: body.meta,
-	}
+	// let rel = {
+	// 	messages: {
+	// 		error: [],
+	// 	},
+	// 	meta: body.meta,
+	// }
 	let res = {
 		messages: {
 			error: [],
@@ -30,26 +30,26 @@ export default async function submitStripeOrder({ stripeApiSecret, body, verbose
 		meta: body.meta,
 	}
 		// Update shipping method
-		if (body.shippingMethods) {
-			try {
-				const req = await stripe.orders.update(res.meta.orderId, {
-					shipping_methods: body.shippingMethods,
-				})
-				rel.success = true
-				console.log(`submitStripeOrder received from Stripe after updated shipping_methods:`, req)
-			}
-			catch (err) {
-				error(err)
-				if (err.code === `out_of_inventory` || err.code === `resource_missing`) {
-					rel.step = `cart`
-					rel.messages.error.push(`Sorry! One or more items in your cart have gone out of stock. Please remove these products or try again later.`)
-				}
-				else if (err.message) {
-					rel.messages.error.push(err.message)
-				}
-				rel.success = false
-			}
-
+		// if (body.shippingMethods) {
+		// 	try {
+		// 		const req = await stripe.orders.update(res.meta.orderId, {
+		// 			shipping_methods: body.shippingMethods,
+		// 		})
+		// 		rel.success = true
+		// 		console.log(`submitStripeOrder received from Stripe after updated shipping_methods:`, req)
+		// 	}
+		// 	catch (err) {
+		// 		error(err)
+		// 		if (err.code === `out_of_inventory` || err.code === `resource_missing`) {
+		// 			rel.step = `cart`
+		// 			rel.messages.error.push(`Sorry! One or more items in your cart have gone out of stock. Please remove these products or try again later.`)
+		// 		}
+		// 		else if (err.message) {
+		// 			rel.messages.error.push(err.message)
+		// 		}
+		// 		rel.success = false
+		// 	}
+		// }
 	// Update shipping method
 	if (body.selectedShippingMethod) {
 		try {
@@ -73,7 +73,7 @@ export default async function submitStripeOrder({ stripeApiSecret, body, verbose
 	}
 
 	// Pay for order
-	if (res.success && rel.success) {
+	if (res.success) {
 		let req
 		try {
 			req = await stripe.orders.pay(res.meta.orderId, {
