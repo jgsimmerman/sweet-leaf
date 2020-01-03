@@ -160,27 +160,25 @@ export default async function submitStripeInfo({ stripeApiSecret, body, verbose 
 	// 	res.selectedShippingMethod = order.selected_shipping_method
 	// }
 
-	res.shippingMethods = [
-		{
-			id: `shipping-0`,
-			description: `Standard Shipping`,
-		},
-		{
-			id: `shipping-1`,
-			description: `Express Shipping`,
-		},
-		{
-			id: `shipping-2`,
-			description: `Overnight Shipping`,
-		},
-	]
+	// res.shippingMethods = [
+	// 	{
+	// 		id: `shipping-0`,
+	// 		description: `Standard Shipping`,
+	// 	},
+	// 	{
+	// 		id: `shipping-1`,
+	// 		description: `Express Shipping`,
+	// 	},
+	// 	{
+	// 		id: `shipping-2`,
+	// 		description: `Overnight Shipping`,
+	// 	},
+	// ]
 	// res.selectedShippingMethod = {
 	// 	ship1: `method1`,
 	// 	ship2: `method1`,
 	// }	
-	if(order.selected_shipping_method) {
-		res.selectedShippingMethod = order.selected_shipping_method
-	}
+	//res.selectedShippingMethod = shippingMethods[0]
 	
 	if (order.id) {
 		res.meta.orderId = order.id
