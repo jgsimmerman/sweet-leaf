@@ -44,7 +44,7 @@ const ZygoteCart = props => {
 			orderWebhook='/.netlify/functions/order-stripe'
       
       plugins={[ 
-        getShippingMethods 
+        //getShippingMethods 
       ]}
 
       // cartHeader={<div>Sweet Leaf Succulents</div>}
@@ -63,11 +63,11 @@ const ZygoteCart = props => {
         //   value: 0,
         //   displayValue: `Calculated at checkout`,
         // },
-        {
-          id: `sale-1`,
-          description: `Super Sale!`,
-          value: -2000,
-        },
+        // {
+        //   id: `sale-1`,
+        //   description: `Super Sale!`,
+        //   value: -2000,
+        // },
       ]}
      
     />

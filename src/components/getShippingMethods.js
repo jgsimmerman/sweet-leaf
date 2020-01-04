@@ -42,10 +42,12 @@ const getShippingMethods = async ({ response, info, preFetchData }) => {
 	// 		))
 	// 	})
 
+	
+
 	let shippingOptions = [
 		{
 			id: `shipping-0`,
-			description: `Standard Shipping`,
+			description: `Priority Shipping`,
 			value: (subtotal) => {
 				if (subtotal < 3000) {
 					return 795
@@ -62,7 +64,7 @@ const getShippingMethods = async ({ response, info, preFetchData }) => {
 				// 	return 0
 				// }
 			},
-			addInfo:  `Free standard shipping on orders over $75!`,
+			addInfo:  `Free priority shipping on orders over $50!`,
 		},
 		{
 			id: `shipping-1`,
