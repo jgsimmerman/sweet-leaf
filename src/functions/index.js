@@ -6,4 +6,5 @@ export {
 	submitStripeInfo,
 	submitStripeOrder,
 	// sendSparkpostConfirmation,
+	getShippingMethods
 }
