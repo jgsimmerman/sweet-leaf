@@ -166,7 +166,7 @@ const getShippingMethods = async ({ response, info, preFetchData }) => {
 	))
 
 	console.log(shippingMethods);
-	return shippingMethods
+	return JSON.stringify(shippingMethods)
 }
 
 export default {getShippingMethods}
