@@ -5,7 +5,7 @@ dotenv.config({ silent: true })
 
 export async function handler({ body }) {
 
-	const res = await getShippingMethods()
+	const res = await getShippingMethods(body)
 
 	// Response
 	return {
