@@ -167,7 +167,7 @@ const getShippingMethods = async ({ response, info, preFetchData }) => {
 
 	console.log(`getShippingMethods lambda function`);
 	console.log(shippingMethods);
-	return JSON.stringify(shippingMethods)
+	return shippingMethods;
 }
 
 export default {getShippingMethods}

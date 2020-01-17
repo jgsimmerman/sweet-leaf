@@ -166,6 +166,11 @@ const getShippingMethods = async ({ response, info, preFetchData }) => {
 	))
 
 	console.log(shippingMethods);
+
+	const req = await stripe.orders.update(res.meta.orderId, {
+		selected_shipping_method: body.selectedShippingMethod,
+	})
+
 	return {
 		...response,
 		methods: shippingMethods,
