@@ -53,12 +53,12 @@ const ZygoteCart = props => {
 
 
       totalModifications={[
-        {
-          id: `shipping`,
-          description: `Test Shipping`,
-          value: 1000,
-          displayValue: `$10`,
-        },
+        // {
+        //   id: `shipping`,
+        //   description: `Test Shipping`,
+        //   value: 1000,
+        //   displayValue: `$10`,
+        // },
         // {
         //   id: `tax`,
         //   description: `Tax`,

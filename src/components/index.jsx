@@ -7,6 +7,7 @@ import TagsBlock from './TagsBlock';
 import BurgerMenu from './BurgerMenu';
 import SocialIcons from './SocialIcons';
 import ZygoteCart from './ZygoteCart';
+import getShippingMethods from './getShippingMethods'
 
 
-export { BlogList, Header, PostList, SEO, TagsBlock, BurgerMenu, SocialIcons, ZygoteCart };
+export { BlogList, Header, PostList, SEO, TagsBlock, BurgerMenu, SocialIcons, ZygoteCart, getShippingMethods };
