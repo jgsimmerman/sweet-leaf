@@ -2,7 +2,7 @@ import dotenv from 'dotenv'
 import {
 	updateShipping,
 	sendSparkpostConfirmation,
-} from '../server'
+} from '../functions'
 dotenv.config({ silent: true })
 
 export async function handler({ body }) {
