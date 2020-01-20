@@ -80,7 +80,6 @@ export default async function submitStripeInfo({ stripeApiSecret, body, verbose 
 	}
 	catch (err) {
 		order = {}
-		error(`submitStripeInfo received error from Stripe:`, err)
 
 		// Error messages
 		// Create more consumer friendly inventory error message
@@ -90,7 +89,6 @@ export default async function submitStripeInfo({ stripeApiSecret, body, verbose 
 				.replace(`]`, ``))
 			if (body.products[item]) {
 				res.step = `cart`
-				res.messages.error.push(`Sorry! "${body.products[item].name}" is out of stock. Please lower the quantity or remove this product from your cart.`)
 				const stock = await stripe.products.retrieve(body.products[item].id)
 				let quantity = 999999
 				stock.skus.data.forEach(sku => { // Scan for least quantity in product
@@ -105,7 +103,6 @@ export default async function submitStripeInfo({ stripeApiSecret, body, verbose 
 			}
 		}
 		else if (err.message) {
-			res.messages.error.push(err.message)
 		}
 
 		if (err.param === `coupon`) {
