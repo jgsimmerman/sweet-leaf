@@ -1,9 +1,7 @@
 import Stripe from 'stripe'
-import noop from '../utils/noop'
 
 export default async function updateShipping({ stripeApiSecret, body, verbose }) {
-	let log = noop
-	let error = noop
+
 	if(verbose){
 		log = console.log
 		error = console.error
