@@ -15,7 +15,6 @@ export default async function submitStripeInfo({ stripeApiSecret, body, verbose 
 	// Create empty result object to be sent later
 	let res = {
 		messages: {
-			error: [],
 		},
 		modifications: [],
 		meta: {},

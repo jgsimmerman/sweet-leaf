@@ -17,7 +17,6 @@ export default async function submitStripeOrder({ stripeApiSecret, body, verbose
 	// Create empty result object to be sent later
 	let res = {
 		messages: {
-			error: [],
 		},
 		meta: body.meta,
 	}
@@ -32,13 +31,10 @@ export default async function submitStripeOrder({ stripeApiSecret, body, verbose
 			console.log(`submitStripeOrder received from Stripe after updated shipping:`, req)
 		}
 		catch (err) {
-			error(err)
 			if (err.code === `out_of_inventory` || err.code === `resource_missing`) {
 				res.step = `cart`
-				res.messages.error.push(`Sorry! One or more items in your cart have gone out of stock. Please remove these products or try again later.`)
 			}
 			else if (err.message) {
-				res.messages.error.push(err.message)
 			}
 			res.success = false
 		}
@@ -56,13 +52,10 @@ export default async function submitStripeOrder({ stripeApiSecret, body, verbose
 			console.log(`submitStripeOrder received from Stripe after order placement:`, req)
 		}
 		catch (err) {
-			error(err)
 			if (err.code === `out_of_inventory` || err.code === `resource_missing`) {
 				res.step = `cart`
-				res.messages.error.push(`Sorry! One or more items in your cart have gone out of stock. Please remove these products or try again later.`)
 			}
 			else if (err.message) {
-				res.messages.error.push(err.message)
 			}
 			res.success = false
 		}

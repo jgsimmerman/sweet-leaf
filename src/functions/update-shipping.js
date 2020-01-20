@@ -17,7 +17,6 @@ export default async function updateShipping({ stripeApiSecret, body, verbose })
   }
   catch (err) {
     info = {}
-    console.error(err)
   }
   let subtotal = info.subtotal
 
