@@ -3,8 +3,7 @@ import Stripe from 'stripe'
 export default async function updateShipping({ stripeApiSecret, body, verbose }) {
 
 	if(verbose){
-		log = console.log
-		error = console.error
+		
 	}
 	const stripe = Stripe(stripeApiSecret)
 	if(typeof body === `string`){
@@ -172,11 +171,11 @@ export default async function updateShipping({ stripeApiSecret, body, verbose })
   //
 
 	// Validate product prices & stock here
-	log(`updateShipping received from invoke:`, body)
+	console.log(`updateShipping received from invoke:`, body)
 
 	// Create empty result object to be sent later
 
-	log(`updateShipping returning:`, res)
+	console.log(`updateShipping returning:`, res)
 
 
   let response = {

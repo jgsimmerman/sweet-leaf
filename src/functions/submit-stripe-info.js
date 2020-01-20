@@ -3,15 +3,14 @@ import Stripe from 'stripe'
 export default async function submitStripeInfo({ stripeApiSecret, body, verbose }) {
 
 	if(verbose){
-		log = console.log
-		error = console.error
+		
 	}
 	const stripe = Stripe(stripeApiSecret)
 	if(typeof body === `string`){
 		body = JSON.parse(body)
 	}
 
-	log(`submitStripeInfo received from invoke:`, body)
+	console.log(`submitStripeInfo received from invoke:`, body)
 
 	// Create empty result object to be sent later
 	let res = {
@@ -78,7 +77,7 @@ export default async function submitStripeInfo({ stripeApiSecret, body, verbose 
 		}
 
 		res.success = true
-		log(`submitStripeInfo received from Stripe:`, order)
+		console.log(`submitStripeInfo received from Stripe:`, order)
 	}
 	catch (err) {
 		order = {}
@@ -153,7 +152,7 @@ export default async function submitStripeInfo({ stripeApiSecret, body, verbose 
 		...res,
 	}
 
-	log(`submitStripeInfo returning:`, res)
+	console.log(`submitStripeInfo returning:`, res)
 
 	return res
 }

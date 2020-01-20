@@ -4,8 +4,7 @@ import Stripe from 'stripe'
 export default async function submitStripeOrder({ stripeApiSecret, body, verbose }) {
 
 	if(verbose){
-		log = console.log
-		error = console.error
+		
 	}
 	const stripe = Stripe(stripeApiSecret)
 	if(typeof body === `string`){
@@ -13,7 +12,7 @@ export default async function submitStripeOrder({ stripeApiSecret, body, verbose
 	}
 
 	// Validate product prices & stock here
-	log(`submitStripeOrder received from invoke:`, body)
+	console.log(`submitStripeOrder received from invoke:`, body)
 
 	// Create empty result object to be sent later
 	let res = {
@@ -30,7 +29,7 @@ export default async function submitStripeOrder({ stripeApiSecret, body, verbose
 				selected_shipping_method: body.selectedShippingMethod,
 			})
 			res.success = true
-			log(`submitStripeOrder received from Stripe after updated shipping:`, req)
+			console.log(`submitStripeOrder received from Stripe after updated shipping:`, req)
 		}
 		catch (err) {
 			error(err)
@@ -54,7 +53,7 @@ export default async function submitStripeOrder({ stripeApiSecret, body, verbose
 				source: body.payment.id,
 			})
 			res.success = req.status === `paid`
-			log(`submitStripeOrder received from Stripe after order placement:`, req)
+			console.log(`submitStripeOrder received from Stripe after order placement:`, req)
 		}
 		catch (err) {
 			error(err)
@@ -75,7 +74,7 @@ export default async function submitStripeOrder({ stripeApiSecret, body, verbose
 		...res,
 	}
 
-	log(`submitStripeOrder returning:`, res)
+	console.log(`submitStripeOrder returning:`, res)
 
 	return res
 }
