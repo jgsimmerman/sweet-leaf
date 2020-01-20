@@ -286,7 +286,7 @@ export default async function submitStripeInfo({ stripeApiSecret, body, verbose 
 	// 	}
 	// ))
 
-	res.selectedShippingMethod = 'shipping'
+	//res.selectedShippingMethod = 'shipping'
 	// res.selectedShippingMethod = {
 	// 	ship1: `method1`,
 	// 	ship2: `method1`,
