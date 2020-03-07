@@ -51,23 +51,14 @@ const ZygoteCart = props => {
       
 
       // totalModifications={[
-      //   // {
-      //   //   id: `shipping`,
-      //   //   description: `Shipping`,
-      //   //   value: 0,
-      //   //   displayValue: `Free`,
-      //   // },
-      //   // {
-      //   //   id: `tax`,
-      //   //   description: `Tax`,
-      //   //   value: 0,
-      //   //   displayValue: `Calculated at checkout`,
-      //   // },
-      //   // {
-      //   //   id: `sale-1`,
-      //   //   description: `Super Sale!`,
-      //   //   value: -2000,
-      //   // },
+       
+      //     {
+      //       id: '50OFF', // Coupon code
+      //       description: 'Spring savings event', // Used in subtotal as a label
+      //       value: '-5000', // Negative, cent representation of discount
+      //       type: 'discount' // Metadata you can later use in your plugins
+      //     }
+        
       // ]}
      
     />
