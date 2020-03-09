@@ -9,7 +9,7 @@ import BuyButton from './BuyButton';
 import Img from 'gatsby-image';
 import { Grid, GridItem } from 'styled-grid-component';
 
-import { Cart, getShippingMethods, preInfo, Shipping} from 'cart';
+import { Cart, getShippingMethods, preInfo, Shipping, coupons } from 'cart';
 
 
 const ZygoteCart = props => {
@@ -44,6 +44,7 @@ const ZygoteCart = props => {
         // getShippingMethods, 
         // preInfo, 
         // Shipping
+        coupons,
       ]}
 
       cartHeader={<div>Sweet Leaf </div>}
