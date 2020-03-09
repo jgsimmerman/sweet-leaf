@@ -1,7 +1,7 @@
 const preInfo = async ({ preFetchData, info }) => {
   
   let subtotal = info.subtotal
-
+  console.log(`info object from preInfo: ${info}`)
   let shippingOptions = [
     {
       id: `shipping-0`,
