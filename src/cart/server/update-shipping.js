@@ -14,6 +14,7 @@ export default async function updateShipping({ stripeApiSecret, body, verbose })
 	console.log(`body object from update-shipping: ${body}`);
 
 	let subtotal = body.order.amount
+	let skuMatch = body.order.items.some((item) => item.id === 'sku_GrsjNKjWmiGT87')
 	
 	console.log(`Subtotal from updateShipping ${subtotal}`)
 	let shippingMethods = []
@@ -35,7 +36,7 @@ export default async function updateShipping({ stripeApiSecret, body, verbose })
         else if (subtotal < 5000) {
           return 995
         }
-        else if (subtotal >= 5000) {
+        else if (subtotal >= 5000 || skuMatch) {
           return 0 //1195
         }
         // else if (subtotal > 7501) {
