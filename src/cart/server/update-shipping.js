@@ -11,6 +11,7 @@ export default async function updateShipping({ stripeApiSecret, body, verbose })
 		body = JSON.parse(body)
   }
   
+	console.log(`body object from update-shipping: ${body}`);
 
 	let subtotal = body.order.amount
 	
