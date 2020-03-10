@@ -69,14 +69,14 @@ const coupons = async ({ response, info, preFetchData }) => {
 
 //   return response;
 // };
-console.log(`coupons plugin`);
-response.modifications.push({
-              // Add valid coupon to modifications array
-              id: '10_Off',
-              description: '10 Off',
-              value: -10,
-              type: 'discount',
-            });
+// console.log(`coupons plugin`);
+// response.modifications.push({
+//               // Add valid coupon to modifications array
+//               id: '10_Off',
+//               description: '10 Off',
+//               value: -10,
+//               type: 'discount',
+//             });
 // import Stripe from "stripe";
 
 // // const coupons = async ({ response, info, preFetchData }) => {

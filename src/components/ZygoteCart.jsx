@@ -9,7 +9,7 @@ import BuyButton from './BuyButton';
 import Img from 'gatsby-image';
 import { Grid, GridItem } from 'styled-grid-component';
 
-import { Cart, getShippingMethods, preInfo, Shipping, coupons } from 'cart';
+import { Cart, getShippingMethods, preInfo, Shipping } from 'cart';
 
 
 const ZygoteCart = props => {
@@ -34,11 +34,11 @@ const ZygoteCart = props => {
      stripeApiKey="pk_test_Vc8z3p2pdxHFQgxhbbhIXtyv00GnPddsjV"
     
       //stripeApiKey=`${process.env.STRIPE_API_PUBLIC}`
-      // infoWebhook='/.netlify/functions/info-stripe'
-      // orderWebhook='/.netlify/functions/order-stripe'
-       infoWebhook='https://afda6f56.ngrok.io/.netlify/functions/info-stripe'
-       orderWebhook='https://afda6f56.ngrok.io/.netlify/functions/order-stripe'
-       shippingWebhook='https://afda6f56.ngrok.io/.netlify/functions/shipping-stripe'
+      infoWebhook='/.netlify/functions/info-stripe'
+      orderWebhook='/.netlify/functions/order-stripe'
+      //  infoWebhook='https://afda6f56.ngrok.io/.netlify/functions/info-stripe'
+      //  orderWebhook='https://afda6f56.ngrok.io/.netlify/functions/order-stripe'
+      //  shippingWebhook='https://afda6f56.ngrok.io/.netlify/functions/shipping-stripe'
       
       plugins={[ 
         // getShippingMethods, 
