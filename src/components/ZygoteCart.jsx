@@ -34,17 +34,17 @@ const ZygoteCart = props => {
      stripeApiKey="pk_test_Vc8z3p2pdxHFQgxhbbhIXtyv00GnPddsjV"
     
       //stripeApiKey=`${process.env.STRIPE_API_PUBLIC}`
-      infoWebhook='/.netlify/functions/info-stripe'
-      orderWebhook='/.netlify/functions/order-stripe'
-      // infoWebhook='https://98f0c2b3.ngrok.io/.netlify/functions/info-stripe'
-      // orderWebhook='https://98f0c2b3.ngrok.io/.netlify/functions/order-stripe'
-      // shippingWebhook='https://98f0c2b3.ngrok.io/.netlify/functions/shipping-stripe'
+      // infoWebhook='/.netlify/functions/info-stripe'
+      // orderWebhook='/.netlify/functions/order-stripe'
+       infoWebhook='https://afda6f56.ngrok.io/.netlify/functions/info-stripe'
+       orderWebhook='https://afda6f56.ngrok.io/.netlify/functions/order-stripe'
+       shippingWebhook='https://afda6f56.ngrok.io/.netlify/functions/shipping-stripe'
       
       plugins={[ 
         // getShippingMethods, 
         // preInfo, 
         // Shipping
-        coupons,
+        //coupons,
       ]}
 
       cartHeader={<div>Sweet Leaf </div>}
