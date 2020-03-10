@@ -8,6 +8,7 @@ export { default as removeFromCart } from './utils/remove-from-cart'
 export { default as getShippingMethods } from './plugins/getShippingMethods'
 export { default as preInfo } from './plugins/preInfo'
 export { default as Shipping } from './plugins/Shipping'
+export {default as coupons } from './plugins/coupons'
 
 
 export {

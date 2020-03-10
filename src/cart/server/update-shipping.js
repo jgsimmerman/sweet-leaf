@@ -11,9 +11,9 @@ export default async function updateShipping({ stripeApiSecret, body, verbose })
 		body = JSON.parse(body)
   }
   
+	console.log(`body object from update-shipping: ${body}`);
 
 	let subtotal = body.order.amount
-
 	let skuMatch = body.order.products.some((product) => product.id === 'sku_GrsjNKjWmiGT87')
 	
 	console.log(`Subtotal from updateShipping ${subtotal}`)
@@ -237,3 +237,44 @@ export default async function updateShipping({ stripeApiSecret, body, verbose })
 
   return response
 }
+// let order =
+// {
+// 	"infoName":"Jacob G Simmerman",
+// 	"infoEmail":"jgsimmerman@gmail.com",
+// 	"infoPhone":"0269317870",
+// 	"shippingAddress1":"104 S Darlington Ave",
+// 	"shippingAddress2":"",
+// 	"shippingCompany":"",
+// 	"shippingCity":"Lamar",
+// 	"shippingState":"South Carolina",
+// 	"shippingZip":"29069",
+// 	"coupon":"",
+// 	"cardNumber":false,
+// 	"expiration":false,
+// 	"cvc":false,"
+// 	sameBilling":true,
+// 	"event":"info",
+// 	"shippingStateAbbr":"SC",
+// 	"products":[
+// 		{
+// 			"id":"sku_GrsjNKjWmiGT87",
+// 			"name":"Nepenthes Kokedama",
+// 			"image":"https://i.imgur.com/LtrevUf.jpg",
+// 			"description":"",
+// 			"price":3999,
+// 			"shippable":true,
+// 			"quantity":1,
+// 			"stock":2
+// 		}
+// 	],
+// 	"selectedShippingMethod":false,
+// 	"totals":{
+// 		"subtotal":3999,
+// 		"modifications":[],
+// 		"total":3999,
+// 		"loading":true
+// 	},
+// 	"meta":{},
+// 	"subtotal":3999,
+// 	"shippingMethods":[]
+// }

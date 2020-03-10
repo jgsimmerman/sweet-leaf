@@ -9,7 +9,7 @@ import BuyButton from './BuyButton';
 import Img from 'gatsby-image';
 import { Grid, GridItem } from 'styled-grid-component';
 
-import { Cart, getShippingMethods, preInfo, Shipping} from 'cart';
+import { Cart, getShippingMethods, preInfo, Shipping } from 'cart';
 
 
 const ZygoteCart = props => {
@@ -30,20 +30,21 @@ const ZygoteCart = props => {
   return(
     
     <Cart
-     // stripeApiKey="pk_live_nMctV4G1movcajzQsjXet2Zs000zybvAUV"
-      stripeApiKey="pk_test_Vc8z3p2pdxHFQgxhbbhIXtyv00GnPddsjV"
-
+     //stripeApiKey="pk_live_nMctV4G1movcajzQsjXet2Zs000zybvAUV"
+     stripeApiKey="pk_test_Vc8z3p2pdxHFQgxhbbhIXtyv00GnPddsjV"
+    
       //stripeApiKey=`${process.env.STRIPE_API_PUBLIC}`
       infoWebhook='/.netlify/functions/info-stripe'
       orderWebhook='/.netlify/functions/order-stripe'
-      // infoWebhook='https://98f0c2b3.ngrok.io/.netlify/functions/info-stripe'
-      // orderWebhook='https://98f0c2b3.ngrok.io/.netlify/functions/order-stripe'
-      // shippingWebhook='https://98f0c2b3.ngrok.io/.netlify/functions/shipping-stripe'
+      //  infoWebhook='https://afda6f56.ngrok.io/.netlify/functions/info-stripe'
+      //  orderWebhook='https://afda6f56.ngrok.io/.netlify/functions/order-stripe'
+      //  shippingWebhook='https://afda6f56.ngrok.io/.netlify/functions/shipping-stripe'
       
       plugins={[ 
         // getShippingMethods, 
         // preInfo, 
         // Shipping
+        //coupons,
       ]}
 
       cartHeader={<div>Sweet Leaf </div>}
@@ -51,23 +52,14 @@ const ZygoteCart = props => {
       
 
       // totalModifications={[
-      //   // {
-      //   //   id: `shipping`,
-      //   //   description: `Shipping`,
-      //   //   value: 0,
-      //   //   displayValue: `Free`,
-      //   // },
-      //   // {
-      //   //   id: `tax`,
-      //   //   description: `Tax`,
-      //   //   value: 0,
-      //   //   displayValue: `Calculated at checkout`,
-      //   // },
-      //   // {
-      //   //   id: `sale-1`,
-      //   //   description: `Super Sale!`,
-      //   //   value: -2000,
-      //   // },
+       
+      //     {
+      //       id: '50OFF', // Coupon code
+      //       description: 'Spring savings event', // Used in subtotal as a label
+      //       value: '-5000', // Negative, cent representation of discount
+      //       type: 'discount' // Metadata you can later use in your plugins
+      //     }
+        
       // ]}
      
     />
