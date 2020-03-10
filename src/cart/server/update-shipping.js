@@ -25,7 +25,9 @@ export default async function updateShipping({ stripeApiSecret, body, verbose })
       id: `shipping-0`,
       description: `Standard Shipping`,
       value: (subtotal) => {
-        if (subtotal < 1000) {
+				if (skuMatch) {
+					return 0
+				} else if (subtotal < 1000) {
           return 549
         } else if (subtotal < 3000) {
           return 749
@@ -36,7 +38,7 @@ export default async function updateShipping({ stripeApiSecret, body, verbose })
         else if (subtotal < 5000) {
           return 995
         }
-        else if (subtotal >= 5000 || skuMatch) {
+        else if (subtotal >= 5000) {
           return 0 //1195
         }
         // else if (subtotal > 7501) {
@@ -235,7 +237,7 @@ export default async function updateShipping({ stripeApiSecret, body, verbose })
 
   return response
 }
-
+// let order =
 // {
 // 	"infoName":"Jacob G Simmerman",
 // 	"infoEmail":"jgsimmerman@gmail.com",
